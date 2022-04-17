@@ -1,9 +1,3 @@
----
-title: "关于使用 Codeql 进行自动化审计的一点想法"
-date: 2022-04-17T12:36:40+08:00
-draft: false
----
-
 今天继续学习 CodeQL，看了楼兰师傅的[《CodeQL与XRay联动实现黑白盒双重校验》](https://www.yuque.com/loulan-b47wt/rc30f7/bd1frn)有所启发，既然可以使用 Python 调用 codeql-cli 进行查询，那么肯定可以批量进行扫描。CodeQL 官方提供了大量安全 QL 查询，如果直接使用这些基础的 QL 进行批量查询，将结果导入到数据库中再由安全人员进行手动分析，是不是会提高审计的效率？
 
 我使用的是官方 Java 库中的 Security 库
