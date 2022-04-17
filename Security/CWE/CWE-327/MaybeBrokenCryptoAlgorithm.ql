@@ -71,6 +71,4 @@ where
   sink.getNode().asExpr() = c.getAlgoSpec() and
   source.getNode().asExpr() = s and
   conf.hasFlowPath(source, sink)
-select c, source, sink,
-  "Cryptographic algorithm $@ may not be secure, consider using a different algorithm.", s,
-  s.getValue()
+select sink.getNode().getLocation().toString()
