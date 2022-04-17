@@ -1,0 +1,2 @@
+[2022-04-17 00:08:47] [javac-output-53659] warning: unknown enum constant When.MAYBE
+[2022-04-17 00:08:47] [javac-output-53659]   reason: class file for javax.annotation.meta.When not found

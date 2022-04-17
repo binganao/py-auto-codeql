@@ -1,0 +1,68 @@
+[2022-04-17 13:05:44] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql
+[2022-04-17 13:05:44] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql
+[2022-04-17 13:05:44] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql"
+                      ]
+[2022-04-17 13:05:44] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:05:44] Creating executor with 1 threads.
+[2022-04-17 13:05:45] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql --format=json
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Found enclosing pack 'CWE-297' at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/.cache.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297 resolved OK.
+[2022-04-17 13:05:45] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2022-04-17 13:05:45] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297"
+                        ],
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/.cache"
+                        ],
+                        "relativeName" : "CWE-297/InsecureJavaMail.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297 or an enclosing directory.",
+                        "qlPackName" : "CWE-297"
+                      }
+[2022-04-17 13:05:45] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql hashes to e8eaaa2a068e23e1181ac2222379f388ad1bf2ce.
+[2022-04-17 13:05:45] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql.
+[2022-04-17 13:05:45] ExternalModuleBindingPass ...
+[2022-04-17 13:05:45] ExternalModuleBindingPass time: 00:00.004
+[2022-04-17 13:05:45] QLPredicateSynthesiser ...
+[2022-04-17 13:05:45] QLPredicateSynthesiser time: 00:00.003
+[2022-04-17 13:05:45] DeclarationBindingPass ...
+[2022-04-17 13:05:45] DeclarationBindingPass time: 00:00.007
+[2022-04-17 13:05:45] Fixed point time ...
+[2022-04-17 13:05:45] Fixed point time time: 00:00.010
+[2022-04-17 13:05:45] ReferenceBindingPass ...
+[2022-04-17 13:05:45] ReferenceBindingPass time: 00:00.002
+[2022-04-17 13:05:45] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:05:45] EntityTypeUpdateBindingPass time: 00:00.001
+[2022-04-17 13:05:45] DeclarationBindingPass ...
+[2022-04-17 13:05:45] DeclarationBindingPass time: 00:00.001
+[2022-04-17 13:05:45] PredicateBodyBindingPass ...
+[2022-04-17 13:05:45] PredicateBodyBindingPass time: 00:00.037
+[2022-04-17 13:05:45] LanguagePragmaPropagationPass ...
+[2022-04-17 13:05:45] LanguagePragmaPropagationPass time: 00:00.000
+[2022-04-17 13:05:45] Ambiguity checks ...
+[2022-04-17 13:05:45] Ambiguity checks time: 00:00.007
+[2022-04-17 13:05:45] Ql checks ...
+[2022-04-17 13:05:45] Ql checks time: 00:00.012
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve module semmle.code.java.security.Mail. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:16,8-38)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve module java. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:15,8-12)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve type MethodAccess (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:18,6-18)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve type MailSessionGetInstanceMethod (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:20,29-57)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve type VarAccess (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:21,51-60)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve type VarAccess (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:23,73-82)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve predicate isInsecureMailPropertyConfig/1 (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:21,3-31)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve predicate enablesEmailSsl/1 (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:23,3-18)
+[2022-04-17 13:05:46] [ERROR] execute queries> ERROR: Could not resolve predicate hasSslCertificateCheck/1 (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-297/InsecureJavaMail.ql:23,31-53)
+[2022-04-17 13:05:46] Sequence stamp origin is -6466451457631359911
+[2022-04-17 13:05:46] Pausing evaluation to close the cache at sequence stamp o+0
+[2022-04-17 13:05:46] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:05:46] Unpausing evaluation
+[2022-04-17 13:05:46] Exiting with code 2

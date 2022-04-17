@@ -1,0 +1,62 @@
+[2022-04-17 14:03:03] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql
+[2022-04-17 14:03:03] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql
+[2022-04-17 14:03:03] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql"
+                      ]
+[2022-04-17 14:03:03] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 14:03:03] Creating executor with 1 threads.
+[2022-04-17 14:03:04] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql --format=json
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql.
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 14:03:04] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 14:03:04] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-835/InfiniteLoop.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 14:03:04] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql.
+[2022-04-17 14:03:04] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql.
+[2022-04-17 14:03:05] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql hashes to 329034ae0173ca8cb8be79901229a16c117caa8b.
+[2022-04-17 14:03:05] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql.
+[2022-04-17 14:03:05] ExternalModuleBindingPass ...
+[2022-04-17 14:03:06] ExternalModuleBindingPass time: 00:01.114
+[2022-04-17 14:03:06] QLPredicateSynthesiser ...
+[2022-04-17 14:03:06] QLPredicateSynthesiser time: 00:00.017
+[2022-04-17 14:03:06] DeclarationBindingPass ...
+[2022-04-17 14:03:07] DeclarationBindingPass time: 00:00.277
+[2022-04-17 14:03:07] Fixed point time ...
+[2022-04-17 14:03:07] Fixed point time time: 00:00.326
+[2022-04-17 14:03:07] ReferenceBindingPass ...
+[2022-04-17 14:03:07] ReferenceBindingPass time: 00:00.045
+[2022-04-17 14:03:07] EntityTypeUpdateBindingPass ...
+[2022-04-17 14:03:07] EntityTypeUpdateBindingPass time: 00:00.066
+[2022-04-17 14:03:07] DeclarationBindingPass ...
+[2022-04-17 14:03:07] DeclarationBindingPass time: 00:00.027
+[2022-04-17 14:03:07] PredicateBodyBindingPass ...
+[2022-04-17 14:03:08] PredicateBodyBindingPass time: 00:00.432
+[2022-04-17 14:03:08] LanguagePragmaPropagationPass ...
+[2022-04-17 14:03:08] LanguagePragmaPropagationPass time: 00:00.033
+[2022-04-17 14:03:08] Ambiguity checks ...
+[2022-04-17 14:03:08] Ambiguity checks time: 00:00.077
+[2022-04-17 14:03:08] Ql checks ...
+[2022-04-17 14:03:08] Ql checks time: 00:00.685
+[2022-04-17 14:03:09] [ERROR] execute queries> ERROR: Could not resolve module Likely_Bugs.Comparison.UselessComparisonTest (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql:16,8-52)
+[2022-04-17 14:03:09] [ERROR] execute queries> ERROR: Could not resolve predicate uselessTest/3 (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-835/InfiniteLoop.ql:61,3-14)
+[2022-04-17 14:03:09] Sequence stamp origin is -6466436687468579652
+[2022-04-17 14:03:09] Pausing evaluation to close the cache at sequence stamp o+0
+[2022-04-17 14:03:09] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 14:03:09] Unpausing evaluation
+[2022-04-17 14:03:09] Exiting with code 2

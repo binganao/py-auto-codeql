@@ -1,0 +1,490 @@
+[2022-04-17 13:26:44] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql
+[2022-04-17 13:26:44] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql
+[2022-04-17 13:26:45] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql"
+                      ]
+[2022-04-17 13:26:45] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:26:45] Creating executor with 1 threads.
+[2022-04-17 13:26:45] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql --format=json
+[2022-04-17 13:26:45] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:26:45] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:26:45] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:26:45] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:26:46] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:26:46] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:26:46] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-319/UseSSL.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:26:46] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:26:46] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:26:46] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql hashes to ebef5abdaabfe1fe4caa650bdcbe797fd6ca5e95.
+[2022-04-17 13:26:46] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:26:47] ExternalModuleBindingPass ...
+[2022-04-17 13:26:48] ExternalModuleBindingPass time: 00:01.134
+[2022-04-17 13:26:48] QLPredicateSynthesiser ...
+[2022-04-17 13:26:48] QLPredicateSynthesiser time: 00:00.019
+[2022-04-17 13:26:48] DeclarationBindingPass ...
+[2022-04-17 13:26:48] DeclarationBindingPass time: 00:00.106
+[2022-04-17 13:26:48] Fixed point time ...
+[2022-04-17 13:26:48] Fixed point time time: 00:00.281
+[2022-04-17 13:26:48] ReferenceBindingPass ...
+[2022-04-17 13:26:48] ReferenceBindingPass time: 00:00.039
+[2022-04-17 13:26:48] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:26:48] EntityTypeUpdateBindingPass time: 00:00.057
+[2022-04-17 13:26:48] DeclarationBindingPass ...
+[2022-04-17 13:26:48] DeclarationBindingPass time: 00:00.045
+[2022-04-17 13:26:48] PredicateBodyBindingPass ...
+[2022-04-17 13:26:49] PredicateBodyBindingPass time: 00:00.715
+[2022-04-17 13:26:49] LanguagePragmaPropagationPass ...
+[2022-04-17 13:26:49] LanguagePragmaPropagationPass time: 00:00.032
+[2022-04-17 13:26:49] Ambiguity checks ...
+[2022-04-17 13:26:49] Ambiguity checks time: 00:00.072
+[2022-04-17 13:26:49] Ql checks ...
+[2022-04-17 13:26:50] Ql checks time: 00:00.570
+[2022-04-17 13:26:52] Compilation pipeline
+[2022-04-17 13:26:52] Type Inference ...
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,789,1500
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:52] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:26:53] Type Inference time: 00:01.645
+[2022-04-17 13:26:53] Binding Checks ...
+[2022-04-17 13:26:54] Binding Checks time: 00:00.249
+[2022-04-17 13:26:54] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:26:54] Processing compilation pipeline
+[2022-04-17 13:26:54] Started compiling a query
+[2022-04-17 13:26:54] Initialising compiler...
+[2022-04-17 13:26:54] 	 ... compiler initialised
+[2022-04-17 13:26:54] About to start query optimisation
+[2022-04-17 13:26:55] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:55] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:55] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:56] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:57] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:58] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:58] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:58] Compilation cache hit - skipping compilation.
+[2022-04-17 13:26:58] Compilation cache miss for 73116132fa817dad4b437bcf2c0e70852b26fcda.
+[2022-04-17 13:27:00] Stored compiled program for 73116132fa817dad4b437bcf2c0e70852b26fcda.
+[2022-04-17 13:27:00] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 13:27:00] CSV_COMPILATION: 1989,1570,211,1507
+[2022-04-17 13:27:00] [PROGRESS] execute queries> [1/1 comp 14.3s] Compiled /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:27:00] Of 4437 predicates, 0 are used in more than one query.
+[2022-04-17 13:27:00] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-319/UseSSL.ql.
+[2022-04-17 13:27:00] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql
+[2022-04-17 13:27:00] (0s) Start query execution
+[2022-04-17 13:27:00] (0s) Beginning execution of Member::overridesIgnoringAccess#ffff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Member::overridesIgnoringAccess#ffff (UseSSL.ql),0.027,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Member::overridesIgnoringAccess#ffff,UseSSL.ql,1,Success,0.027,5291,34
+[2022-04-17 13:27:00] (0s) Beginning execution of Type::erase#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Type::erase#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Type::erase#ff,UseSSL.ql,2,Success,0.001,6439,36
+[2022-04-17 13:27:00] (0s) Beginning execution of Location::Top::toString_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Location::Top::toString_dispred#ff (UseSSL.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Location::Top::toString_dispred#ff,UseSSL.ql,3,Success,0,64877,37
+[2022-04-17 13:27:00] (0s) Beginning execution of ExternalFlow::paramsString#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: ExternalFlow::paramsString#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,ExternalFlow::paramsString#ff,UseSSL.ql,4,Success,0.001,22462,41
+[2022-04-17 13:27:00] (0s) Beginning execution of Type::hasSubtype#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Type::hasSubtype#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Type::hasSubtype#ff,UseSSL.ql,5,Success,0.001,16080,45
+[2022-04-17 13:27:00] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (UseSSL.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,UseSSL.ql,6,Success,0,38891,47
+[2022-04-17 13:27:00] (0s) Beginning execution of Annotation::Annotatable::getAnAnnotation_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Annotation::Annotatable::getAnAnnotation_dispred#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Annotation::Annotatable::getAnAnnotation_dispred#ff,UseSSL.ql,7,Success,0.001,2208,50
+[2022-04-17 13:27:00] (0s) Beginning execution of Type::RefType::hasMethod_dispred#ffff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Type::RefType::hasMethod_dispred#ffff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Type::RefType::hasMethod_dispred#ffff,UseSSL.ql,8,Success,0.001,103353,52
+[2022-04-17 13:27:00] (0s) Beginning execution of InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f (UseSSL.ql),0.007,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f,UseSSL.ql,9,Success,0.007,84,62
+[2022-04-17 13:27:00] (0s) Beginning execution of BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff (UseSSL.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff,UseSSL.ql,10,Success,0.002,114,66
+[2022-04-17 13:27:00] (0s) Beginning execution of ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff,UseSSL.ql,11,Success,0.001,893,68
+[2022-04-17 13:27:00] (0s) Beginning execution of BasicBlocks::BasicBlock::getNode_dispred#fff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::getNode_dispred#fff (UseSSL.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::getNode_dispred#fff,UseSSL.ql,12,Success,0,994,68
+[2022-04-17 13:27:00] (0s) Beginning execution of BasicBlocks::BasicBlock::length_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::length_dispred#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::length_dispred#ff,UseSSL.ql,13,Success,0.001,265,70
+[2022-04-17 13:27:00] (0s) Beginning execution of BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff (UseSSL.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff,UseSSL.ql,14,Success,0,132,71
+[2022-04-17 13:27:00] (0s) Beginning execution of Dominance::bbIDominates#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Dominance::bbIDominates#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Dominance::bbIDominates#ff,UseSSL.ql,15,Success,0.001,80,73
+[2022-04-17 13:27:00] (0s) Beginning execution of BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff
+[2022-04-17 13:27:00] (0s) Inferred that project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k is empty, due to BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff/3@1d86206t.
+[2022-04-17 13:27:00] (0s) Inferred that project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5 is empty, due to project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k.
+[2022-04-17 13:27:00] (0s) Inferred that BaseSSA::BaseSsaImplicitInit::captures_dispred#ff/2@05448be9 is empty, due to project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5.
+[2022-04-17 13:27:00] (0s)  >>> Created relation project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k with 0 rows.
+[2022-04-17 13:27:00] (0s)  >>> Created relation project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5 with 0 rows.
+[2022-04-17 13:27:00] (0s)  >>> Created relation BaseSSA::BaseSsaImplicitInit::captures_dispred#ff/2@05448be9 with 0 rows.
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff (UseSSL.ql),0.012,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff,UseSSL.ql,16,Success,0.012,467,86
+[2022-04-17 13:27:00] (0s) Beginning execution of SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff
+[2022-04-17 13:27:00] (0s) Inferred that SSA::SsaSourceField::isVolatile#f#join_rhs/2@5b70a8g7 is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:27:00] (0s) Inferred that SSA::TQualifiedField#ffff_13#join_rhs/2@a4f5c8bl is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:27:00] (0s) Inferred that SSA::SsaImpl::certainVariableUpdate#ffff#join_rhs/2@3e125186 is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:27:00] (0s)  >>> Created relation SSA::SsaSourceField::isVolatile#f#join_rhs/2@5b70a8g7 with 0 rows.
+[2022-04-17 13:27:00] (0s)  >>> Created relation SSA::TQualifiedField#ffff_13#join_rhs/2@a4f5c8bl with 0 rows.
+[2022-04-17 13:27:00] (0s)  >>> Created relation SSA::SsaImpl::certainVariableUpdate#ffff#join_rhs/2@3e125186 with 0 rows.
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff (UseSSL.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff,UseSSL.ql,17,Success,0.004,43698,91
+[2022-04-17 13:27:00] (0s) Beginning execution of SSA::TrackedVariablesImpl::trackField#f
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: SSA::TrackedVariablesImpl::trackField#f (UseSSL.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,SSA::TrackedVariablesImpl::trackField#f,UseSSL.ql,18,Success,0,1,92
+[2022-04-17 13:27:00] (0s) Beginning execution of Expr::CompileTimeConstantExpr::getIntValue_dispred#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Expr::CompileTimeConstantExpr::getIntValue_dispred#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Expr::CompileTimeConstantExpr::getIntValue_dispred#ff,UseSSL.ql,19,Success,0.001,2,93
+[2022-04-17 13:27:00] (0s) Beginning execution of Dependency::usesType#ff
+[2022-04-17 13:27:00] CSV_CACHE_DIFF: Dependency::usesType#ff (UseSSL.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:00] CSV_IMB_QUERIES: Stage,Dependency::usesType#ff,UseSSL.ql,20,Success,0.001,7444,95
+[2022-04-17 13:27:00] (0s) Beginning execution of DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff
+[2022-04-17 13:27:01] CSV_CACHE_DIFF: DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff (UseSSL.ql),0.345,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:27:01] CSV_IMB_QUERIES: Stage,DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff,UseSSL.ql,21,Success,0.345,122983,441
+[2022-04-17 13:27:01] (0s) Beginning execution of UseSSL.ql
+[2022-04-17 13:27:01] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@348c8e6n
+[2022-04-17 13:27:01] (0s)  >>> Created relation exprs_10#join_rhs/2@348c8e6n with 3830 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate exprs_340#join_rhs/3@3df914ar
+[2022-04-17 13:27:01] (0s)  >>> Created relation exprs_340#join_rhs/3@3df914ar with 3830 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Expr::MethodAccess::getQualifier_dispred#ff/2@2fa946f5
+[2022-04-17 13:27:01] (0s)  >>> Created relation Expr::MethodAccess::getQualifier_dispred#ff/2@2fa946f5 with 101 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation callableBinding/2@5704453i with 134 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation methods/6@d93893sl with 20736 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate project#callableBinding/1@1510a2ic
+[2022-04-17 13:27:01] (0s)  >>> Created relation project#callableBinding/1@1510a2ic with 94 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation typeVars/5@f6f131jt with 844 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation constrs/6@9f73ec4d with 1726 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate constrs_50#join_rhs/2@2fcc1eqj
+[2022-04-17 13:27:01] (0s)  >>> Created relation constrs_50#join_rhs/2@2fcc1eqj with 1726 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate methods_50#join_rhs/2@2b64aeij
+[2022-04-17 13:27:01] (0s)  >>> Created relation methods_50#join_rhs/2@2b64aeij with 20736 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate m#Type::declaresMember#fb/1@22f823um
+[2022-04-17 13:27:01] (0s)  >>> Created relation m#Type::declaresMember#fb/1@22f823um with 924 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Type::declaresMember#fb/2@57b410gl
+[2022-04-17 13:27:01] (0s)  >>> Created relation Type::declaresMember#fb/2@57b410gl with 775 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Type::declaresMember#fb_1#join_rhs/1@704b79gr
+[2022-04-17 13:27:01] (0s)  >>> Created relation Type::declaresMember#fb_1#join_rhs/1@704b79gr with 775 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Expr::MethodAccess::getMethod_dispred#ff/2@2fd47dd6
+[2022-04-17 13:27:01] (0s)  >>> Created relation Expr::MethodAccess::getMethod_dispred#ff/2@2fd47dd6 with 101 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation classes/4@821293v7 with 1748 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation wildcards/3@962bcerh with 331 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate @boundedtype#f/1@8c3271mq
+[2022-04-17 13:27:01] (0s)  >>> Created relation @boundedtype#f/1@8c3271mq with 1175 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation arrays/5@3a5ff15c with 310 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation interfaces/4@64928d95 with 3196 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Element::Element_not_CompilationUnit_Exception_ImportStaticTypeMember#b/1@2a5d603e
+[2022-04-17 13:27:01] (0s)  >>> Created relation Element::Element_not_CompilationUnit_Exception_ImportStaticTypeMember#b/1@2a5d603e with 27165 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation packages/2@29d2d1tb with 205 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation modifiers/2@58c606ia with 11 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation paramName/2@c0e6abca with 48 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation primitives/2@ddc678hq with 10 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation fields/5@1c902dh2 with 4594 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation localvars/4@10ccb3st with 52 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation params/5@32e25at0 with 21675 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate paramName_0#antijoin_rhs/1@74ec44ei
+[2022-04-17 13:27:01] (0s)  >>> Created relation paramName_0#antijoin_rhs/1@74ec44ei with 48 rows.
+[2022-04-17 13:27:01] (0s)  >>> Created relation files/2@19948aeb with 1853 rows.
+[2022-04-17 13:27:01] (0s) Starting to evaluate predicate Element::Element::hasName#ff/2@82328b6u
+[2022-04-17 13:27:02] (1s)  >>> Created relation Element::Element::hasName#ff/2@82328b6u with 57290 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate @classorinterface#f/1@57b53ang
+[2022-04-17 13:27:02] (1s)  >>> Created relation @classorinterface#f/1@57b53ang with 4944 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType#class#f/1@a176683a
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType#class#f/1@a176683a with 6429 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation cupackage/2@b0b380cb with 1709 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate cupackage_0#antijoin_rhs/1@d502c77c
+[2022-04-17 13:27:02] (1s)  >>> Created relation cupackage_0#antijoin_rhs/1@d502c77c with 1709 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation exceptions/3@e5c802fq with 3023 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate exceptions_10#join_rhs/2@66bb8c0k
+[2022-04-17 13:27:02] (1s)  >>> Created relation exceptions_10#join_rhs/2@66bb8c0k with 3023 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Location::Top::toString_dispred#ff#join_rhs#1/2@75f8278i
+[2022-04-17 13:27:02] (1s)  >>> Created relation Location::Top::toString_dispred#ff#join_rhs#1/2@75f8278i with 3023 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Element::Element::hasName_dispred#bf/2@i1#c8c58wdh (iteration 1)
+[2022-04-17 13:27:02] (1s) 			 - Element::Element::hasName_dispred#bf_delta has 57290 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Element::Element::hasName_dispred#bf/2@i2#c8c58wdh (iteration 2)
+[2022-04-17 13:27:02] (1s) 			 - Element::Element::hasName_dispred#bf_delta has 3023 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Element::Element::hasName_dispred#bf/2@i3#c8c58wdh (iteration 3)
+[2022-04-17 13:27:02] (1s) Empty delta for Element::Element::hasName_dispred#bf_delta (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Accumulating deltas
+[2022-04-17 13:27:02] (1s)  >>> Created relation Element::Element::hasName_dispred#bf/2@c8c58wdh with 60313 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Element::Element::getName_dispred#bf/2@797ec5sl
+[2022-04-17 13:27:02] (1s)  >>> Created relation Element::Element::getName_dispred#bf/2@797ec5sl with 27165 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#Expr::Expr::getType_dispred#bf#shared/2@acdbda32
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#Expr::Expr::getType_dispred#bf#shared/2@acdbda32 with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate typeVars_40#join_rhs/2@01b02c1e
+[2022-04-17 13:27:02] (1s)  >>> Created relation typeVars_40#join_rhs/2@01b02c1e with 844 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Generics::TypeVariable::getGenericType_dispred#ff/2@7959bb8g
+[2022-04-17 13:27:02] (1s)  >>> Created relation Generics::TypeVariable::getGenericType_dispred#ff/2@7959bb8g with 197 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Generics::TypeVariable::getGenericType_dispred#ff_10#join_rhs/2@4e900d2g
+[2022-04-17 13:27:02] (1s)  >>> Created relation Generics::TypeVariable::getGenericType_dispred#ff_10#join_rhs/2@4e900d2g with 197 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate @callable#b/1@de9afe8m
+[2022-04-17 13:27:02] (1s)  >>> Created relation @callable#b/1@de9afe8m with 599 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Generics::GenericCallable#class#f/1@3f0812g9
+[2022-04-17 13:27:02] (1s)  >>> Created relation Generics::GenericCallable#class#f/1@3f0812g9 with 684 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::declaresMember#fb_10#join_rhs/2@05b639ge
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::declaresMember#fb_10#join_rhs/2@05b639ge with 775 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff#join_rhs/2@526befht
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::getPackage_dispred#ff#join_rhs/2@526befht with 647 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i1#bc9f4w6m (iteration 1)
+[2022-04-17 13:27:02] (1s) 			 - Type::RefType::getPackage_dispred#ff_delta has 4944 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i2#bc9f4w6m (iteration 2)
+[2022-04-17 13:27:02] (1s) 			 - Type::RefType::getPackage_dispred#ff_delta has 844 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i3#bc9f4w6m (iteration 3)
+[2022-04-17 13:27:02] (1s) Empty delta for Type::RefType::getPackage_dispred#ff_delta (order for disjuncts: delta=3163).
+[2022-04-17 13:27:02] (1s) Accumulating deltas
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::getPackage_dispred#ff/2@bc9f4w6m with 5788 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation enclInReftype/2@07dda0q5 with 329 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate enclInReftype_0#antijoin_rhs/1@952090tq
+[2022-04-17 13:27:02] (1s)  >>> Created relation enclInReftype_0#antijoin_rhs/1@952090tq with 329 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf#shared/1@9f9230c9
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::nestedName#bf#shared/1@9f9230c9 with 6100 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate enclInReftype_10#join_rhs/2@d10431cv
+[2022-04-17 13:27:02] (1s)  >>> Created relation enclInReftype_10#join_rhs/2@d10431cv with 329 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf#join_rhs/3@97661bnl
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::nestedName#bf#join_rhs/3@97661bnl with 329 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i1#3a51cwnu (iteration 1)
+[2022-04-17 13:27:02] (1s) 			 - Type::RefType::nestedName#bf_delta has 6100 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i2#3a51cwnu (iteration 2)
+[2022-04-17 13:27:02] (1s) 			 - Type::RefType::nestedName#bf_delta has 318 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i3#3a51cwnu (iteration 3)
+[2022-04-17 13:27:02] (1s) 			 - Type::RefType::nestedName#bf_delta has 11 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i4#3a51cwnu (iteration 4)
+[2022-04-17 13:27:02] (1s) Empty delta for Type::RefType::nestedName#bf_delta (order for disjuncts: delta=500000).
+[2022-04-17 13:27:02] (1s) Accumulating deltas
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::nestedName#bf/2@3a51cwnu with 6429 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#bbf/3@fbb0523t
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#bbf/3@fbb0523t with 5788 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#bbf_10#join_rhs/2@45daef8f
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#bbf_10#join_rhs/2@45daef8f with 5788 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate project#Type::RefType::hasQualifiedName_dispred#bbf/1@a529d740
+[2022-04-17 13:27:02] (1s)  >>> Created relation project#Type::RefType::hasQualifiedName_dispred#bbf/1@a529d740 with 12 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate project#Type::RefType::hasQualifiedName_dispred#bbf#2/1@e6cad2i8
+[2022-04-17 13:27:02] (1s)  >>> Created relation project#Type::RefType::hasQualifiedName_dispred#bbf#2/1@e6cad2i8 with 0 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i1#28217whc (iteration 1)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 6121 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i2#28217whc (iteration 2)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 1980 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i3#28217whc (iteration 3)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 716 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i4#28217whc (iteration 4)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 152 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i5#28217whc (iteration 5)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 55 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i6#28217whc (iteration 6)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 14 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i7#28217whc (iteration 7)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 7 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i8#28217whc (iteration 8)
+[2022-04-17 13:27:02] (1s) 			 - #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta has 2 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@i9#28217whc (iteration 9)
+[2022-04-17 13:27:02] (1s) Empty delta for #Type::RefType::getASupertype_dispredPlus#fb#flipped_delta (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Accumulating deltas
+[2022-04-17 13:27:02] (1s)  >>> Created relation #Type::RefType::getASupertype_dispredPlus#fb#flipped/2@28217whc with 9047 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Encryption::SSLClass#class#f/1@185225ii
+[2022-04-17 13:27:02] (1s)  >>> Created relation Encryption::SSLClass#class#f/1@185225ii with 8 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#Expr::Expr::getType_dispred#bf#antijoin_rhs/2@dd94cbki
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#Expr::Expr::getType_dispred#bf#antijoin_rhs/2@dd94cbki with 0 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#Expr::Expr::getType_dispred#bf/1@f2f213m9
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#Expr::Expr::getType_dispred#bf/1@f2f213m9 with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate @annotation#f/1@f19e16h7
+[2022-04-17 13:27:02] (1s)  >>> Created relation @annotation#f/1@f19e16h7 with 2208 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Expr::Expr::getType_dispred#bf/2@09e624l7
+[2022-04-17 13:27:02] (1s)  >>> Created relation Expr::Expr::getType_dispred#bf/2@09e624l7 with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Expr::MethodAccess::getQualifier_dispred#ff_10#join_rhs/2@a5b8acdd
+[2022-04-17 13:27:02] (1s)  >>> Created relation Expr::MethodAccess::getQualifier_dispred#ff_10#join_rhs/2@a5b8acdd with 101 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #select#ff#shared/2@af54fcos
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#ff#shared/2@af54fcos with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#UseSSL::Socket#class#b/1@97ea03es
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#UseSSL::Socket#class#b/1@97ea03es with 1740 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#Type::RefType::getAnAncestor_dispred#bf/1@30087cs0
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#Type::RefType::getAnAncestor_dispred#bf/1@30087cs0 with 1740 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::hasSubtype#ff_10#join_rhs/2@e4521ak0
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::hasSubtype#ff_10#join_rhs/2@e4521ak0 with 16080 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i1#1af9cw8c (iteration 1)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 5516 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i2#1af9cw8c (iteration 2)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 2380 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i3#1af9cw8c (iteration 3)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 1172 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i4#1af9cw8c (iteration 4)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 549 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i5#1af9cw8c (iteration 5)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 128 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i6#1af9cw8c (iteration 6)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 19 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i7#1af9cw8c (iteration 7)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 12 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i8#1af9cw8c (iteration 8)
+[2022-04-17 13:27:02] (1s) 			 - #Type::hasSubtypePlus#fb#flipped_delta has 4 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #Type::hasSubtypePlus#fb#flipped/2@i9#1af9cw8c (iteration 9)
+[2022-04-17 13:27:02] (1s) Empty delta for #Type::hasSubtypePlus#fb#flipped_delta (order for disjuncts: delta=<standard>).
+[2022-04-17 13:27:02] (1s) Accumulating deltas
+[2022-04-17 13:27:02] (1s)  >>> Created relation #Type::hasSubtypePlus#fb#flipped/2@1af9cw8c with 9780 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::getAnAncestor_dispred#bf/2@1df3b1lt
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::getAnAncestor_dispred#bf/2@1df3b1lt with 11520 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_type/1@4e7947dt
+[2022-04-17 13:27:02] (1s)  >>> Created relation m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_type/1@4e7947dt with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::nestedName#fb/2@02b6cdum
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::nestedName#fb/2@02b6cdum with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#fbb#cpe#13/2@cfc317or
+[2022-04-17 13:27:02] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#fbb#cpe#13/2@cfc317or with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #select#ff#shared#1/4@2600b0il
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#ff#shared#1/4@2600b0il with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #select#ff#shared#2/4@c095cel3
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#ff#shared#2/4@c095cel3 with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #select#ff#antijoin_rhs/2@412cadci
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#ff#antijoin_rhs/2@412cadci with 0 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate UseSSL::Socket#class#b/1@a5c7b7t3
+[2022-04-17 13:27:02] (1s)  >>> Created relation UseSSL::Socket#class#b/1@a5c7b7t3 with 1 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate Element::Element::hasName_dispred#bf_10#join_rhs/2@f0f2f2vk
+[2022-04-17 13:27:02] (1s)  >>> Created relation Element::Element::hasName_dispred#bf_10#join_rhs/2@f0f2f2vk with 60313 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate UseSSL::URLConnection#class#b#antijoin_rhs/1@603eef3c
+[2022-04-17 13:27:02] (1s)  >>> Created relation UseSSL::URLConnection#class#b#antijoin_rhs/1@603eef3c with 0 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate UseSSL::URLConnection#class#b/1@fc5d79n6
+[2022-04-17 13:27:02] (1s)  >>> Created relation UseSSL::URLConnection#class#b/1@fc5d79n6 with 2 rows.
+[2022-04-17 13:27:02] (1s) Starting to evaluate predicate #select#ff/2@4e25e0t3
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#ff/2@4e25e0t3 with 0 rows.
+[2022-04-17 13:27:02] (1s) Inferred that Location::Top::hasLocationInfoAux_dispred#bfffff/6@83cfbbdg is empty, due to #select#ff/2@4e25e0t3.
+[2022-04-17 13:27:02] (1s) Inferred that #select#query#ffffffff/8@f67641cj is empty, due to #select#ff/2@4e25e0t3.
+[2022-04-17 13:27:02] (1s) Inferred that Location::Top::hasLocationInfo_dispred#bfffff/6@91c5dcno is empty, due to Location::Top::hasLocationInfoAux_dispred#bfffff/6@83cfbbdg.
+[2022-04-17 13:27:02] (1s) Inferred that project#Location::Top::hasLocationInfo_dispred#bfffff/1@a6a73bbq is empty, due to Location::Top::hasLocationInfo_dispred#bfffff/6@91c5dcno.
+[2022-04-17 13:27:02] (1s)  >>> Created relation #select#query#ffffffff/8@f67641cj with 0 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation Location::Top::hasLocationInfo_dispred#bfffff/6@91c5dcno with 0 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation Location::Top::hasLocationInfoAux_dispred#bfffff/6@83cfbbdg with 0 rows.
+[2022-04-17 13:27:02] (1s)  >>> Created relation project#Location::Top::hasLocationInfo_dispred#bfffff/1@a6a73bbq with 0 rows.
+[2022-04-17 13:27:02] (1s) Query done
+[2022-04-17 13:27:02] CSV_CACHE_DIFF: #select#query#ffffffff (UseSSL.ql),1.338,1.094,0.113,0.031,0.043,0.013,0,0,0,0,0,0,0
+[2022-04-17 13:27:02] (1s) Sequence stamp origin is -6466446043767740781
+[2022-04-17 13:27:02] (1s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 13:27:02] (1s) Unpausing evaluation
+[2022-04-17 13:27:02] CSV_IMB_QUERIES: Query,#select#query#ffffffff,UseSSL.ql,21,Success,1.338,0,1799
+[2022-04-17 13:27:02] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-319/UseSSL.ql produced BQRS results.
+[2022-04-17 13:27:02] [PROGRESS] execute queries> Evaluation completed (2s).
+[2022-04-17 13:27:02] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 13:27:02] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 13:27:02] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 13:27:02] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:27:02] Unpausing evaluation
+[2022-04-17 13:27:02] Terminating normally.

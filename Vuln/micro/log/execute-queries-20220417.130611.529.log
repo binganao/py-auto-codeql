@@ -1,0 +1,94 @@
+[2022-04-17 13:06:11] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql
+[2022-04-17 13:06:11] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql
+[2022-04-17 13:06:11] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql"
+                      ]
+[2022-04-17 13:06:11] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:06:11] Creating executor with 1 threads.
+[2022-04-17 13:06:12] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql --format=json
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Found enclosing pack 'CWE-807' at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/.cache.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 resolved OK.
+[2022-04-17 13:06:12] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2022-04-17 13:06:12] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807"
+                        ],
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/.cache"
+                        ],
+                        "relativeName" : "CWE-807/TaintedPermissionsCheck.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory.",
+                        "qlPackName" : "CWE-807"
+                      }
+[2022-04-17 13:06:12] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:12] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:12] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql hashes to 7284d4d3843b14090653921f62efcfb68f5a6847.
+[2022-04-17 13:06:12] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql.
+[2022-04-17 13:06:13] ExternalModuleBindingPass ...
+[2022-04-17 13:06:13] ExternalModuleBindingPass time: 00:00.007
+[2022-04-17 13:06:13] QLPredicateSynthesiser ...
+[2022-04-17 13:06:13] QLPredicateSynthesiser time: 00:00.005
+[2022-04-17 13:06:13] DeclarationBindingPass ...
+[2022-04-17 13:06:13] DeclarationBindingPass time: 00:00.015
+[2022-04-17 13:06:13] Fixed point time ...
+[2022-04-17 13:06:13] Fixed point time time: 00:00.011
+[2022-04-17 13:06:13] ReferenceBindingPass ...
+[2022-04-17 13:06:13] ReferenceBindingPass time: 00:00.001
+[2022-04-17 13:06:13] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:06:13] EntityTypeUpdateBindingPass time: 00:00.001
+[2022-04-17 13:06:13] DeclarationBindingPass ...
+[2022-04-17 13:06:13] DeclarationBindingPass time: 00:00.004
+[2022-04-17 13:06:13] PredicateBodyBindingPass ...
+[2022-04-17 13:06:13] PredicateBodyBindingPass time: 00:00.058
+[2022-04-17 13:06:13] LanguagePragmaPropagationPass ...
+[2022-04-17 13:06:13] LanguagePragmaPropagationPass time: 00:00.001
+[2022-04-17 13:06:13] Ambiguity checks ...
+[2022-04-17 13:06:13] Ambiguity checks time: 00:00.007
+[2022-04-17 13:06:13] Ql checks ...
+[2022-04-17 13:06:13] Ql checks time: 00:00.022
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module semmle.code.java.dataflow.FlowSources. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:16,8-45)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module java. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:15,8-12)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:17,8-16)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type RefType (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:19,32-39)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type RefType (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:23,37-44)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type Top (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:29,48-51)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type Expr (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:30,12-16)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type MethodAccess (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:33,44-56)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type Method (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:35,12-18)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type Expr (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:44,12-16)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type ClassInstanceExpr (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:47,40-57)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type Expr (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:52,12-16)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module TaintTracking. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:55,49-62)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:58,31-39)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve type UserInput (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:58,74-83)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:60,29-37)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:66,3-11)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:66,30-38)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getQualifiedName() cannot be resolved for type TypeShiroSubject.extends (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:20,29-45)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getQualifiedName() cannot be resolved for type TypeShiroWCPermission.extends (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:25,10-26)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getMethod() cannot be resolved for type PermissionsCheckMethodAccess.extends (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:35,32-41)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getArgument(int) cannot be resolved for type PermissionsCheckMethodAccess (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:44,44-55)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getConstructor() cannot be resolved for type WCPermissionConstruction.extends (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:49,10-24)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: getArgument(int) cannot be resolved for type WCPermissionConstruction (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:52,44-55)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: hasFlowPath(<unknown>, <unknown>) cannot be resolved for type TaintedPermissionsCheckFlowConfig (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:68,55-66)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: TypeShiroSubject must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:19,7-23)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: TypeShiroWCPermission must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:23,7-28)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: PermissionsConstruction must declare toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:29,16-39)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: PermissionsCheckMethodAccess must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:33,7-35)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Signature incompatible with signature of overridden method: <unknown> getInput() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:44,17-25)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: WCPermissionConstruction must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:47,7-31)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: Signature incompatible with signature of overridden method: <unknown> getInput() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:52,17-25)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: TaintedPermissionsCheckFlowConfig must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:55,7-40)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: This predicate does not override another predicate (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:58,3-85)
+[2022-04-17 13:06:13] [ERROR] execute queries> ERROR: This predicate does not override another predicate (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-807/TaintedPermissionsCheck.ql:60,3-62,4)
+[2022-04-17 13:06:13] Sequence stamp origin is -6466451340932283820
+[2022-04-17 13:06:13] Pausing evaluation to close the cache at sequence stamp o+0
+[2022-04-17 13:06:13] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:06:13] Unpausing evaluation
+[2022-04-17 13:06:13] Exiting with code 2

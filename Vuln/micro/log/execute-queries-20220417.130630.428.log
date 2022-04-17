@@ -1,0 +1,65 @@
+[2022-04-17 13:06:30] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql
+[2022-04-17 13:06:30] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql
+[2022-04-17 13:06:30] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql"
+                      ]
+[2022-04-17 13:06:30] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:06:30] Creating executor with 1 threads.
+[2022-04-17 13:06:31] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql --format=json
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Found enclosing pack 'CWE-917' at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/.cache.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 resolved OK.
+[2022-04-17 13:06:31] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2022-04-17 13:06:31] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917"
+                        ],
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/.cache"
+                        ],
+                        "relativeName" : "CWE-917/OgnlInjection.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory.",
+                        "qlPackName" : "CWE-917"
+                      }
+[2022-04-17 13:06:31] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql hashes to ecd3375b9a1c2ccd0583ea9a016b885b14dae7eb.
+[2022-04-17 13:06:31] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql.
+[2022-04-17 13:06:31] ExternalModuleBindingPass ...
+[2022-04-17 13:06:31] ExternalModuleBindingPass time: 00:00.005
+[2022-04-17 13:06:31] QLPredicateSynthesiser ...
+[2022-04-17 13:06:31] QLPredicateSynthesiser time: 00:00.002
+[2022-04-17 13:06:31] DeclarationBindingPass ...
+[2022-04-17 13:06:31] DeclarationBindingPass time: 00:00.010
+[2022-04-17 13:06:31] Fixed point time ...
+[2022-04-17 13:06:31] Fixed point time time: 00:00.010
+[2022-04-17 13:06:31] ReferenceBindingPass ...
+[2022-04-17 13:06:31] ReferenceBindingPass time: 00:00.002
+[2022-04-17 13:06:31] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:06:31] EntityTypeUpdateBindingPass time: 00:00.000
+[2022-04-17 13:06:31] DeclarationBindingPass ...
+[2022-04-17 13:06:31] DeclarationBindingPass time: 00:00.004
+[2022-04-17 13:06:31] PredicateBodyBindingPass ...
+[2022-04-17 13:06:31] PredicateBodyBindingPass time: 00:00.004
+[2022-04-17 13:06:31] LanguagePragmaPropagationPass ...
+[2022-04-17 13:06:31] LanguagePragmaPropagationPass time: 00:00.000
+[2022-04-17 13:06:31] Ambiguity checks ...
+[2022-04-17 13:06:31] Ambiguity checks time: 00:00.004
+[2022-04-17 13:06:31] Ql checks ...
+[2022-04-17 13:06:32] Ql checks time: 00:00.046
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve module semmle.code.java.security.OgnlInjectionQuery. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:14,8-52)
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve module java. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:13,8-12)
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:15,8-16)
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:17,6-14)
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:17,33-41)
+[2022-04-17 13:06:32] [ERROR] execute queries> ERROR: Could not resolve type OgnlInjectionFlowConfig (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-917/OgnlInjection.ql:17,58-81)
+[2022-04-17 13:06:32] Sequence stamp origin is -6466451259845547539
+[2022-04-17 13:06:32] Pausing evaluation to close the cache at sequence stamp o+0
+[2022-04-17 13:06:32] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:06:32] Unpausing evaluation
+[2022-04-17 13:06:32] Exiting with code 2

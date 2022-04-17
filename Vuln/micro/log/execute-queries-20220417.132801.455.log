@@ -1,0 +1,180 @@
+[2022-04-17 13:28:01] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql
+[2022-04-17 13:28:01] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql
+[2022-04-17 13:28:01] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql"
+                      ]
+[2022-04-17 13:28:01] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:28:01] Creating executor with 1 threads.
+[2022-04-17 13:28:02] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql --format=json
+[2022-04-17 13:28:02] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql.
+[2022-04-17 13:28:02] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:28:02] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:28:02] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:28:03] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:28:03] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:28:03] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-113/ResponseSplitting.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:28:03] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql.
+[2022-04-17 13:28:03] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql.
+[2022-04-17 13:28:03] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql hashes to db64942502c6fc7729141d4ebf5f3d52d68507d3.
+[2022-04-17 13:28:03] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql.
+[2022-04-17 13:28:04] ExternalModuleBindingPass ...
+[2022-04-17 13:28:05] ExternalModuleBindingPass time: 00:01.379
+[2022-04-17 13:28:05] QLPredicateSynthesiser ...
+[2022-04-17 13:28:05] QLPredicateSynthesiser time: 00:00.022
+[2022-04-17 13:28:05] DeclarationBindingPass ...
+[2022-04-17 13:28:05] DeclarationBindingPass time: 00:00.102
+[2022-04-17 13:28:05] Fixed point time ...
+[2022-04-17 13:28:06] Fixed point time time: 00:00.298
+[2022-04-17 13:28:06] ReferenceBindingPass ...
+[2022-04-17 13:28:06] ReferenceBindingPass time: 00:00.092
+[2022-04-17 13:28:06] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:28:06] EntityTypeUpdateBindingPass time: 00:00.064
+[2022-04-17 13:28:06] DeclarationBindingPass ...
+[2022-04-17 13:28:06] DeclarationBindingPass time: 00:00.034
+[2022-04-17 13:28:06] PredicateBodyBindingPass ...
+[2022-04-17 13:28:06] PredicateBodyBindingPass time: 00:00.471
+[2022-04-17 13:28:06] LanguagePragmaPropagationPass ...
+[2022-04-17 13:28:06] LanguagePragmaPropagationPass time: 00:00.053
+[2022-04-17 13:28:06] Ambiguity checks ...
+[2022-04-17 13:28:06] Ambiguity checks time: 00:00.068
+[2022-04-17 13:28:06] Ql checks ...
+[2022-04-17 13:28:07] Ql checks time: 00:00.745
+[2022-04-17 13:28:10] Compilation pipeline
+[2022-04-17 13:28:10] Type Inference ...
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 13:28:10] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,762,1188
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:11] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:28:13] Type Inference time: 00:02.557
+[2022-04-17 13:28:13] Binding Checks ...
+[2022-04-17 13:28:13] Binding Checks time: 00:00.312
+[2022-04-17 13:28:14] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-113/ResponseSplitting.ql.
+[2022-04-17 13:28:14] Processing compilation pipeline
+[2022-04-17 13:28:14] Started compiling a query
+[2022-04-17 13:28:14] Initialising compiler...
+[2022-04-17 13:28:14] 	 ... compiler initialised
+[2022-04-17 13:28:14] About to start query optimisation
+[2022-04-17 13:28:15] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:15] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:16] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:16] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:16] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:16] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:16] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:17] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:18] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:18] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:18] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:18] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:18] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:19] Compilation cache hit - skipping compilation.
+[2022-04-17 13:28:19] Compilation cache miss for 080a8020210f85dba0458af6262ffabfa935bf7f.

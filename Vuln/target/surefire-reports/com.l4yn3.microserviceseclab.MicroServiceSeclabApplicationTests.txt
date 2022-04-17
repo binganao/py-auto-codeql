@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.l4yn3.microserviceseclab.MicroServiceSeclabApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.83 s - in com.l4yn3.microserviceseclab.MicroServiceSeclabApplicationTests

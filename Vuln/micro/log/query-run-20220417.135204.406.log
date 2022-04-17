@@ -1,0 +1,11 @@
+[2022-04-17 13:52:04] This is codeql query run -d ./Vuln/micro/ ./Security/CWE/CWE-918/RequestForgery.ql
+[2022-04-17 13:52:04] Log file was started late.
+[2022-04-17 13:52:04] Calling plumbing command: codeql resolve ram --format=json
+[2022-04-17 13:52:04] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx2048M",
+                        "--off-heap-ram=2048"
+                      ]
+[2022-04-17 13:52:04] Spawning plumbing command: execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-918/RequestForgery.ql
+[2022-04-17 13:52:50] Plumbing command codeql execute queries terminated with status 0.
+[2022-04-17 13:52:50] Exiting with code 0

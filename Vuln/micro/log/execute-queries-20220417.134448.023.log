@@ -1,0 +1,1034 @@
+[2022-04-17 13:44:48] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql
+[2022-04-17 13:44:48] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql
+[2022-04-17 13:44:48] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql"
+                      ]
+[2022-04-17 13:44:48] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:44:48] Creating executor with 1 threads.
+[2022-04-17 13:44:48] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql --format=json
+[2022-04-17 13:44:48] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:44:48] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:44:48] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:44:48] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:44:49] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:44:49] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:44:49] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-094/GroovyInjection.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:44:49] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:44:49] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:44:50] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql hashes to ecaa96f9b5a64305c92f6856931eea69c051fc91.
+[2022-04-17 13:44:50] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:44:50] ExternalModuleBindingPass ...
+[2022-04-17 13:44:51] ExternalModuleBindingPass time: 00:01.168
+[2022-04-17 13:44:51] QLPredicateSynthesiser ...
+[2022-04-17 13:44:51] QLPredicateSynthesiser time: 00:00.026
+[2022-04-17 13:44:51] DeclarationBindingPass ...
+[2022-04-17 13:44:51] DeclarationBindingPass time: 00:00.172
+[2022-04-17 13:44:51] Fixed point time ...
+[2022-04-17 13:44:52] Fixed point time time: 00:00.315
+[2022-04-17 13:44:52] ReferenceBindingPass ...
+[2022-04-17 13:44:52] ReferenceBindingPass time: 00:00.045
+[2022-04-17 13:44:52] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:44:52] EntityTypeUpdateBindingPass time: 00:00.050
+[2022-04-17 13:44:52] DeclarationBindingPass ...
+[2022-04-17 13:44:52] DeclarationBindingPass time: 00:00.030
+[2022-04-17 13:44:52] PredicateBodyBindingPass ...
+[2022-04-17 13:44:52] PredicateBodyBindingPass time: 00:00.451
+[2022-04-17 13:44:52] LanguagePragmaPropagationPass ...
+[2022-04-17 13:44:52] LanguagePragmaPropagationPass time: 00:00.035
+[2022-04-17 13:44:52] Ambiguity checks ...
+[2022-04-17 13:44:52] Ambiguity checks time: 00:00.070
+[2022-04-17 13:44:52] Ql checks ...
+[2022-04-17 13:44:53] Ql checks time: 00:00.626
+[2022-04-17 13:44:55] Compilation pipeline
+[2022-04-17 13:44:55] Type Inference ...
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 13:44:55] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,762,1188
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:44:57] Type Inference time: 00:02.289
+[2022-04-17 13:44:57] Binding Checks ...
+[2022-04-17 13:44:58] Binding Checks time: 00:00.353
+[2022-04-17 13:44:59] [WARN] execute queries> WARNING: A path-problem query must select at least 4 columns. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql:17,1-19,47)
+[2022-04-17 13:44:59] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:44:59] Processing compilation pipeline
+[2022-04-17 13:44:59] Started compiling a query
+[2022-04-17 13:44:59] Initialising compiler...
+[2022-04-17 13:44:59] 	 ... compiler initialised
+[2022-04-17 13:44:59] About to start query optimisation
+[2022-04-17 13:45:00] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:00] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:00] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:01] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:01] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:01] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:01] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:01] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:02] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:03] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:03] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:03] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:03] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:03] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:04] Compilation cache hit - skipping compilation.
+[2022-04-17 13:45:04] Compilation cache miss for 35d84f8a30a0003a30a3cbe2fcdc3b13513f6c9a.
+[2022-04-17 13:45:18] Stored compiled program for 35d84f8a30a0003a30a3cbe2fcdc3b13513f6c9a.
+[2022-04-17 13:45:18] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 13:45:18] CSV_COMPILATION: 3129,2242,1767,11483
+[2022-04-17 13:45:18] [PROGRESS] execute queries> [1/1 comp 28.9s] Compiled /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:45:18] Of 5609 predicates, 0 are used in more than one query.
+[2022-04-17 13:45:18] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-094/GroovyInjection.ql.
+[2022-04-17 13:45:18] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql
+[2022-04-17 13:45:18] (0s) Start query execution
+[2022-04-17 13:45:18] (0s) Beginning execution of Member::overridesIgnoringAccess#ffff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Member::overridesIgnoringAccess#ffff (GroovyInjection.ql),0.057,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Member::overridesIgnoringAccess#ffff,GroovyInjection.ql,1,Success,0.057,5291,70
+[2022-04-17 13:45:18] (0s) Beginning execution of Type::erase#ff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Type::erase#ff (GroovyInjection.ql),0.003,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Type::erase#ff,GroovyInjection.ql,2,Success,0.003,6439,75
+[2022-04-17 13:45:18] (0s) Beginning execution of Location::Top::toString_dispred#ff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Location::Top::toString_dispred#ff (GroovyInjection.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Location::Top::toString_dispred#ff,GroovyInjection.ql,3,Success,0.002,64877,78
+[2022-04-17 13:45:18] (0s) Beginning execution of ExternalFlow::paramsString#ff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: ExternalFlow::paramsString#ff (GroovyInjection.ql),0.005,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,ExternalFlow::paramsString#ff,GroovyInjection.ql,4,Success,0.005,22462,87
+[2022-04-17 13:45:18] (0s) Beginning execution of Type::hasSubtype#ff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Type::hasSubtype#ff (GroovyInjection.ql),0.006,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Type::hasSubtype#ff,GroovyInjection.ql,5,Success,0.006,16080,94
+[2022-04-17 13:45:18] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (GroovyInjection.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,GroovyInjection.ql,6,Success,0.002,38891,108
+[2022-04-17 13:45:18] (0s) Beginning execution of Annotation::Annotatable::getAnAnnotation_dispred#ff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Annotation::Annotatable::getAnAnnotation_dispred#ff (GroovyInjection.ql),0.008,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Annotation::Annotatable::getAnAnnotation_dispred#ff,GroovyInjection.ql,7,Success,0.008,2208,121
+[2022-04-17 13:45:18] (0s) Beginning execution of Type::RefType::hasMethod_dispred#ffff
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: Type::RefType::hasMethod_dispred#ffff (GroovyInjection.ql),0.003,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,Type::RefType::hasMethod_dispred#ffff,GroovyInjection.ql,8,Success,0.003,103353,125
+[2022-04-17 13:45:18] (0s) Beginning execution of InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f
+[2022-04-17 13:45:18] (0s) Inferred that InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/2@be64b0dd is empty, due to InstanceAccess::TInstanceAccessQualifier#fffff/5@6adb87n1.
+[2022-04-17 13:45:18] (0s) Inferred that project#InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/1@192687j0 is empty, due to InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/2@be64b0dd.
+[2022-04-17 13:45:18] (0s) Inferred that InstanceAccess::InstanceAccessExt::ppBase_dispred#ff#join_rhs/3@74ba12kd is empty, due to InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/2@be64b0dd.
+[2022-04-17 13:45:18] (0s) Inferred that InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff_10#join_rhs/2@6af9879e is empty, due to InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/2@be64b0dd.
+[2022-04-17 13:45:18] (0s)  >>> Created relation InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/2@be64b0dd with 0 rows.
+[2022-04-17 13:45:18] (0s)  >>> Created relation InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff_10#join_rhs/2@6af9879e with 0 rows.
+[2022-04-17 13:45:18] (0s)  >>> Created relation InstanceAccess::InstanceAccessExt::ppBase_dispred#ff#join_rhs/3@74ba12kd with 0 rows.
+[2022-04-17 13:45:18] (0s)  >>> Created relation project#InstanceAccess::EnclosingInstanceAccess::getQualifier_dispred#ff/1@192687j0 with 0 rows.
+[2022-04-17 13:45:18] CSV_CACHE_DIFF: InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f (GroovyInjection.ql),0.021,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:18] CSV_IMB_QUERIES: Stage,InstanceAccess::TExplicitInstanceAccess#ff InstanceAccess::TThisQualifier#ff InstanceAccess::TThisArgument#ff InstanceAccess::TThisEnclosingInstanceCapture#ff InstanceAccess::TEnclosingInstanceAccess#fff InstanceAccess::TInstanceAccessQualifier#fffff InstanceAccess::TInstanceAccessExt#f,GroovyInjection.ql,9,Success,0.021,84,148
+[2022-04-17 13:45:18] (0s) Beginning execution of BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff (GroovyInjection.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,BaseSSA::BaseSsaSourceVariable::getAnAccess_dispred#ff,GroovyInjection.ql,10,Success,0.001,114,150
+[2022-04-17 13:45:19] (0s) Beginning execution of ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff (GroovyInjection.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,ControlFlowGraph::ControlFlowGraphImpl::branchSuccessor#fff ControlFlowGraph::ControlFlowGraphImpl::succ#fff,GroovyInjection.ql,11,Success,0.002,893,153
+[2022-04-17 13:45:19] (0s) Beginning execution of BasicBlocks::BasicBlock::getNode_dispred#fff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::getNode_dispred#fff (GroovyInjection.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::getNode_dispred#fff,GroovyInjection.ql,12,Success,0,994,153
+[2022-04-17 13:45:19] (0s) Beginning execution of BasicBlocks::BasicBlock::length_dispred#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::length_dispred#ff (GroovyInjection.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::length_dispred#ff,GroovyInjection.ql,13,Success,0.001,265,155
+[2022-04-17 13:45:19] (0s) Beginning execution of BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff (GroovyInjection.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,BasicBlocks::BasicBlock::getABBSuccessor_dispred#ff,GroovyInjection.ql,14,Success,0.001,132,157
+[2022-04-17 13:45:19] (0s) Beginning execution of Dominance::bbIDominates#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: Dominance::bbIDominates#ff (GroovyInjection.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,Dominance::bbIDominates#ff,GroovyInjection.ql,15,Success,0,80,157
+[2022-04-17 13:45:19] (0s) Beginning execution of BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff
+[2022-04-17 13:45:19] (0s) Inferred that project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k is empty, due to BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff/3@1d86206t.
+[2022-04-17 13:45:19] (0s) Inferred that project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5 is empty, due to project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k.
+[2022-04-17 13:45:19] (0s) Inferred that BaseSSA::BaseSsaImplicitInit::captures_dispred#ff/2@05448be9 is empty, due to project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@7832e77k with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@5ffbd2l5 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation BaseSSA::BaseSsaImplicitInit::captures_dispred#ff/2@05448be9 with 0 rows.
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff (GroovyInjection.ql),0.009,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,BaseSSA::SsaImpl::firstUse#ff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff BaseSSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff BaseSSA::SsaImpl::hasEntryDef#ff BaseSSA::SsaImpl::getDestVar#ff BaseSSA::SsaImpl::variableUpdate#ffff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUseSameVar#ff BaseSSA::SsaImpl::SsaPublic::baseSsaAdjacentUseUse#ff BaseSSA::SsaImpl::phiNode#ff,GroovyInjection.ql,16,Success,0.009,467,167
+[2022-04-17 13:45:19] (0s) Beginning execution of SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff
+[2022-04-17 13:45:19] (0s) Inferred that SSA::SsaSourceField::isVolatile#f#join_rhs/2@5b70a8g7 is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:45:19] (0s) Inferred that SSA::TQualifiedField#ffff_13#join_rhs/2@a4f5c8bl is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:45:19] (0s) Inferred that SSA::SsaImpl::certainVariableUpdate#ffff#join_rhs/2@3e125186 is empty, due to SSA::TQualifiedField#ffff/4@785271lm.
+[2022-04-17 13:45:19] (0s)  >>> Created relation SSA::SsaSourceField::isVolatile#f#join_rhs/2@5b70a8g7 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation SSA::TQualifiedField#ffff_13#join_rhs/2@a4f5c8bl with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation SSA::SsaImpl::certainVariableUpdate#ffff#join_rhs/2@3e125186 with 0 rows.
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff (GroovyInjection.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,SSA::TLocalVar#fff SSA::TPlainField#fff SSA::TEnclosingField#ffff SSA::TQualifiedField#ffff SSA::TSsaSourceVariable#f SSA::SsaSourceVariable::getAnAccess_dispred#ff,GroovyInjection.ql,17,Success,0.002,43698,170
+[2022-04-17 13:45:19] (0s) Beginning execution of SSA::TrackedVariablesImpl::trackField#f
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: SSA::TrackedVariablesImpl::trackField#f (GroovyInjection.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,SSA::TrackedVariablesImpl::trackField#f,GroovyInjection.ql,18,Success,0.001,1,171
+[2022-04-17 13:45:19] (0s) Beginning execution of Expr::CompileTimeConstantExpr::getIntValue_dispred#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: Expr::CompileTimeConstantExpr::getIntValue_dispred#ff (GroovyInjection.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,Expr::CompileTimeConstantExpr::getIntValue_dispred#ff,GroovyInjection.ql,19,Success,0,2,172
+[2022-04-17 13:45:19] (0s) Beginning execution of Dependency::usesType#ff
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: Dependency::usesType#ff (GroovyInjection.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,Dependency::usesType#ff,GroovyInjection.ql,20,Success,0,7444,174
+[2022-04-17 13:45:19] (0s) Beginning execution of DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::TSpecificLocalCall#ff_10#join_rhs/2@07adcbn0 is empty, due to DataFlowImplCommon::Cached::TSpecificLocalCall#ff/2@3de3f6u8.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#antijoin_rhs/6@5631ebu1 is empty, due to DataFlowImplCommon::Cached::TSpecificLocalCall#ff_10#join_rhs/2@07adcbn0.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#antijoin_rhs#1/6@212521vc is empty, due to DataFlowImplCommon::Cached::TSpecificLocalCall#ff_10#join_rhs/2@07adcbn0.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::TSpecificLocalCall#ff_10#join_rhs/2@07adcbn0 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#antijoin_rhs/6@5631ebu1 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#antijoin_rhs#1/6@212521vc with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff_021#join_rhs/3@885af8mo is empty, due to DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff/3@db3e6ft8.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff_021#join_rhs/3@885af8mo with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::TReturn#fff_2#join_rhs/1@6b8c47cn is empty, due to DataFlowImplCommon::Cached::TReturn#fff/3@c762b82e.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::TReturn#fff_201#join_rhs/3@88a21crb is empty, due to DataFlowImplCommon::Cached::TReturn#fff/3@c762b82e.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::TReturn#fff_2#join_rhs/1@6b8c47cn with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::TReturn#fff_201#join_rhs/3@88a21crb with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::relevantLocalCCtx#ff/2@b36c4f72 is empty, due to DataFlowImplCommon::Cached::isUnreachableInCallCached#ff/2@a63aed5n.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::getLocalCallContext#fff#antijoin_rhs/2@547c2coe is empty, due to DataFlowImplCommon::relevantLocalCCtx#ff/2@b36c4f72.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::relevantLocalCCtx#ff/2@b36c4f72 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::getLocalCallContext#fff#antijoin_rhs/2@547c2coe with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff_02#join_rhs/2@7fc693u9 is empty, due to DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff/3@8973457k.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff_02#join_rhs/2@7fc693u9 with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that DataFlowImplCommon::Cached::TSpecificCall#ff_10#join_rhs/2@cf7e8eod is empty, due to DataFlowImplCommon::Cached::TSpecificCall#ff/2@e973c3pr.
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::Cached::TSpecificCall#ff_10#join_rhs/2@cf7e8eod with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that FlowSources::AndroidContentProviderInput#ff/2@2f654d3b is empty, due to ExternalFlow::Cached::sourceNode#ff/2@cffc33fq.
+[2022-04-17 13:45:19] (0s) Inferred that ExternalFlow::Cached::sourceNode#ff_10#join_rhs/2@020d05lb is empty, due to ExternalFlow::Cached::sourceNode#ff/2@cffc33fq.
+[2022-04-17 13:45:19] (0s)  >>> Created relation FlowSources::AndroidContentProviderInput#ff/2@2f654d3b with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation ExternalFlow::Cached::sourceNode#ff_10#join_rhs/2@020d05lb with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that project#DataFlowImplCommon::Cached::viableCallableLambda/2@e92b062k is empty, due to DataFlowImplCommon::Cached::viableCallableLambda#fff/3@9f6f94l8.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#DataFlowImplCommon::Cached::viableCallableLambda/2@e92b062k with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@5dee40m5 is empty, due to SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff/3@5a038doi.
+[2022-04-17 13:45:19] (0s) Inferred that project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@b3f9c3vm is empty, due to project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@5dee40m5.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture/2@5dee40m5 with 0 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture_10#join_rhs/2@b3f9c3vm with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef/2@059a988u is empty, due to SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff/3@46449ecu.
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef/2@059a988u with 0 rows.
+[2022-04-17 13:45:19] (0s) Inferred that SSA::TSsaPhiNode#fff_2#antijoin_rhs/1@9b57630g is empty, due to SSA::TSsaPhiNode#fff/3@e4ffddvj.
+[2022-04-17 13:45:19] (0s)  >>> Created relation SSA::TSsaPhiNode#fff_2#antijoin_rhs/1@9b57630g with 0 rows.
+[2022-04-17 13:45:19] CSV_CACHE_DIFF: DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff (GroovyInjection.ql),0.087,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:45:19] CSV_IMB_QUERIES: Stage,DataFlowImplCommon::Cached::TReturnPosition#f DataFlowImplCommon::Cached::TTypedContent#f DataFlowImplCommon::Cached::TDataFlowCallOption#f TaintTrackingUtil::Cached::localTaintStep#ff DataFlowImplCommon::Cached::hiddenNode#f DataFlowImplCommon::Cached::clearsContentCached#ff DataFlowImplCommon::Cached::TAnyLocalCall#f DataFlowImplCommon::Cached::TLocalFlowCallContext#f DataFlowImplCommon::Cached::TSpecificLocalCall#ff DataFlowImplCommon::Cached::TAccessPathFront#f DataFlowImplCommon::Cached::TFrontNil#ff DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContextReverse#fff DataFlowImplCommon::Cached::allowParameterReturnInSelfCached#f DataFlowImplCommon::Cached::DispatchWithCallContext::prunedViableImplInCallContext#fff DataFlowImplCommon::Cached::TBooleanSome#ff DataFlowImplCommon::Cached::TBooleanOption#f DataFlowImplCommon::Cached::TBooleanNone#f DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInReturn#ff DataFlowImplCommon::Cached::TReturn#fff DataFlowImplCommon::Cached::TSomeCall#f DataFlowImplCommon::Cached::isUnreachableInCallCached#ff DataFlowImplCommon::Cached::recordDataFlowCallSiteUnreachable#ff DataFlowImplCommon::Cached::TDataFlowCallSome#ff DataFlowImplCommon::Cached::callEnclosingCallable#ff DataFlowImplCommon::Cached::DispatchWithCallContext::reducedViableImplInCallContext#fff DataFlowImplCommon::Cached::recordDataFlowCallSiteDispatch#ff DataFlowImplCommon::Cached::TSpecificCall#ff DataFlowImplCommon::Cached::TAnyCallContext#f DataFlowImplCommon::Cached::TCallContext#f DataFlowImplCommon::Cached::viableReturnPosOut#fff DataFlowImplCommon::Cached::TReturnPosition0#fff DataFlowImplCommon::Cached::store#2#ffff DataFlowImplCommon::Cached::jumpStepCached#ff DataFlowImplCommon::Cached::simpleLocalFlowStepExt#ff SignAnalysisCommon::exprSign#ff ModulusAnalysis::exprModulus#ffff RangeAnalysis::RangeAnalysisCache::possibleReason#f RangeAnalysis::RangeAnalysisCache::RangeAnalysisPublic::bounded#fffff GuardsLogic::implies_v3#ffff DataFlowImplCommon::Cached::getAnOutNodeExt#fff DataFlowImplCommon::Cached::nodeEnclosingCallable#ff DataFlowImplCommon::Cached::TReturnKindExt#f DataFlowImplCommon::Cached::TParamUpdate#ff DataFlowImplCommon::Cached::outNodeExt#f DataFlowImplCommon::Cached::castNode#f DataFlowImplCommon::Cached::castingNode#f DataFlowImplCommon::Cached::TValueReturn#ff DataFlowImplCommon::Cached::returnNodeExt#ff DataFlowImplCommon::Cached::argumentNode#fff ExternalFlow::Cached::sinkNode#ff ExternalFlow::Cached::sourceNode#ff TaintTrackingUtil::Cached::localAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultAdditionalTaintStep#ff TaintTrackingUtil::Cached::defaultTaintSanitizer#f TaintTrackingUtil::Cached::forceCachingInSameStage# DataFlowUtil::simpleLocalFlowStep#ff DataFlowImplCommon::Cached::TDataFlowCallNone#f DataFlowImplCommon::Cached::viableCallableLambda#fff DataFlowImplCommon::Cached::viableParamArg#fff SSA::SsaImpl::firstUse#ff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUse#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesCapture#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesUncertainDef#fff SSA::SsaImpl::SsaDefReaches::ssaDefReachesEndOfBlock#fff SSA::TSsaUncertainUpdate#fffff SSA::TSsaCertainUpdate#fffff SSA::SsaImpl::relevantFieldUpdate#fff SSA::SsaImpl::updatesNamedField#fff SSA::SsaImpl::uncertainVariableUpdate#ffff SSA::SsaImpl::getDestVar#ff SSA::SsaImpl::certainVariableUpdate#ffff SSA::SsaImpl::phiNode#ff SSA::TSsaPhiNode#fff SSA::SsaImpl::SsaPublic::adjacentUseUseSameVar#ff SSA::SsaImpl::SsaPublic::adjacentUseUse#ff SSA::SsaImpl::hasEntryDef#ff SSA::TSsaEntryDef#fff SSA::TSsaUntracked#fff SSA::TSsaVariable#f DataFlowImplCommon::Cached::read#fff VirtualDispatch::Dispatch::viableImpl#ff VirtualDispatch::Dispatch::viableImpl_v3#ff VirtualDispatch::Dispatch::viableImpl_v2#ff VirtualDispatch::Dispatch::exactMethodImpl#fff VirtualDispatch::Dispatch::viableMethodImpl#ffff VirtualDispatch::Dispatch::viableImpl_v1#ff TypeFlow::TypeFlowBounds::fieldTypeFlow#fff TypeFlow::TypeFlowBounds::exprTypeFlow#fff DataFlowImplCommon::Cached::nodeDataFlowType#ff DataFlowImplCommon::Cached::parameterNode#fff DataFlowImplCommon::Cached::MkTypedContent#fff DataFlowImplCommon::Cached::TFrontHead#ff DataFlowImplCommon::Cached::TAccessPathFrontOption#f DataFlowImplCommon::Cached::TAccessPathFrontNone#f DataFlowImplCommon::Cached::TAccessPathFrontSome#ff DataFlowImplCommon::Cached::forceCachingInSameStage# DataFlowNodes::TNode#f DataFlowNodes::TExplicitParameterNode#ff DataFlowNodes::TImplicitVarargsArray#ff DataFlowNodes::TInstanceParameterNode#ff DataFlowNodes::TImplicitInstanceAccess#ff DataFlowNodes::TMallocNode#ff DataFlowNodes::TExplicitExprPostUpdate#ff DataFlowNodes::TImplicitExprPostUpdate#ff DataFlowNodes::TSummaryInternalNode#fff DataFlowNodes::TFieldValueNode#ff DataFlowNodes::TExprNode#ff,GroovyInjection.ql,21,Success,0.087,122983,262
+[2022-04-17 13:45:19] (0s) Beginning execution of GroovyInjection.ql
+[2022-04-17 13:45:19] (0s)  >>> Created relation classes/4@821293v7 with 1748 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate classes_0#antijoin_rhs/1@52efea8j
+[2022-04-17 13:45:19] (0s)  >>> Created relation classes_0#antijoin_rhs/1@52efea8j with 1748 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation interfaces/4@64928d95 with 3196 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate interfaces_0#antijoin_rhs/1@13b98c8j
+[2022-04-17 13:45:19] (0s)  >>> Created relation interfaces_0#antijoin_rhs/1@13b98c8j with 3196 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate @classorinterface#f/1@c1053d1t
+[2022-04-17 13:45:19] (0s)  >>> Created relation @classorinterface#f/1@c1053d1t with 4944 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation wildcards/3@962bcerh with 331 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate wildcards_0#antijoin_rhs/1@216b66l8
+[2022-04-17 13:45:19] (0s)  >>> Created relation wildcards_0#antijoin_rhs/1@216b66l8 with 331 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation typeVars/5@f6f131jt with 844 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate @boundedtype#f/1@cf7f2bcg
+[2022-04-17 13:45:19] (0s)  >>> Created relation @boundedtype#f/1@cf7f2bcg with 1175 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation arrays/5@3a5ff15c with 310 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate @reftype#f/1@3b6467tp
+[2022-04-17 13:45:19] (0s)  >>> Created relation @reftype#f/1@3b6467tp with 6429 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TAccessPathNil#ff/2@6bfd985j
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TAccessPathNil#ff/2@6bfd985j with 6429 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TAccessPathNil#ff_1#join_rhs/1@e1f0besb
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TAccessPathNil#ff_1#join_rhs/1@e1f0besb with 6429 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TNil#ff/2@aacfd4cv
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TNil#ff/2@aacfd4cv with 6429 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TAccessPathNil#ff_10#join_rhs/2@4c8066sj
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TAccessPathNil#ff_10#join_rhs/2@4c8066sj with 6429 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate dom#DataFlowImplCommon::Cached::TBooleanSome#f#join_rhs#1/1@e94d07ta
+[2022-04-17 13:45:19] (0s)  >>> Created relation dom#DataFlowImplCommon::Cached::TBooleanSome#f#join_rhs#1/1@e94d07ta with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate dom#Expr::Qualifier::TThis#/0@f34704u1
+[2022-04-17 13:45:19] (0s)  >>> Created relation dom#Expr::Qualifier::TThis#/0@f34704u1 with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowUtil::TArrayContent#f/1@06a9e1uq
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowUtil::TArrayContent#f/1@06a9e1uq with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowUtil::TCollectionContent#f/1@428c4ffh
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowUtil::TCollectionContent#f/1@428c4ffh with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowPrivate::forceHighPrecision#f/1@91e001sf
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowPrivate::forceHighPrecision#f/1@91e001sf with 2 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowImplCommon::TypedContent::forceHighPrecision_dispred#f/1@aa1c0cjj
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::TypedContent::forceHighPrecision_dispred#f/1@aa1c0cjj with 263 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowImpl::LocalFlowBigStep::localFlowExit#ff#join_rhs/1@14af03dv
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImpl::LocalFlowBigStep::localFlowExit#ff#join_rhs/1@14af03dv with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowImplCommon::CallContextCall#class#f/1@356980c4
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::CallContextCall#class#f/1@356980c4 with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TNodeNormal#ff/2@3e8241e6
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TNodeNormal#ff/2@3e8241e6 with 12842 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TNodeNormal#ff_10#join_rhs/2@b6e27epn
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TNodeNormal#ff_10#join_rhs/2@b6e27epn with 12842 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowImplCommon::CallContextNoCall#class#f/1@b6eefajm
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImplCommon::CallContextNoCall#class#f/1@b6eefajm with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TNil#ff_1#join_rhs/1@096191s3
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TNil#ff_1#join_rhs/1@096191s3 with 6429 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation params/5@32e25at0 with 21675 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate project#params/1@18f8e7rp
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#params/1@18f8e7rp with 20 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowDispatch::DispatchImpl::parameterPosition#f/1@222be71a
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowDispatch::DispatchImpl::parameterPosition#f/1@222be71a with 21 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate project#DataFlowImplCommon::Cached::argumentNode/1@482b5aa6
+[2022-04-17 13:45:19] (0s)  >>> Created relation project#DataFlowImplCommon::Cached::argumentNode/1@482b5aa6 with 334 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowImpl::pathIntoArg#fffffff#join_rhs/3@c91275sg
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowImpl::pathIntoArg#fffffff#join_rhs/3@c91275sg with 334 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowImpl::TSummaryCtxNone#f/1@69132ccm
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowImpl::TSummaryCtxNone#f/1@69132ccm with 1 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@348c8e6n
+[2022-04-17 13:45:19] (0s)  >>> Created relation exprs_10#join_rhs/2@348c8e6n with 3830 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate @annotation#f/1@f19e16h7
+[2022-04-17 13:45:19] (0s)  >>> Created relation @annotation#f/1@f19e16h7 with 2208 rows.
+[2022-04-17 13:45:19] (0s)  >>> Created relation isAnnotType/1@ba9a67ar with 71 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate Annotation::Annotation::getType_dispred#ff/2@c04949iv
+[2022-04-17 13:45:19] (0s)  >>> Created relation Annotation::Annotation::getType_dispred#ff/2@c04949iv with 2184 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate Expr::Expr::getType_dispred#ff/2@05999d79
+[2022-04-17 13:45:19] (0s)  >>> Created relation Expr::Expr::getType_dispred#ff/2@05999d79 with 3806 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowNodes::Public::Node::getType#ff/2@6c9373im
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowNodes::Public::Node::getType#ff/2@6c9373im with 1859 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowNodes::Public::Node::getType#ff_10#join_rhs/2@e886dflv
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowNodes::Public::Node::getType#ff_10#join_rhs/2@e886dflv with 1859 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate num#DataFlowUtil::TMapValueContent#f/1@1bcca32m
+[2022-04-17 13:45:19] (0s)  >>> Created relation num#DataFlowUtil::TMapValueContent#f/1@1bcca32m with 1 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate DataFlowNodes::TExprNode#ff_10#join_rhs/2@7457d9jl
+[2022-04-17 13:45:19] (0s)  >>> Created relation DataFlowNodes::TExprNode#ff_10#join_rhs/2@7457d9jl with 637 rows.
+[2022-04-17 13:45:19] (0s) Starting to evaluate predicate exprs_30124#join_rhs/5@e50ac3u3
+[2022-04-17 13:45:19] (1s)  >>> Created relation exprs_30124#join_rhs/5@e50ac3u3 with 3830 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::Expr_not_Annotation_ArrayAccess_ArrayCreationExpr_ArrayInit_ArrayTypeAccess_Assignment_BinaryExpr_BitNotExpr_CastExpr_ClassInstanceExpr_ConditionalExpr_InstanceOfExpr_IntersectionTypeAccess_Literal_LocalVariableDeclExpr_LogNotExpr_MethodAccess_MinusExpr_PackageAccess_PlusExpr_PostDecExpr_PostIncExpr_PreDecExpr_PreIncExpr_SuperAccess_SwitchExpr_ThisAccess_TypeAccess_TypeLiteral_UnionTypeAccess_VarAccess_WildcardTypeAccess#f#antijoin_rhs#11/1@45b46fga
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::Expr_not_Annotation_ArrayAccess_ArrayCreationExpr_ArrayInit_ArrayTypeAccess_Assignment_BinaryExpr_BitNotExpr_CastExpr_ClassInstanceExpr_ConditionalExpr_InstanceOfExpr_IntersectionTypeAccess_Literal_LocalVariableDeclExpr_LogNotExpr_MethodAccess_MinusExpr_PackageAccess_PlusExpr_PostDecExpr_PostIncExpr_PreDecExpr_PreIncExpr_SuperAccess_SwitchExpr_ThisAccess_TypeAccess_TypeLiteral_UnionTypeAccess_VarAccess_WildcardTypeAccess#f#antijoin_rhs#11/1@45b46fga with 101 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate exprs_340#join_rhs/3@3df914ar
+[2022-04-17 13:45:19] (1s)  >>> Created relation exprs_340#join_rhs/3@3df914ar with 3830 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::MethodAccess::getQualifier_dispred#ff/2@2fa946f5
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::MethodAccess::getQualifier_dispred#ff/2@2fa946f5 with 101 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::ClassInstanceExpr#class#f/1@48a9c731
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::ClassInstanceExpr#class#f/1@48a9c731 with 22 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation stmts/5@0f812bj4 with 228 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate stmts_10#join_rhs/2@fa7205g2
+[2022-04-17 13:45:19] (1s)  >>> Created relation stmts_10#join_rhs/2@fa7205g2 with 228 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::Call::getQualifier_dispred#ff/2@1a36f8gr
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::Call::getQualifier_dispred#ff/2@1a36f8gr with 101 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::MethodAccess::getAnArgument_dispred#ff#shared/5@767714i3
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::MethodAccess::getAnArgument_dispred#ff#shared/5@767714i3 with 84 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::MethodAccess::getArgument_dispred#fff/3@7e6a82ma
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::MethodAccess::getArgument_dispred#fff/3@7e6a82ma with 84 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::ClassInstanceExpr::getAnArgument_dispred#ff/2@044f3485
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::ClassInstanceExpr::getAnArgument_dispred#ff/2@044f3485 with 11 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::ClassInstanceExpr::getArgument_dispred#fff/3@ff3051pv
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::ClassInstanceExpr::getArgument_dispred#fff/3@ff3051pv with 11 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Statement::Stmt_not_AssertStmt_BlockStmt_BreakStmt_CatchClause_ConstCase_ContinueStmt_DefaultCase_DoStmt_EmptyStmt_EnhancedForStmt_ExprStmt_ForStmt_IfStmt_LabeledStmt_LocalTypeDeclStmt_LocalVariableDeclStmt_ReturnStmt_SuperConstructorInvocationStmt_SwitchStmt_SynchronizedStmt_ThisConstructorInvocationStmt_ThrowStmt_TryStmt_WhileStmt_YieldStmt#f#antijoin_rhs#18/1@0c8d6a5o
+[2022-04-17 13:45:19] (1s)  >>> Created relation Statement::Stmt_not_AssertStmt_BlockStmt_BreakStmt_CatchClause_ConstCase_ContinueStmt_DefaultCase_DoStmt_EmptyStmt_EnhancedForStmt_ExprStmt_ForStmt_IfStmt_LabeledStmt_LocalTypeDeclStmt_LocalVariableDeclStmt_ReturnStmt_SuperConstructorInvocationStmt_SwitchStmt_SynchronizedStmt_ThisConstructorInvocationStmt_ThrowStmt_TryStmt_WhileStmt_YieldStmt#f#antijoin_rhs#18/1@0c8d6a5o with 0 rows.
+[2022-04-17 13:45:19] (1s) Inferred that Statement::ThisConstructorInvocationStmt::getAnArgument_dispred#ff/2@6c8df8hj is empty, due to Expr::Call#class#f#antijoin_rhs#1/1@0c8d6a5o.
+[2022-04-17 13:45:19] (1s) Inferred that Statement::ThisConstructorInvocationStmt::getEnclosingCallable_dispred#ff/2@f74f11th is empty, due to Expr::Call#class#f#antijoin_rhs#1/1@0c8d6a5o.
+[2022-04-17 13:45:19] (1s)  >>> Created relation Statement::ThisConstructorInvocationStmt::getAnArgument_dispred#ff/2@6c8df8hj with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation Statement::ThisConstructorInvocationStmt::getEnclosingCallable_dispred#ff/2@f74f11th with 0 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Statement::Stmt_not_AssertStmt_BlockStmt_BreakStmt_CatchClause_ConstCase_ContinueStmt_DefaultCase_DoStmt_EmptyStmt_EnhancedForStmt_ExprStmt_ForStmt_IfStmt_LabeledStmt_LocalTypeDeclStmt_LocalVariableDeclStmt_ReturnStmt_SuperConstructorInvocationStmt_SwitchStmt_SynchronizedStmt_ThisConstructorInvocationStmt_ThrowStmt_TryStmt_WhileStmt_YieldStmt#f#antijoin_rhs#15/1@3865119q
+[2022-04-17 13:45:19] (1s)  >>> Created relation Statement::Stmt_not_AssertStmt_BlockStmt_BreakStmt_CatchClause_ConstCase_ContinueStmt_DefaultCase_DoStmt_EmptyStmt_EnhancedForStmt_ExprStmt_ForStmt_IfStmt_LabeledStmt_LocalTypeDeclStmt_LocalVariableDeclStmt_ReturnStmt_SuperConstructorInvocationStmt_SwitchStmt_SynchronizedStmt_ThisConstructorInvocationStmt_ThrowStmt_TryStmt_WhileStmt_YieldStmt#f#antijoin_rhs#15/1@3865119q with 11 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Statement::SuperConstructorInvocationStmt::getAnArgument_dispred#ff/2@889ad0ob
+[2022-04-17 13:45:19] (1s)  >>> Created relation Statement::SuperConstructorInvocationStmt::getAnArgument_dispred#ff/2@889ad0ob with 0 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate Expr::Call::getArgument_dispred#fff/3@53f0cflu
+[2022-04-17 13:45:19] (1s)  >>> Created relation Expr::Call::getArgument_dispred#fff/3@53f0cflu with 95 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate project#Expr::Call::getArgument_dispred#fff/1@00630fqd
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#Expr::Call::getArgument_dispred#fff/1@00630fqd with 95 rows.
+[2022-04-17 13:45:19] (1s) Starting to evaluate predicate GroovyInjection::GroovyInjectionSink#class#ff/2@2e5cdfnt
+[2022-04-17 13:45:19] (1s)  >>> Created relation GroovyInjection::GroovyInjectionSink#class#ff/2@2e5cdfnt with 0 rows.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::sinkNode#ff/2@3fa9f37g is empty, due to GroovyInjection::GroovyInjectionSink#class#ff/2@2e5cdfnt.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlow0#fff/3@6d3493wb is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlow#2#fff/3@6d3492wb is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowIn#ffff/4@6d3491wb is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowStore#ffff#reorder_0_3_1_2/4@6d3490wb is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowInToReturn#fff#reorder_0_2_1/3@6d349z1b is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowIsReturned#fff#reorder_0_2_1/3@6d349y1b is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowOut#ff/2@6d349x1b is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowConsCand#ff/2@6d349w1b is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::sinkNode#ff_10#join_rhs/2@d28a75u8 is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::PathNodeMid::isAtSink_dispred#f/1@e01470fj is empty, due to DataFlowImpl::sinkNode#ff/2@3fa9f37g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::callMayFlowThroughRev#ff/2@19a2f473 is empty, due to DataFlowImpl::Stage1::revFlow#2#fff/3@6d3492wb.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud is empty, due to DataFlowImpl::Stage1::revFlow#2#fff/3@6d3492wb.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::throughFlowNodeCand#ff/2@24e871r8 is empty, due to DataFlowImpl::Stage1::revFlow#2#fff/3@6d3492wb.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow#fffff#join_rhs/2@dc83039o is empty, due to DataFlowImpl::Stage1::revFlow#2#fff/3@6d3492wb.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::revFlowStore#ffff/2@e9100c3k is empty, due to DataFlowImpl::Stage1::revFlowStore#ffff#reorder_0_3_1_2/4@6d3490wb.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowInToReturn#fff#reorder_0_2_1_210#join_rhs/3@662ca16o is empty, due to DataFlowImpl::Stage1::revFlowInToReturn#fff#reorder_0_2_1/3@6d349z1b.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::revFlowIsReadAndStored#ff/2@26bc646t is empty, due to project#DataFlowImpl::Stage1::revFlowStore#ffff/2@e9100c3k.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TPathNodeSink#ff/2@d39e53qh is empty, due to DataFlowImpl::PathNodeMid::isAtSink_dispred#f/1@e01470fj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::PathNodeMid::projectToSink_dispred#ff/2@4a7e9ah2 is empty, due to DataFlowImpl::PathNodeMid::isAtSink_dispred#f/1@e01470fj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::flowThroughOutOfCall#ffffff/6@5bf8fbn0 is empty, due to DataFlowImpl::Stage1::callMayFlowThroughRev#ff/2@19a2f473.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::additionalLocalFlowStepNodeCand1#fff/3@05cf43jj is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::localFlowStepNodeCand1#fff/3@4a14f5dk is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::localStep#cpe#1235#ffbf/4@958fcdf9 is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::viableParamArgNodeCand1#ffff/4@083857q8 is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::viableReturnPosOutNodeCand1#ffff/4@2de125di is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::readStepCand#ffff/4@86fb24g9 is empty, due to DataFlowImpl::Stage1::revFlowIsReadAndStored#ff/2@26bc646t.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::storeStepCand#ffffff/6@0a53c2pn is empty, due to DataFlowImpl::Stage1::revFlowIsReadAndStored#ff/2@26bc646t.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::branch#fff#count_range/3@8d3e29la is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::join#fff/3@9f0107js is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow0#fffff#join_rhs#2/5@db7289sa is empty, due to DataFlowImpl::Stage1::revFlow#3#ff/2@4862e5ud.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::returnFlowCallableNodeCand#fff/3@cb769buf is empty, due to DataFlowImpl::Stage1::throughFlowNodeCand#ff/2@24e871r8.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#shared/4@6fe114dn is empty, due to DataFlowImpl::Stage1::throughFlowNodeCand#ff/2@24e871r8.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowOutNotFromArg#fffff/5@c80063w0 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowStore#fffffff/7@c80061w0 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowIn#fffffff/7@c80060w0 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@c8006z40 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@c8006y40 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowOutFromArg#fffff#reorder_0_2_4_1_3/5@c8006x40 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowConsCand#ffff#reorder_0_1_3_2/4@c8006w40 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::flowThroughOutOfCall#ffffff_125034#join_rhs/6@8f7db5u0 is empty, due to DataFlowImpl::Stage2::flowThroughOutOfCall#ffffff/6@5bf8fbn0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff/3@220e294q is empty, due to DataFlowImpl::additionalLocalFlowStepNodeCand1#fff/3@05cf43jj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::localFlowStepNodeCand1#fff_120#join_rhs/3@f74e98sq is empty, due to DataFlowImpl::localFlowStepNodeCand1#fff/3@4a14f5dk.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::localFlowStepNodeCand1#fff_021#join_rhs/3@8df458md is empty, due to DataFlowImpl::localFlowStepNodeCand1#fff/3@4a14f5dk.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_2013#join_rhs/4@0ec21a4r is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf/4@958fcdf9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_0231#join_rhs/4@19ec822c is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf/4@958fcdf9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_1230#join_rhs/4@b1b7d05q is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf/4@958fcdf9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#2#ffff/4@cd2cb8ap is empty, due to DataFlowImpl::viableParamArgNodeCand1#ffff/4@083857q8.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::viableReturnPosOutNodeCand1#ffff_1302#join_rhs/4@6ac77eg9 is empty, due to DataFlowImpl::viableReturnPosOutNodeCand1#ffff/4@2de125di.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow0#fffff/5@c80064w0 is empty, due to project#DataFlowImpl::Stage1::revFlow#3#ff/1@1694b46j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::readStepCand#ffff_0_true3_true12#join_rhs/6@b5b92ep0 is empty, due to DataFlowImpl::Stage1::readStepCand#ffff/4@86fb24g9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::readStepCand#ffff_0312#join_rhs/4@c14a61oa is empty, due to DataFlowImpl::Stage1::readStepCand#ffff/4@86fb24g9.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::storeStepCand#ffffff/5@59b2a8iq is empty, due to DataFlowImpl::Stage1::storeStepCand#ffffff/6@0a53c2pn.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::branch#fff/3@16e30728 is empty, due to DataFlowImpl::branch#fff#count_range/3@8d3e29la.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#fffff#shared#1/8@c29a54n8 is empty, due to DataFlowImpl::join#fff/3@9f0107js.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#fffff/5@379677jg is empty, due to DataFlowImpl::join#fff/3@9f0107js.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff#shared#1/8@efb8d9dg is empty, due to DataFlowImpl::join#fff/3@9f0107js.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff/5@e1156bgc is empty, due to DataFlowImpl::join#fff/3@9f0107js.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::returnFlowCallableNodeCand#fff_021#join_rhs/3@e9e08cqc is empty, due to DataFlowImpl::Stage1::returnFlowCallableNodeCand#fff/3@cb769buf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::returnFlowCallableNodeCand#fff_02#join_rhs/2@7708f7ms is empty, due to DataFlowImpl::Stage1::returnFlowCallableNodeCand#fff/3@cb769buf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::parameterMayFlowThrough#ffff/4@d8c02858 is empty, due to DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#shared/4@6fe114dn.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#antijoin_rhs/5@c6ef609t is empty, due to DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#shared/4@6fe114dn.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff_14023#join_rhs/5@6d4f86l0 is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#2#fffff/5@e1156bgc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::callMayFlowThroughFwd#ff/2@c26ac1qt is empty, due to DataFlowImpl::Stage2::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@c8006y40.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow#fffff_20134#join_rhs/5@4c44f97k is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlow#fffff/2@69ef04tb is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlow#fffff#2/3@d7296de5 is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow#fffff_03412#join_rhs/5@f27b5800 is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow#fffff_02341#join_rhs/5@52c696j5 is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff/5@c80062w0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowStore#fffffff#join_rhs/4@2b30ablr is empty, due to project#DataFlowImpl::Stage1::storeStepCand#ffffff/5@59b2a8iq.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlowStore#fffffff/5@b8976dlh is empty, due to DataFlowImpl::Stage2::fwdFlowStore#fffffff/7@c80061w0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#fffff_14023#join_rhs/5@c4b596uu is empty, due to DataFlowImpl::flowIntoCallNodeCand1#fffff/5@379677jg.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlowRead#fffffff/5@03feea42 is empty, due to DataFlowImpl::Stage2::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@c8006z40.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlowRead#fffffff#2/2@76c1454b is empty, due to DataFlowImpl::Stage2::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@c8006z40.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::readStepFwd#ffffff/6@c493a2ls is empty, due to project#DataFlowImpl::Stage2::fwdFlowRead#fffffff/5@03feea42.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff_120#join_rhs/3@4bccfab9 is empty, due to DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff/3@220e294q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff_021#join_rhs/3@1c65c9nl is empty, due to DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff/3@220e294q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#join_rhs/3@4c9a49t8 is empty, due to DataFlowImpl::localFlowStepNodeCand1#fff_120#join_rhs/3@f74e98sq.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlow0#fffff#join_rhs/3@d8f10drm is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_2013#join_rhs/4@0ec21a4r.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow0#fffff#join_rhs/3@19764315 is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_2013#join_rhs/4@0ec21a4r.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow0#fffff#join_rhs#1/4@ce8a17bb is empty, due to DataFlowImpl::Stage2::localStep#cpe#1235#ffbf_0231#join_rhs/4@19ec822c.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand1#2#ffff/3@e8c323d6 is empty, due to DataFlowImpl::flowIntoCallNodeCand1#2#ffff/4@cd2cb8ap.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#fffff#shared/5@8d53ebek is empty, due to DataFlowImpl::flowIntoCallNodeCand1#2#ffff/4@cd2cb8ap.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#ffff/4@72e92dh0 is empty, due to DataFlowImpl::viableReturnPosOutNodeCand1#ffff_1302#join_rhs/4@6ac77eg9.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::storeStepCand#ffffff_01423#join_rhs/5@31699ddh is empty, due to project#DataFlowImpl::Stage1::storeStepCand#ffffff/5@59b2a8iq.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff#shared/5@3843d2ka is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#ffff/4@72e92dh0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand1#fffff#antijoin_rhs/6@9f9495ib is empty, due to DataFlowImpl::flowIntoCallNodeCand1#fffff#shared#1/8@c29a54n8.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand1#fffff/4@011dd8qf is empty, due to DataFlowImpl::flowIntoCallNodeCand1#fffff/5@379677jg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff#antijoin_rhs/6@74d0c20g is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#2#fffff#shared#1/8@efb8d9dg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff_04123#join_rhs/5@d576bcb9 is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#2#fffff/5@e1156bgc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand1#2#fffff_24013#join_rhs/5@e8b1b693 is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#2#fffff/5@e1156bgc.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::parameterMayFlowThrough#ffff/2@7e086fng is empty, due to DataFlowImpl::Stage1::parameterMayFlowThrough#ffff/4@d8c02858.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#2/3@ab0dfagh is empty, due to DataFlowImpl::Stage1::parameterMayFlowThrough#ffff/4@d8c02858.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#3/2@c590ecfb is empty, due to DataFlowImpl::Stage1::parameterMayFlowThrough#ffff/4@d8c02858.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#2#fffff_14023#join_rhs/5@6d4f86l0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::flowThroughIntoCall#fffff/5@e9e82cdq is empty, due to DataFlowImpl::Stage2::callMayFlowThroughFwd#ff/2@c26ac1qt.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::returnNodeMayFlowThrough#fff/3@af4bfbra is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff_20134#join_rhs/5@4c44f97k.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowIsReturned#fffff#reorder_0_3_4_1_2#join_rhs/4@87485640 is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff_20134#join_rhs/5@4c44f97k.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2/3@d7296de5.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlow#fffff#2_102#join_rhs/3@ee95f42c is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2/3@d7296de5.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::parameterMayFlowThrough#ffff/4@718928ah is empty, due to DataFlowImpl::Stage2::fwdFlow#fffff_02341#join_rhs/5@52c696j5.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::fwdFlowStore#fffffff_24013#join_rhs/5@34d821ad is empty, due to project#DataFlowImpl::Stage2::fwdFlowStore#fffffff/5@b8976dlh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af is empty, due to DataFlowImpl::flowIntoCallNodeCand1#fffff_14023#join_rhs/5@c4b596uu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::storeStepFwd#ffffff/6@7a0a617i is empty, due to project#DataFlowImpl::Stage2::fwdFlowRead#fffffff#2/2@76c1454b.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::readStepFwd#ffffff/5@b3b4d3i7 is empty, due to DataFlowImpl::Stage2::readStepFwd#ffffff/6@c493a2ls.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::readStepFwd#ffffff#2/5@280807ke is empty, due to DataFlowImpl::Stage2::readStepFwd#ffffff/6@c493a2ls.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::readStepCand#ffff/4@9bfac1n9 is empty, due to DataFlowImpl::Stage2::readStepFwd#ffffff/6@c493a2ls.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#join_rhs#1/4@37fb774n is empty, due to DataFlowImpl::LocalFlowBigStep::additionalLocalFlowStepNodeCand2#fff_120#join_rhs/3@4bccfab9.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand1#2#ffff_120#join_rhs/3@81b37cj6 is empty, due to project#DataFlowImpl::flowIntoCallNodeCand1#2#ffff/3@e8c323d6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowOutOfCallNodeCand1#ffff/3@f3ad55u5 is empty, due to DataFlowImpl::flowOutOfCallNodeCand1#ffff/4@72e92dh0.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand1#fffff_1302#join_rhs/4@fe8827cg is empty, due to project#DataFlowImpl::flowIntoCallNodeCand1#fffff/4@011dd8qf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowOut#ffffff/6@7e01e0wu is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowIsReturned#fffff#reorder_0_3_4_1_2/5@7e01ezau is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2#join_rhs/2@a427292m is empty, due to project#DataFlowImpl::Stage1::parameterMayFlowThrough#ffff#2/3@ab0dfagh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand2#fffff_04123#join_rhs/5@c258det9 is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowOutOfCallNodeCand2#fffff/4@c81622l9 is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowOut#ffffff#join_rhs/5@1caa00kd is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowOut#ffffff#join_rhs#1/5@ad14b650 is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowOutOfCallNodeCand2#fffff_24013#join_rhs/5@3b292dic is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowOut#ffffff/6@72cc30wa is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowIsReturned#fffff#reorder_0_3_4_1_2/5@72cc3yla is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545 is empty, due to DataFlowImpl::flowOutOfCallNodeCand2#fffff/5@9891f80q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::flowThroughIntoCall#fffff_24013#join_rhs/5@37e795kl is empty, due to DataFlowImpl::Stage2::flowThroughIntoCall#fffff/5@e9e82cdq.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow0#fffff/5@7e01e3wu is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@7e01e1wu is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowInToReturn#fffff#reorder_0_2_4_1_3/5@7e01eyau is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowInNotToReturn#ffff/4@7e01exau is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowConsCand#ffff/4@7e01ewau is empty, due to project#DataFlowImpl::Stage2::fwdFlow#fffff#2_021#join_rhs/3@fd575crc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow#fffff_12034#join_rhs/5@37e597e6 is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::parameterMayFlowThrough#ffff/2@a19512n5 is empty, due to DataFlowImpl::Stage2::parameterMayFlowThrough#ffff/4@718928ah.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::parameterMayFlowThrough#ffff#2/3@80cb37h2 is empty, due to DataFlowImpl::Stage2::parameterMayFlowThrough#ffff/4@718928ah.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::parameterMayFlowThrough#ffff#3/2@f93faf41 is empty, due to DataFlowImpl::Stage2::parameterMayFlowThrough#ffff/4@718928ah.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand2#fffff/4@3092f73h is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowIn#fffffff#join_rhs/4@47db71bd is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowIn#fffffff#join_rhs#1/4@c0df86ft is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowIntoCallNodeCand2#fffff_14023#join_rhs/5@5b0649bs is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowIn#fffffff/7@11b540wh is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@11b54x2h is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff/5@fb1227af.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::storeStepFwd#ffffff_201345#join_rhs/6@cb823b4t is empty, due to DataFlowImpl::Stage2::storeStepFwd#ffffff/6@7a0a617i.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::storeStepFwd#ffffff_345012#join_rhs/6@50ec56n3 is empty, due to DataFlowImpl::Stage2::storeStepFwd#ffffff/6@7a0a617i.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::readStepFwd#ffffff_23401#join_rhs/5@48bc05lr is empty, due to project#DataFlowImpl::Stage2::readStepFwd#ffffff/5@b3b4d3i7.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::readStepFwd#ffffff#2_23401#join_rhs/5@e472facv is empty, due to project#DataFlowImpl::Stage2::readStepFwd#ffffff#2/5@280807ke.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlowStore#fffffffff/4@4c18beoj is empty, due to DataFlowImpl::Stage2::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@7e01e1wu.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlow#fffff#3/3@36e8abcu is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::readStepCand#ffff_1023#join_rhs/4@4e525fo0 is empty, due to DataFlowImpl::Stage2::readStepCand#ffff/4@9bfac1n9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::readStepCand#ffff_0132#join_rhs/4@373c61u6 is empty, due to DataFlowImpl::Stage2::readStepCand#ffff/4@9bfac1n9.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowOutOfCallNodeCand1#ffff_120#join_rhs/3@647e46d0 is empty, due to project#DataFlowImpl::flowOutOfCallNodeCand1#ffff/3@f3ad55u5.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::callMayFlowThroughRev#ff/2@0a874drj is empty, due to DataFlowImpl::Stage2::revFlowInToReturn#fffff#reorder_0_2_4_1_3/5@7e01eyau.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::flowThroughOutOfCall#ffffff/6@c638d2f9 is empty, due to DataFlowImpl::Stage2::callMayFlowThroughRev#ff/2@0a874drj.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowOutOfCallNodeCand2#fffff_0312#join_rhs/4@87dbf7tp is empty, due to project#DataFlowImpl::flowOutOfCallNodeCand2#fffff/4@c81622l9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::callMayFlowThroughRev#ff/2@3fca8emc is empty, due to DataFlowImpl::Stage3::revFlowIsReturned#fffff#reorder_0_3_4_1_2/5@72cc3yla.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowOutOfCall#fffff_04123#join_rhs/5@3936a9qv is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowOutNotFromArg#fffff#join_rhs/5@903acdul is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowOutNotFromArg#fffff#join_rhs#1/5@4f6729qk is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowOutOfCall#fffff_14023#join_rhs/5@e31996a9 is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowOutNotFromArg#fffff/5@a38433w4 is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowOut#ffffff#join_rhs/5@df0cef6u is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowOut#ffffff#join_rhs#1/5@fab9bbe0 is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowOutOfCall#fffff_24013#join_rhs/5@54a6f8g7 is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowOut#ffffff/6@34a680wg is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowIsReturned#fffff#reorder_0_3_4_1_2/5@34a68y9g is empty, due to DataFlowImpl::Stage4::flowOutOfCall#fffff/5@4590b545.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::parameterFlow#fffff/5@68c1dav6 is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlow#fffff_304#join_rhs/3@00ac78kv is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlow#fffff#4/1@fe5105pi is empty, due to DataFlowImpl::Stage2::revFlow#fffff/5@7e01e2wu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7#join_rhs/7@59e8e513 is empty, due to DataFlowImpl::Stage2::storeStepFwd#ffffff_201345#join_rhs/6@cb823b4t.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlowStore#fffffffff#2/7@35e352oq is empty, due to DataFlowImpl::Stage2::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@7e01e1wu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::storeStepCand#ffffff/6@a9a0ccse is empty, due to project#DataFlowImpl::Stage2::revFlowStore#fffffffff#2/7@35e352oq.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::flowThroughIntoCall#fffff/5@c666c1gf is empty, due to project#DataFlowImpl::Stage2::parameterMayFlowThrough#ffff#3/2@f93faf41.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowInNotToReturn#ffff#join_rhs/5@e49112ae is empty, due to project#DataFlowImpl::flowIntoCallNodeCand2#fffff/4@3092f73h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowInNotToReturn#ffff#join_rhs#1/5@89f9fe10 is empty, due to project#DataFlowImpl::flowIntoCallNodeCand2#fffff/4@3092f73h.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::flowIntoCallNodeCand2#fffff_1302#join_rhs/4@fe98cdo6 is empty, due to project#DataFlowImpl::flowIntoCallNodeCand2#fffff/4@3092f73h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowInNotToReturn#ffff/4@72cc3xla is empty, due to project#DataFlowImpl::flowIntoCallNodeCand2#fffff/4@3092f73h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp is empty, due to DataFlowImpl::flowIntoCallNodeCand2#fffff_14023#join_rhs/5@5b0649bs.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::callMayFlowThroughFwd#ff/2@1ee3balv is empty, due to DataFlowImpl::Stage3::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@11b54x2h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlow#fffff/5@11b543wh is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowOutNotFromArg#fffff/5@11b542wh is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#3/3@36e8abcu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowStore#fffffff/7@11b541wh is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowOutFromArg#fffff#reorder_0_2_4_1_3/5@11b54y2h is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#3/3@36e8abcu.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowConsCand#ffff#reorder_0_1_3_2/4@11b54w2h is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5#join_rhs/5@a5dc47kd is empty, due to DataFlowImpl::Stage2::readStepCand#ffff_1023#join_rhs/4@4e525fo0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::flowThroughOutOfCall#ffffff_125034#join_rhs/6@5df083ct is empty, due to DataFlowImpl::Stage3::flowThroughOutOfCall#ffffff/6@c638d2f9.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowThroughOutOfCall#ffffff/6@7753768e is empty, due to DataFlowImpl::Stage3::callMayFlowThroughRev#ff/2@3fca8emc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::parameterFlow#fffff_23401#join_rhs/5@482ac5vi is empty, due to DataFlowImpl::Stage2::parameterFlow#fffff/5@68c1dav6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlow#fffff/2@b88c35bt is empty, due to DataFlowImpl::Stage2::revFlow#fffff_304#join_rhs/3@00ac78kv.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowEntry#ff/2@7120a1n7 is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage2::revFlow#fffff#2_10#join_rhs/2@4d7b47cq is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#shared/6@16cd20r9 is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlow0#fffff#join_rhs#1/5@b7ad23ig is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlow0#fffff/5@11b544wh is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@11b54z2h is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#2/2@1e22708a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::getApNil#ff/2@2796d5mq is empty, due to project#DataFlowImpl::Stage2::revFlow#fffff#4/1@fe5105pi.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage2::storeStepCand#ffffff_015234#join_rhs/6@39ff1a66 is empty, due to DataFlowImpl::Stage2::storeStepCand#ffffff/6@a9a0ccse.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlow#fffff/2@6c3a06ln is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff/5@11b543wh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::flowThroughIntoCall#fffff_24013#join_rhs/5@3dc4c9mm is empty, due to DataFlowImpl::Stage3::flowThroughIntoCall#fffff/5@c666c1gf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIn#fffffff#join_rhs/5@6da8c8uc is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIn#fffffff#join_rhs#1/6@822d42ab is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIn#fffffff#join_rhs#2/5@16bb18qm is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIn#fffffff#join_rhs#3/6@207077pt is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowIntoCall#fffff_14023#join_rhs/5@4cc2592q is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIn#fffffff/7@a3843zt4 is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@a3843xt4 is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::flowIntoCall#fffff/4@5660a7nm is empty, due to DataFlowImpl::Stage4::flowIntoCall#fffff/5@edd33alp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlow#fffff_10234#join_rhs/5@34f4c88m is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff/5@11b543wh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlow#fffff#2/3@302cd2i6 is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff/5@11b543wh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::fwdFlow#fffff_03412#join_rhs/5@7fb066gs is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff/5@11b543wh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlowStore#fffffff/5@72aa5eqh is empty, due to DataFlowImpl::Stage3::fwdFlowStore#fffffff/7@11b541wh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::readStepFwd#ffffff/6@88c39b82 is empty, due to DataFlowImpl::Stage3::fwdFlowConsCand#ffff#reorder_0_1_3_2/4@11b54w2h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowThroughOutOfCall#ffffff_125034#join_rhs/6@14d9346k is empty, due to DataFlowImpl::Stage4::flowThroughOutOfCall#ffffff/6@7753768e.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff/6@78104wbo is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowEntry#ff/2@7120a1n7.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow0#fffff#join_rhs#1/4@5da516v2 is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowEntry#ff/2@7120a1n7.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#shared#1/6@db91dfbd is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff#shared/6@16cd20r9.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlowRead#fffffff/5@2f236e2p is empty, due to DataFlowImpl::Stage3::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@11b54z2h.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlowRead#fffffff#2/3@cdc633po is empty, due to DataFlowImpl::Stage3::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@11b54z2h.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowInToReturn#fffff#reorder_0_2_4_1_3/5@72cc3zla is empty, due to DataFlowImpl::Stage3::flowThroughIntoCall#fffff_24013#join_rhs/5@3dc4c9mm.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::callMayFlowThroughFwd#ff/2@f7b3b8tc is empty, due to DataFlowImpl::Stage4::fwdFlowIsEntered#fffff#reorder_0_3_4_1_2/5@a3843xt4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowInNotToReturn#ffff#join_rhs/5@845d795h is empty, due to project#DataFlowImpl::Stage4::flowIntoCall#fffff/4@5660a7nm.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowInNotToReturn#ffff#join_rhs#1/5@530067pf is empty, due to project#DataFlowImpl::Stage4::flowIntoCall#fffff/4@5660a7nm.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::flowIntoCall#fffff_1302#join_rhs/4@adc9743k is empty, due to project#DataFlowImpl::Stage4::flowIntoCall#fffff/4@5660a7nm.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowInNotToReturn#ffff/4@34a68x9g is empty, due to project#DataFlowImpl::Stage4::flowIntoCall#fffff/4@5660a7nm.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::returnNodeMayFlowThrough#fff/3@fd6e88k6 is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff_10234#join_rhs/5@34f4c88m.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowIsReturned#fffff#reorder_0_3_4_1_2#join_rhs/3@13c4e46d is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff_10234#join_rhs/5@34f4c88m.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowCandSummaryCtx#fff/3@ea36df9k is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff_10234#join_rhs/5@34f4c88m.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlow#fffff#2_021#join_rhs/3@0e920cna is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2/3@302cd2i6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlow#fffff#2_102#join_rhs/3@e95075pf is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2/3@302cd2i6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::parameterMayFlowThrough#ffff/4@efe002bl is empty, due to DataFlowImpl::Stage3::fwdFlow#fffff_03412#join_rhs/5@7fb066gs.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::fwdFlowStore#fffffff_24013#join_rhs/5@6641b94f is empty, due to project#DataFlowImpl::Stage3::fwdFlowStore#fffffff/5@72aa5eqh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::readStepFwd#ffffff/5@5ffe72br is empty, due to DataFlowImpl::Stage3::readStepFwd#ffffff/6@88c39b82.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::readStepFwd#ffffff_34501#join_rhs/5@a53891sq is empty, due to DataFlowImpl::Stage3::readStepFwd#ffffff/6@88c39b82.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::readStepCand#ffff/4@d4e596jp is empty, due to DataFlowImpl::Stage3::readStepFwd#ffffff/6@88c39b82.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowOutFromArg#fffff#reorder_0_2_4_1_3/5@a3843yt4 is empty, due to DataFlowImpl::Stage4::flowThroughOutOfCall#ffffff_125034#join_rhs/6@14d9346k.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowStepPlus#ffffff/6@78104wbo.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::storeStepFwd#ffffff/6@013cbftd is empty, due to project#DataFlowImpl::Stage3::fwdFlowRead#fffffff#2/3@cdc633po.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowThroughIntoCall#fffff/5@355119vk is empty, due to DataFlowImpl::Stage4::callMayFlowThroughFwd#ff/2@f7b3b8tc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::flowCandSummaryCtx#fff_120#join_rhs/3@fc3e42hn is empty, due to DataFlowImpl::flowCandSummaryCtx#fff/3@ea36df9k.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlow0#fffff/5@72cc33wa is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2_021#join_rhs/3@0e920cna.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2_021#join_rhs/3@0e920cna.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@72cc31wa is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2_021#join_rhs/3@0e920cna.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowConsCand#ffff/4@72cc3wla is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2_021#join_rhs/3@0e920cna.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlow0#fffff#join_rhs/4@e7ddbd5q is empty, due to project#DataFlowImpl::Stage3::fwdFlow#fffff#2_102#join_rhs/3@e95075pf.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::parameterMayFlowThrough#ffff/2@c77385ao is empty, due to DataFlowImpl::Stage3::parameterMayFlowThrough#ffff/4@efe002bl.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::parameterMayFlowThrough#ffff#2/3@fa305a62 is empty, due to DataFlowImpl::Stage3::parameterMayFlowThrough#ffff/4@efe002bl.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::parameterMayFlowThrough#ffff#3/2@2ff009a6 is empty, due to DataFlowImpl::Stage3::parameterMayFlowThrough#ffff/4@efe002bl.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::readStepFwd#ffffff_23401#join_rhs/5@d5b618ih is empty, due to project#DataFlowImpl::Stage3::readStepFwd#ffffff/5@5ffe72br.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlowStore#fffffffff/4@0b4eb1ch is empty, due to DataFlowImpl::Stage3::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@72cc31wa.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlow#fffff/3@02b895vj is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::readStepCand#ffff_1023#join_rhs/4@692f68rc is empty, due to DataFlowImpl::Stage3::readStepCand#ffff/4@d4e596jp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::readStepCand#ffff_0132#join_rhs/4@df8db5h3 is empty, due to DataFlowImpl::Stage3::readStepCand#ffff/4@d4e596jp.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0 is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::localStep#ffbfff/6@0ac982pg is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/5@ada207ec is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_2014#join_rhs/4@57a54cqn is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_20145#join_rhs/5@b69fcan3 is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#5/2@a51f5fii is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_024513#join_rhs/6@caa570ji is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/6@6677f0hp.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::storeStepFwd#ffffff_201345#join_rhs/6@1a62717f is empty, due to DataFlowImpl::Stage3::storeStepFwd#ffffff/6@013cbftd.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::storeStepFwd#ffffff_345012#join_rhs/6@b4e752dq is empty, due to DataFlowImpl::Stage3::storeStepFwd#ffffff/6@013cbftd.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::flowThroughIntoCall#fffff_24013#join_rhs/5@583559gq is empty, due to DataFlowImpl::Stage4::flowThroughIntoCall#fffff/5@355119vk.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::parameterFlow#fffff/5@9dc80ae8 is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlow#fffff#3/1@9d26ddmi is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlow#fffff_1034#join_rhs/4@5156e8mn is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen2unfolding#ff#count_range/3@ca4744du is empty, due to DataFlowImpl::Stage3::revFlow#fffff/5@72cc32wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7#join_rhs/7@07a197s1 is empty, due to DataFlowImpl::Stage3::storeStepFwd#ffffff_201345#join_rhs/6@1a62717f.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlowStore#fffffffff#2/7@a413e4eg is empty, due to DataFlowImpl::Stage3::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@72cc31wa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::storeStepCand#ffffff/6@826113oe is empty, due to project#DataFlowImpl::Stage3::revFlowStore#fffffffff#2/7@a413e4eg.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlow#fffff_120#join_rhs/3@7db5f04h is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff/3@02b895vj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4 is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowStore#fffffff/7@a38431w4 is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowConsCand#ffff#reorder_0_1_3_2/4@a3843wt4 is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5#join_rhs/5@11260dci is empty, due to DataFlowImpl::Stage3::readStepCand#ffff_1023#join_rhs/4@692f68rc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow0#fffff#join_rhs#2/5@f0ab16jq is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow0#fffff/5@a38434w4 is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@a38430w4 is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::localStep#ffbfff_20145#join_rhs/5@d6929d13 is empty, due to DataFlowImpl::Stage4::localStep#ffbfff/6@0ac982pg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::localStep#ffbfff_2014#join_rhs/4@138074r6 is empty, due to DataFlowImpl::Stage4::localStep#ffbfff/6@0ac982pg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::localStep#ffbfff_024513#join_rhs/6@100f8248 is empty, due to DataFlowImpl::Stage4::localStep#ffbfff/6@0ac982pg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/5@0946afac is empty, due to project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/5@ada207ec.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#2/3@a3912360 is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_2014#join_rhs/4@57a54cqn.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3/3@80b2e16v is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_2014#join_rhs/4@57a54cqn.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#4/4@6133e7qt is empty, due to DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_20145#join_rhs/5@b69fcan3.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowInToReturn#fffff#reorder_0_2_4_1_3/5@34a68z9g is empty, due to DataFlowImpl::Stage4::flowThroughIntoCall#fffff_24013#join_rhs/5@583559gq.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::parameterFlow#fffff_12340#join_rhs/5@11d0ac70 is empty, due to DataFlowImpl::Stage3::parameterFlow#fffff/5@9dc80ae8.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::getApNil#ff/2@88369b6b is empty, due to project#DataFlowImpl::Stage3::revFlow#fffff#3/1@9d26ddmi.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::revFlow#fffff#4/3@4fa4e3i7 is empty, due to DataFlowImpl::Stage3::revFlow#fffff_1034#join_rhs/4@5156e8mn.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen2unfolding#ff#join_rhs/3@485ab63m is empty, due to DataFlowImpl::expensiveLen2unfolding#ff#count_range/3@ca4744du.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff/3@96e1528j is empty, due to DataFlowImpl::Stage3::storeStepCand#ffffff/6@826113oe.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff#2/2@f4e406s6 is empty, due to DataFlowImpl::Stage3::storeStepCand#ffffff/6@826113oe.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff#3/5@4328f5oc is empty, due to DataFlowImpl::Stage3::storeStepCand#ffffff/6@826113oe.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::returnNodeMayFlowThrough#fff/3@30d1f69a is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlow#fffff/2@b78c45be is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlow#fffff#2/3@25d141gh is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow#fffff_20134#join_rhs/5@379c4et2 is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow#fffff_03412#join_rhs/5@c9c20957 is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::fwdFlow#fffff_02341#join_rhs/5@d61bc8i7 is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff/5@a38432w4.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff#3_01423#join_rhs/5@7a46adnj is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff#3/5@4328f5oc.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlowStore#fffffff/5@850147f8 is empty, due to DataFlowImpl::Stage4::fwdFlowStore#fffffff/7@a38431w4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::readStepFwd#ffffff/6@c8ba66at is empty, due to DataFlowImpl::Stage4::fwdFlowConsCand#ffff#reorder_0_1_3_2/4@a3843wt4.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlowRead#fffffff/5@214053r8 is empty, due to DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@a38430w4.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlowRead#fffffff#2/3@920e9aqg is empty, due to DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@a38430w4.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/4@c82f3723 is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff_02341#join_rhs/5@d61bc8i7.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff/4@203979rd is empty, due to DataFlowImpl::Stage4::localStep#ffbfff_20145#join_rhs/5@d6929d13.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff#2/3@d24c7f04 is empty, due to DataFlowImpl::Stage4::localStep#ffbfff_2014#join_rhs/4@138074r6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff#3/3@b633b6m8 is empty, due to DataFlowImpl::Stage4::localStep#ffbfff_2014#join_rhs/4@138074r6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_2014#join_rhs/4@e682f1u1 is empty, due to DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/5@0946afac.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_02413#join_rhs/5@0bd6c6ql is empty, due to DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/5@0946afac.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#2_120#join_rhs/3@24799d9u is empty, due to project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#2/3@a3912360.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3_021#join_rhs/3@95deb1uv is empty, due to project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3/3@80b2e16v.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3_120#join_rhs/3@ec851fa6 is empty, due to project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3/3@80b2e16v.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#4_0231#join_rhs/4@a6fb75gc is empty, due to project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#4/4@6133e7qt.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff_120#count_range/3@71354bj7 is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff/3@96e1528j.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen2unfolding#ff/2@d0c53fou is empty, due to DataFlowImpl::expensiveLen2unfolding#ff#join_rhs/3@485ab63m.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TConsCons#fff/3@2921a970 is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff#2/2@f4e406s6.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TConsNil#ff/2@a7d433t4 is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff#2/2@f4e406s6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::storeStepCand#ffffff#2_10#join_rhs/2@853b5asb is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff#2/2@f4e406s6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5 is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2/3@25d141gh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlow#fffff#2_102#join_rhs/3@a2550d12 is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2/3@25d141gh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowIsReturned#fffff#reorder_0_3_4_1_2#join_rhs/4@b152ff3j is empty, due to DataFlowImpl::Stage4::fwdFlow#fffff_20134#join_rhs/5@379c4et2.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::fwdFlowStore#fffffff_12403#join_rhs/5@c3697aje is empty, due to project#DataFlowImpl::Stage4::fwdFlowStore#fffffff/5@850147f8.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::readStepFwd#ffffff/5@e42c8bq1 is empty, due to DataFlowImpl::Stage4::readStepFwd#ffffff/6@c8ba66at.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::readStepFwd#ffffff_34501#join_rhs/5@ab4ff1cl is empty, due to DataFlowImpl::Stage4::readStepFwd#ffffff/6@c8ba66at.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::readStepCand#ffff/4@2ff5140f is empty, due to DataFlowImpl::Stage4::readStepFwd#ffffff/6@c8ba66at.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@34a681wg is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::readStepFwd#ffffff_23401#join_rhs/5@8cef7e6o is empty, due to project#DataFlowImpl::Stage4::readStepFwd#ffffff/5@e42c8bq1.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::storeStepFwd#ffffff/6@2c1d15cm is empty, due to project#DataFlowImpl::Stage4::fwdFlowRead#fffffff#2/3@920e9aqg.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/2@339ea4vo is empty, due to DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/4@c82f3723.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2/2@0a3085id is empty, due to DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/4@c82f3723.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff_0231#join_rhs/4@8af5db53 is empty, due to project#DataFlowImpl::Stage4::localStep#ffbfff/4@203979rd.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff#2_120#join_rhs/3@d7215fbl is empty, due to project#DataFlowImpl::Stage4::localStep#ffbfff#2/3@d24c7f04.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff#3_021#join_rhs/3@b3cd47o9 is empty, due to project#DataFlowImpl::Stage4::localStep#ffbfff#3/3@b633b6m8.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::localStep#ffbfff#3_120#join_rhs/3@7cb0b2le is empty, due to project#DataFlowImpl::Stage4::localStep#ffbfff#3/3@b633b6m8.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/3@fb551c59 is empty, due to DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_2014#join_rhs/4@e682f1u1.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen2unfolding#ff#shared/3@63213bmv is empty, due to project#DataFlowImpl::Stage3::storeStepCand#ffffff_120#count_range/3@71354bj7.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TCons1#ff/2@656ac3qo is empty, due to DataFlowImpl::expensiveLen2unfolding#ff/2@d0c53fou.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen2unfolding#ff_0#antijoin_rhs/1@8f4e85u5 is empty, due to DataFlowImpl::expensiveLen2unfolding#ff/2@d0c53fou.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlow0#fffff/5@34a683wg is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowConsCand#ffff/4@34a68w9g is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlow0#fffff#join_rhs/4@0ac197rs is empty, due to project#DataFlowImpl::Stage4::fwdFlow#fffff#2_102#join_rhs/3@a2550d12.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::revFlowStore#fffffffff/4@b123280i is empty, due to DataFlowImpl::Stage4::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@34a681wg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::readStepCand#ffff_0132#join_rhs/4@494a7dcj is empty, due to DataFlowImpl::Stage4::readStepCand#ffff/4@2ff5140f.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::revFlowStore#fffffffff#2/7@a377164b is empty, due to DataFlowImpl::Stage4::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@34a681wg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::storeStepFwd#ffffff_201345#join_rhs/6@708f1dvm is empty, due to DataFlowImpl::Stage4::storeStepFwd#ffffff/6@2c1d15cm.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::storeStepFwd#ffffff_345012#join_rhs/6@5e909fcd is empty, due to DataFlowImpl::Stage4::storeStepFwd#ffffff/6@2c1d15cm.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2_10#join_rhs/2@e46eb1ug is empty, due to project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2/2@0a3085id.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_021#join_rhs/3@1053af93 is empty, due to project#DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/3@fb551c59.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::parameterFlow#fffff/5@506ec77q is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::revFlow#2#fffff/3@d3f4762r is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlow#2#fffff_1034#join_rhs/4@dc9277lr is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::revFlow#2#fffff#3/2@dff960g6 is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countNodesUsingAccessPath#fbf#count_range/3@ac4296ce is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TPathNodeMid#fffff/5@477f4zjr is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::storeStepCand#ffffff/6@cd2d6ejh is empty, due to project#DataFlowImpl::Stage4::revFlowStore#fffffffff#2/7@a377164b.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathReadStep#fffff/5@477f4dwr is empty, due to DataFlowImpl::Stage4::readStepCand#ffff_0132#join_rhs/4@494a7dcj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7#join_rhs/7@3947605l is empty, due to DataFlowImpl::Stage4::storeStepFwd#ffffff_201345#join_rhs/6@708f1dvm.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TSummaryCtxSome#ff/2@6b4516gs is empty, due to project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2_10#join_rhs/2@e46eb1ug.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Stage4::parameterFlow#fffff_23401#join_rhs/5@49b651rs is empty, due to DataFlowImpl::Stage4::parameterFlow#fffff/5@506ec77q.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getAnOutNodeFlow#fffff/5@05fe3cfd is empty, due to project#DataFlowImpl::Stage4::revFlow#2#fffff/3@d3f4762r.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::parameterCand#ffff/4@54d459ub is empty, due to project#DataFlowImpl::Stage4::revFlow#2#fffff/3@d3f4762r.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::revFlow#2#fffff#2/3@b48e422k is empty, due to DataFlowImpl::Stage4::revFlow#2#fffff_1034#join_rhs/4@dc9277lr.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countNodesUsingAccessPath#fbf/3@9e2247mj is empty, due to DataFlowImpl::countNodesUsingAccessPath#fbf#count_range/3@ac4296ce.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::storeStepCand#ffffff/3@f54ae3f5 is empty, due to DataFlowImpl::Stage4::storeStepCand#ffffff/6@cd2d6ejh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::storeStepCand#ffffff#2/2@392a68um is empty, due to DataFlowImpl::Stage4::storeStepCand#ffffff/6@cd2d6ejh.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::storeStepCand#ffffff#3/4@5119952s is empty, due to DataFlowImpl::Stage4::storeStepCand#ffffff/6@cd2d6ejh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathThroughCallable#ffff/4@477f4xjr is empty, due to DataFlowImpl::parameterCand#ffff/4@54d459ub.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathOutOfCallable#fff/3@477f4wjr is empty, due to DataFlowImpl::getAnOutNodeFlow#fffff/5@05fe3cfd.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathIntoCallable#fffffff/7@477f4bwr is empty, due to DataFlowImpl::parameterCand#ffff/4@54d459ub.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathIntoCallable0#fffffff/7@477f4awr is empty, due to DataFlowImpl::parameterCand#ffff/4@54d459ub.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathThroughCallable0#fffffff/7@477f48wr is empty, due to DataFlowImpl::parameterCand#ffff/4@54d459ub.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathIntoCallable#fffffff#reorder_3_4_6_0_1_2_5/7@477f47wr is empty, due to DataFlowImpl::parameterCand#ffff/4@54d459ub.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen1to2unfolding#ff/2@646033fa is empty, due to DataFlowImpl::countNodesUsingAccessPath#fbf/3@9e2247mj.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countNodesUsingAccessPath#fbf_102#join_rhs/3@60810dqh is empty, due to DataFlowImpl::countNodesUsingAccessPath#fbf/3@9e2247mj.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::storeStepCand#ffffff_102#join_rhs/3@4e7d588g is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff/3@f54ae3f5.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Stage4::storeStepCand#ffffff#3_0312#join_rhs/4@be803159 is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff#3/4@5119952s.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathThroughCallable#ffff_031#join_rhs/3@6735661r is empty, due to DataFlowImpl::pathThroughCallable#ffff/4@477f4xjr.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::pathIntoCallable#fffffff/5@93c244n3 is empty, due to DataFlowImpl::pathIntoCallable#fffffff/7@477f4bwr.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TAccessPathCons1#ff/2@390200he is empty, due to DataFlowImpl::expensiveLen1to2unfolding#ff/2@646033fa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::expensiveLen1to2unfolding#ff_0#antijoin_rhs/1@34b7afg5 is empty, due to DataFlowImpl::expensiveLen1to2unfolding#ff/2@646033fa.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::evalUnfold#fff#reorder_1_2_0#antijoin_rhs/3@6b8ecb78 is empty, due to DataFlowImpl::countNodesUsingAccessPath#fbf_102#join_rhs/3@60810dqh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::evalUnfold#fff#reorder_1_2_0#join_rhs/3@84dfebjv is empty, due to DataFlowImpl::countNodesUsingAccessPath#fbf_102#join_rhs/3@60810dqh.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::count1to2unfold#fff#count_range/4@725aaasl is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff_102#join_rhs/3@4e7d588g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getATail#fff/3@c63834u6 is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff_102#join_rhs/3@4e7d588g.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathStoreStep#fffff/5@477f4cwr is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff#3_0312#join_rhs/4@be803159.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::pathStoreStep#fffff#reorder_2_3_0_1_4/5@477f40wr is empty, due to project#DataFlowImpl::Stage4::storeStepCand#ffffff#3_0312#join_rhs/4@be803159.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths01#fffffff/7@ac446aav is empty, due to DataFlowImpl::pathThroughCallable#ffff_031#join_rhs/3@6735661r.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::pathIntoCallable#fffffff_23401#join_rhs/5@2427ef0j is empty, due to project#DataFlowImpl::pathIntoCallable#fffffff/5@93c244n3.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::count1to2unfold#fff#join_rhs/4@c512ac8c is empty, due to DataFlowImpl::count1to2unfold#fff#count_range/4@725aaasl.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getATail#fff_102#join_rhs/3@b888bel8 is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::getATail#fff/1@d63340rc is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getATail#fff_10#join_rhs/2@6d2fa6a8 is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getATail#fff_120#join_rhs/3@91c204qf is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TAccessPathCons2#fff/3@7ac983r0 is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TAccessPathCons#ff#join_rhs/2@5f505apo is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::getATail#fff_20#join_rhs/2@3800e7nt is empty, due to DataFlowImpl::getATail#fff/3@c63834u6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths01#fffffff_4501236#join_rhs/7@ae2424v3 is empty, due to DataFlowImpl::Subpaths::subpaths01#fffffff/7@ac446aav.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::count1to2unfold#fff/3@ab7946vf is empty, due to DataFlowImpl::count1to2unfold#fff#join_rhs/4@c512ac8c.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countPotentialAps#fff#join_rhs/3@c1e09far is empty, due to DataFlowImpl::getATail#fff_102#join_rhs/3@b888bel8.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::getATail#fff__true0#join_rhs/2@99059735 is empty, due to project#DataFlowImpl::getATail#fff/1@d63340rc.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::getATail#fff__false0_1#join_rhs/3@f42ff7fo is empty, due to project#DataFlowImpl::getATail#fff/1@d63340rc.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::getATail#fff__false0#join_rhs/2@baf5a6dj is empty, due to project#DataFlowImpl::getATail#fff/1@d63340rc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countAps#fbf#join_rhs/4@717127i5 is empty, due to DataFlowImpl::count1to2unfold#fff/3@ab7946vf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countAps#fbf/3@5343cyeb is empty, due to project#DataFlowImpl::getATail#fff/1@d63340rc.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countPotentialAps#fff#shared/2@854c3afi is empty, due to DataFlowImpl::getATail#fff_10#join_rhs/2@6d2fa6a8.
+[2022-04-17 13:45:19] (1s) Inferred that dom#DataFlowImpl::TAccessPathCons#ff/2@55056wpr is empty, due to dom#DataFlowImpl::TAccessPathCons#ff#join_rhs/2@5f505apo.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths02#fffffff/7@e346e7pr is empty, due to DataFlowImpl::Subpaths::subpaths01#fffffff_4501236#join_rhs/7@ae2424v3.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::count1to2unfold#fff/1@535dcbm9 is empty, due to DataFlowImpl::count1to2unfold#fff/3@ab7946vf.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countPotentialAps#fff#sum_range/3@331ace3i is empty, due to DataFlowImpl::countPotentialAps#fff#shared/2@854c3afi.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::countPotentialAps#fff#loop_invariant_prefix/3@6c812bv2 is empty, due to DataFlowImpl::countPotentialAps#fff#shared/2@854c3afi.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths02#fffffff_2346015#join_rhs/7@065cf1ur is empty, due to DataFlowImpl::Subpaths::subpaths02#fffffff/7@e346e7pr.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths03#fffff/5@bdad6flk is empty, due to DataFlowImpl::Subpaths::subpaths02#fffffff_2346015#join_rhs/7@065cf1ur.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths03#fffff_03412#join_rhs/5@a6b3f26a is empty, due to DataFlowImpl::Subpaths::subpaths03#fffff/5@bdad6flk.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths#ffff#higher_order_body/1@7ddb20ul is empty, due to DataFlowImpl::Subpaths::subpaths03#fffff_03412#join_rhs/5@a6b3f26a.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::subpaths#ffff/4@72f543h6 is empty, due to DataFlowImpl::Subpaths::subpaths03#fffff_03412#join_rhs/5@a6b3f26a.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Subpaths::subpaths#ffff/1@4ee0c9g2 is empty, due to DataFlowImpl::Subpaths::subpaths#ffff/4@72f543h6.
+[2022-04-17 13:45:19] (1s) Inferred that project#DataFlowImpl::Subpaths::subpaths#ffff#2/1@5a030dkt is empty, due to DataFlowImpl::Subpaths::subpaths#ffff/4@72f543h6.
+[2022-04-17 13:45:19] (1s) Inferred that let0/27@7bbdc3mt is empty, due to DataFlowImpl::Subpaths::subpaths#ffff/4@72f543h6.
+[2022-04-17 13:45:19] (1s) Inferred that DataFlowImpl::Subpaths::retReach#f/1@9ab0ew66 is empty, due to project#DataFlowImpl::Subpaths::subpaths#ffff/1@4ee0c9g2.
+[2022-04-17 13:45:19] (1s) Inferred that subpaths#query#ffffffffffffffffffffffffffff/28@c09a18n8 is empty, due to let0/27@7bbdc3mt.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage1::readStepCand#ffff/4@86fb24g9 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::retReach#f/1@9ab0ew66 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation let0/27@7bbdc3mt with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Subpaths::subpaths#ffff#2/1@5a030dkt with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Subpaths::subpaths#ffff/1@4ee0c9g2 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths#ffff/4@72f543h6 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths03#fffff_03412#join_rhs/5@a6b3f26a with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths03#fffff/5@bdad6flk with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths02#fffffff_2346015#join_rhs/7@065cf1ur with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countPotentialAps#fff#loop_invariant_prefix/3@6c812bv2 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countPotentialAps#fff#sum_range/3@331ace3i with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::count1to2unfold#fff/1@535dcbm9 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage1::revFlow0#fff/3@6d3493wb with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TAccessPathCons#ff/2@55056wpr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::viableReturnPosOutNodeCand1#ffff_1302#join_rhs/4@6ac77eg9 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countPotentialAps#fff#shared/2@854c3afi with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countAps#fbf/3@5343cyeb with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::getATail#fff__false0#join_rhs/2@baf5a6dj with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::getATail#fff__false0_1#join_rhs/3@f42ff7fo with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::getATail#fff__true0#join_rhs/2@99059735 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countPotentialAps#fff#join_rhs/3@c1e09far with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::count1to2unfold#fff/3@ab7946vf with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths01#fffffff_4501236#join_rhs/7@ae2424v3 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::getATail#fff_10#join_rhs/2@6d2fa6a8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::getATail#fff/1@d63340rc with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::getATail#fff_102#join_rhs/3@b888bel8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage2::fwdFlow0#fffff/5@c80064w0 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::count1to2unfold#fff#join_rhs/4@c512ac8c with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::pathIntoCallable#fffffff_23401#join_rhs/5@2427ef0j with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths01#fffffff/7@ac446aav with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathStoreStep#fffff#reorder_2_3_0_1_4/5@477f40wr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathStoreStep#fffff/5@477f4cwr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::getATail#fff/3@c63834u6 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::evalUnfold#fff#reorder_1_2_0#join_rhs/3@84dfebjv with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::evalUnfold#fff#reorder_1_2_0#antijoin_rhs/3@6b8ecb78 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen1to2unfolding#ff_0#antijoin_rhs/1@34b7afg5 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage1::readStepCand#ffff_0_true3_true12#join_rhs/6@b5b92ep0 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::pathIntoCallable#fffffff/5@93c244n3 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathThroughCallable#ffff_031#join_rhs/3@6735661r with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countNodesUsingAccessPath#fbf_102#join_rhs/3@60810dqh with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathIntoCallable#fffffff#reorder_3_4_6_0_1_2_5/7@477f47wr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathThroughCallable0#fffffff/7@477f48wr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathIntoCallable0#fffffff/7@477f4awr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathIntoCallable#fffffff/7@477f4bwr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathOutOfCallable#fff/3@477f4wjr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::pathThroughCallable#ffff/4@477f4xjr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::storeStepCand#ffffff#2/2@392a68um with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::storeStepCand#ffffff/3@f54ae3f5 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countNodesUsingAccessPath#fbf/3@9e2247mj with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::revFlow#2#fffff#2/3@b48e422k with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::getAnOutNodeFlow#fffff/5@05fe3cfd with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TSummaryCtxSome#ff/2@6b4516gs with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::storeStepCand#ffffff#3/4@5119952s with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TPathNodeMid#fffff/5@477f4zjr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countNodesUsingAccessPath#fbf#count_range/3@ac4296ce with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlow#2#fffff_1034#join_rhs/4@dc9277lr with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::revFlow#2#fffff/3@d3f4762r with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::parameterFlow#fffff/5@506ec77q with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::flowIntoCall#fffff_14023#join_rhs/5@4cc2592q with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_021#join_rhs/3@1053af93 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2_10#join_rhs/2@e46eb1ug with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::storeStepFwd#ffffff_345012#join_rhs/6@5e909fcd with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::storeStepFwd#ffffff_201345#join_rhs/6@708f1dvm with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::revFlowStore#fffffffff#2/7@a377164b with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::revFlowStore#fffffffff/4@b123280i with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlow0#fffff#join_rhs/4@0ac197rs with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlowConsCand#ffff/4@34a68w9g with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlow#2#fffff/5@34a682wg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlow0#fffff/5@34a683wg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen2unfolding#ff_0#antijoin_rhs/1@8f4e85u5 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TCons1#ff/2@656ac3qo with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen2unfolding#ff#shared/3@63213bmv with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/3@fb551c59 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff#3_120#join_rhs/3@7cb0b2le with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff#3_021#join_rhs/3@b3cd47o9 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff#2_120#join_rhs/3@d7215fbl with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff_0231#join_rhs/4@8af5db53 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff#2/2@0a3085id with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/2@339ea4vo with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::parameterFlow#fffff_23401#join_rhs/5@49b651rs with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::readStepFwd#ffffff_34501#join_rhs/5@ab4ff1cl with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::readStepFwd#ffffff/5@e42c8bq1 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlowStore#fffffff_12403#join_rhs/5@c3697aje with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlowIsReturned#fffff#reorder_0_3_4_1_2#join_rhs/4@b152ff3j with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlow#fffff#2_102#join_rhs/3@a2550d12 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlow#fffff#2_021#join_rhs/3@17e94ec5 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::storeStepCand#ffffff#2_10#join_rhs/2@853b5asb with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TConsNil#ff/2@a7d433t4 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TConsCons#fff/3@2921a970 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen2unfolding#ff/2@d0c53fou with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::storeStepCand#ffffff_120#count_range/3@71354bj7 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3_120#join_rhs/3@ec851fa6 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3_021#join_rhs/3@95deb1uv with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#2_120#join_rhs/3@24799d9u with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_02413#join_rhs/5@0bd6c6ql with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::localStep#cpe#12345#ffbff_2014#join_rhs/4@e682f1u1 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff#3/3@b633b6m8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff#2/3@d24c7f04 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::localStep#ffbfff/4@203979rd with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::parameterMayFlowThrough#ffff/4@c82f3723 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlowRead#fffffff#2/3@920e9aqg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlowRead#fffffff/5@214053r8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::readStepFwd#ffffff/6@c8ba66at with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlowStore#fffffff/5@850147f8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::storeStepCand#ffffff#3_01423#join_rhs/5@7a46adnj with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlow#fffff_02341#join_rhs/5@d61bc8i7 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7/9@34a681wg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::fwdFlow#fffff#2/3@25d141gh with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Subpaths::subpaths#ffff#higher_order_body/1@7ddb20ul with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::returnNodeMayFlowThrough#fff/3@30d1f69a with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::storeStepCand#ffffff#3/5@4328f5oc with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::storeStepCand#ffffff#2/2@f4e406s6 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TAccessPathCons#ff#join_rhs/2@5f505apo with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen2unfolding#ff#join_rhs/3@485ab63m with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlow#fffff#4/3@4fa4e3i7 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::getApNil#ff/2@88369b6b with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::readStepCand#ffff/4@2ff5140f with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::revFlowInToReturn#fffff#reorder_0_2_4_1_3/5@34a68z9g with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#4/4@6133e7qt with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#3/3@80b2e16v with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation dom#DataFlowImpl::TAccessPathCons2#fff/3@7ac983r0 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::localStep#cpe#12345#ffbff/5@0946afac with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::storeStepCand#ffffff_102#join_rhs/3@4e7d588g with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::localStep#ffbfff_2014#join_rhs/4@138074r6 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage4::readStepFwd#ffffff_23401#join_rhs/5@8cef7e6o with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5/7@a38430w4 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlow0#fffff/5@a38434w4 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlow0#fffff#join_rhs#2/5@f0ab16jq with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlowRead#fffffff#reorder_0_1_6_2_3_4_5#join_rhs/5@11260dci with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlowStore#fffffff/7@a38431w4 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlow#fffff_120#join_rhs/3@7db5f04h with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::storeStepCand#ffffff/6@826113oe with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlowStore#fffffffff#2/7@a413e4eg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::revFlowStore#fffffffff#reorder_0_1_2_8_3_4_5_6_7#join_rhs/7@07a197s1 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::expensiveLen2unfolding#ff#count_range/3@ca4744du with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::revFlow#fffff_1034#join_rhs/4@5156e8mn with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlow#fffff#3/1@9d26ddmi with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::parameterFlow#fffff/5@9dc80ae8 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::fwdFlowIn#fffffff/7@a3843zt4 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::storeStepFwd#ffffff_345012#join_rhs/6@b4e752dq with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::getATail#fff_120#join_rhs/3@91c204qf with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff#5/2@a51f5fii with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_20145#join_rhs/5@b69fcan3 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff_2014#join_rhs/4@57a54cqn with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::LocalFlowBigStep::localFlowBigStep#ffffff/5@ada207ec with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage4::localStep#ffbfff/6@0ac982pg with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlow#fffff#2/2@79d364q0 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::countAps#fbf#join_rhs/4@717127i5 with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation DataFlowImpl::Stage3::readStepCand#ffff_1023#join_rhs/4@692f68rc with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlow#fffff/3@02b895vj with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::revFlowStore#fffffffff/4@0b4eb1ch with 0 rows.
+[2022-04-17 13:45:19] (1s)  >>> Created relation project#DataFlowImpl::Stage3::readStepFwd#ffffff_23401#join_rhs/5@d5b618ih with 0 rows.
+[2022-04-17 13:45:20] (1s) Starting to evaluate predicate num#DataFlowImpl::TPathNodeSink#fff/3@8ee07ab2
+[2022-04-17 13:45:20] (1s)  >>> Created relation num#DataFlowImpl::TPathNodeSink#fff/3@8ee07ab2 with 0 rows.
+[2022-04-17 13:45:20] (1s) Inferred that DataFlowImpl::PathNodeSink#class#fff/3@e6e0d2a2 is empty, due to num#DataFlowImpl::TPathNodeSink#fff/3@8ee07ab2.
+[2022-04-17 13:45:20] (1s) Inferred that DataFlowImpl::PathNodeSink#class#fff_0#antijoin_rhs/1@75fe723r is empty, due to DataFlowImpl::PathNodeSink#class#fff/3@e6e0d2a2.
+[2022-04-17 13:45:20] (1s) Inferred that DataFlowImpl::Configuration::hasFlowPath_dispred#fff/3@62d83a8j is empty, due to DataFlowImpl::PathNodeSink#class#fff/3@e6e0d2a2.
+[2022-04-17 13:45:20] (1s) Inferred that DataFlowImpl::directReach#f/1@cdb51w9f is empty, due to DataFlowImpl::PathNodeSink#class#fff_0#antijoin_rhs/1@75fe723r.
+[2022-04-17 13:45:20] (1s) Inferred that project#DataFlowImpl::Configuration::hasFlowPath_dispred#fff/1@3d360e4m is empty, due to DataFlowImpl::Configuration::hasFlowPath_dispred#fff/3@62d83a8j.
+[2022-04-17 13:45:20] (1s) Inferred that DataFlowImpl::pathSucc#ff/2@4252f49n is empty, due to DataFlowImpl::directReach#f/1@cdb51w9f.
+[2022-04-17 13:45:20] (1s) Inferred that #select#query#f/1@970f402m is empty, due to project#DataFlowImpl::Configuration::hasFlowPath_dispred#fff/1@3d360e4m.
+[2022-04-17 13:45:20] (1s)  >>> Created relation #select#query#f/1@970f402m with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::PathNodeSink#class#fff_0#antijoin_rhs/1@75fe723r with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::Configuration::hasFlowPath_dispred#fff/3@62d83a8j with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::directReach#f/1@cdb51w9f with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::PathNodeSink#class#fff/3@e6e0d2a2 with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::pathSucc#ff/2@4252f49n with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation project#DataFlowImpl::Configuration::hasFlowPath_dispred#fff/1@3d360e4m with 0 rows.
+[2022-04-17 13:45:20] (1s) Starting to evaluate predicate DataFlowImpl::reach#f/1@c897e7t9
+[2022-04-17 13:45:20] (1s)  >>> Created relation DataFlowImpl::reach#f/1@c897e7t9 with 0 rows.
+[2022-04-17 13:45:20] (1s) Inferred that edges#query#ffffffffffffff/14@72ad31sv is empty, due to DataFlowImpl::reach#f/1@c897e7t9.
+[2022-04-17 13:45:20] (1s) Inferred that nodes#query#fffffffff/9@30555ag9 is empty, due to DataFlowImpl::reach#f/1@c897e7t9.
+[2022-04-17 13:45:20] (1s)  >>> Created relation edges#query#ffffffffffffff/14@72ad31sv with 0 rows.
+[2022-04-17 13:45:20] (1s)  >>> Created relation nodes#query#fffffffff/9@30555ag9 with 0 rows.
+[2022-04-17 13:45:20] (1s) Query done
+[2022-04-17 13:45:20] CSV_CACHE_DIFF: edges#query#ffffffffffffff nodes#query#fffffffff subpaths#query#ffffffffffffffffffffffffffff #select#query#f (GroovyInjection.ql),0.97,0.639,0.235,0.006,0.031,0.005,0,0,0,0,0,0,0
+[2022-04-17 13:45:20] (1s) Sequence stamp origin is -6466441391327125318
+[2022-04-17 13:45:20] (1s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 13:45:20] (1s) Unpausing evaluation
+[2022-04-17 13:45:20] CSV_IMB_QUERIES: Query,edges#query#ffffffffffffff nodes#query#fffffffff subpaths#query#ffffffffffffffffffffffffffff #select#query#f,GroovyInjection.ql,21,Success,0.97,0,1253
+[2022-04-17 13:45:20] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/GroovyInjection.ql produced BQRS results.
+[2022-04-17 13:45:20] [PROGRESS] execute queries> Evaluation completed (1.6s).
+[2022-04-17 13:45:20] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 13:45:20] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 13:45:20] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 13:45:20] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:45:20] Unpausing evaluation
+[2022-04-17 13:45:20] Terminating normally.

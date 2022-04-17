@@ -1,0 +1,12 @@
+[2022-04-17 13:05:58] This is codeql query run -d ./Vuln/micro/ ./Security/CWE/CWE-094/JexlInjection.ql
+[2022-04-17 13:05:58] Log file was started late.
+[2022-04-17 13:05:58] Calling plumbing command: codeql resolve ram --format=json
+[2022-04-17 13:05:58] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx2048M",
+                        "--off-heap-ram=2048"
+                      ]
+[2022-04-17 13:05:59] Spawning plumbing command: execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/JexlInjection.ql
+[2022-04-17 13:06:01] [ERROR] Spawned process exited abnormally (code 2; tried to run: [/Users/zhuangpenghai/codeql-home/codeql/tools/osx64/java/bin/java, -Xmx2048M, -Djava.library.path=/Users/zhuangpenghai/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., -cp, /Users/zhuangpenghai/codeql-home/codeql/tools/codeql.jar, com.semmle.cli2.CodeQL, env_argv, execute, queries, -J-Xmx2048M, _, _, _, _, _, _, _, --, /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java, /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-094/JexlInjection.ql])
+[2022-04-17 13:06:01] Plumbing command codeql execute queries terminated with status 2.
+[2022-04-17 13:06:01] Exiting with code 2

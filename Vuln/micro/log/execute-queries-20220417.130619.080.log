@@ -1,0 +1,74 @@
+[2022-04-17 13:06:19] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql
+[2022-04-17 13:06:19] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql
+[2022-04-17 13:06:19] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql"
+                      ]
+[2022-04-17 13:06:19] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:06:19] Creating executor with 1 threads.
+[2022-04-17 13:06:19] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql --format=json
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Found enclosing pack 'CWE-601' at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/.cache.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 resolved OK.
+[2022-04-17 13:06:19] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2022-04-17 13:06:19] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601"
+                        ],
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/.cache"
+                        ],
+                        "relativeName" : "CWE-601/UrlRedirect.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory.",
+                        "qlPackName" : "CWE-601"
+                      }
+[2022-04-17 13:06:19] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:19] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:19] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql hashes to 801cfba3448b793e40483c22acfc459686e9f49b.
+[2022-04-17 13:06:19] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql.
+[2022-04-17 13:06:20] ExternalModuleBindingPass ...
+[2022-04-17 13:06:20] ExternalModuleBindingPass time: 00:00.005
+[2022-04-17 13:06:20] QLPredicateSynthesiser ...
+[2022-04-17 13:06:20] QLPredicateSynthesiser time: 00:00.006
+[2022-04-17 13:06:20] DeclarationBindingPass ...
+[2022-04-17 13:06:20] DeclarationBindingPass time: 00:00.010
+[2022-04-17 13:06:20] Fixed point time ...
+[2022-04-17 13:06:20] Fixed point time time: 00:00.012
+[2022-04-17 13:06:20] ReferenceBindingPass ...
+[2022-04-17 13:06:20] ReferenceBindingPass time: 00:00.000
+[2022-04-17 13:06:20] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:06:20] EntityTypeUpdateBindingPass time: 00:00.004
+[2022-04-17 13:06:20] DeclarationBindingPass ...
+[2022-04-17 13:06:20] DeclarationBindingPass time: 00:00.001
+[2022-04-17 13:06:20] PredicateBodyBindingPass ...
+[2022-04-17 13:06:20] PredicateBodyBindingPass time: 00:00.064
+[2022-04-17 13:06:20] LanguagePragmaPropagationPass ...
+[2022-04-17 13:06:20] LanguagePragmaPropagationPass time: 00:00.000
+[2022-04-17 13:06:20] Ambiguity checks ...
+[2022-04-17 13:06:20] Ambiguity checks time: 00:00.004
+[2022-04-17 13:06:20] Ql checks ...
+[2022-04-17 13:06:20] Ql checks time: 00:00.024
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module semmle.code.java.dataflow.FlowSources. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:15,8-45)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module semmle.code.java.security.UrlRedirect. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:16,8-45)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module java. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:14,8-12)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:17,8-16)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module TaintTracking. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:19,33-46)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:22,31-39)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve type RemoteFlowSource (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:22,74-90)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:24,29-37)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve type UrlRedirectSink (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:24,68-83)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:27,6-14)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601 or an enclosing directory. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:27,33-41)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: hasFlowPath(<unknown>, <unknown>) cannot be resolved for type UrlRedirectConfig (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:28,12-23)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: UrlRedirectConfig must implement toString() (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:19,7-24)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: This predicate does not override another predicate (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:22,3-92)
+[2022-04-17 13:06:20] [ERROR] execute queries> ERROR: This predicate does not override another predicate (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-601/UrlRedirect.ql:24,3-85)
+[2022-04-17 13:06:20] Sequence stamp origin is -6466451308538360573
+[2022-04-17 13:06:20] Pausing evaluation to close the cache at sequence stamp o+0
+[2022-04-17 13:06:20] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:06:20] Unpausing evaluation
+[2022-04-17 13:06:20] Exiting with code 2

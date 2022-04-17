@@ -1,0 +1,240 @@
+[2022-04-17 12:17:44] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/micro_service_seclab-main/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/micro_service_seclab-main/qlconfig.yml -- /Users/zhuangpenghai/Downloads/micro_service_seclab-main/micro/db-java /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql
+[2022-04-17 12:17:44] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql
+[2022-04-17 12:17:44] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql"
+                      ]
+[2022-04-17 12:17:44] Creating executor with 1 threads.
+[2022-04-17 12:17:44] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/micro_service_seclab-main/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql --format=json
+[2022-04-17 12:17:44] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:44] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/micro_service_seclab-main.
+[2022-04-17 12:17:44] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/micro_service_seclab-main/.cache.
+[2022-04-17 12:17:44] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/micro_service_seclab-main/qlpack.yml.
+[2022-04-17 12:17:45] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/micro_service_seclab-main resolved OK.
+[2022-04-17 12:17:45] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 12:17:45] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/micro_service_seclab-main",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/micro_service_seclab-main/.cache"
+                        ],
+                        "relativeName" : "micro/query.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 12:17:45] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:45] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:46] Resolved file set for /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql hashes to ffd3e70dd25d2009f462e0520845731f912936bc.
+[2022-04-17 12:17:46] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:46] ExternalModuleBindingPass ...
+[2022-04-17 12:17:47] ExternalModuleBindingPass time: 00:01.316
+[2022-04-17 12:17:47] QLPredicateSynthesiser ...
+[2022-04-17 12:17:47] QLPredicateSynthesiser time: 00:00.042
+[2022-04-17 12:17:47] DeclarationBindingPass ...
+[2022-04-17 12:17:47] DeclarationBindingPass time: 00:00.150
+[2022-04-17 12:17:47] Fixed point time ...
+[2022-04-17 12:17:48] Fixed point time time: 00:00.282
+[2022-04-17 12:17:48] ReferenceBindingPass ...
+[2022-04-17 12:17:48] ReferenceBindingPass time: 00:00.054
+[2022-04-17 12:17:48] EntityTypeUpdateBindingPass ...
+[2022-04-17 12:17:48] EntityTypeUpdateBindingPass time: 00:00.049
+[2022-04-17 12:17:48] DeclarationBindingPass ...
+[2022-04-17 12:17:48] DeclarationBindingPass time: 00:00.025
+[2022-04-17 12:17:48] PredicateBodyBindingPass ...
+[2022-04-17 12:17:48] PredicateBodyBindingPass time: 00:00.436
+[2022-04-17 12:17:48] LanguagePragmaPropagationPass ...
+[2022-04-17 12:17:48] LanguagePragmaPropagationPass time: 00:00.045
+[2022-04-17 12:17:48] Ambiguity checks ...
+[2022-04-17 12:17:48] Ambiguity checks time: 00:00.062
+[2022-04-17 12:17:48] Ql checks ...
+[2022-04-17 12:17:49] Ql checks time: 00:00.570
+[2022-04-17 12:17:51] Compilation pipeline
+[2022-04-17 12:17:51] Type Inference ...
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,762,1188
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:51] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 12:17:52] Type Inference time: 00:01.539
+[2022-04-17 12:17:52] Binding Checks ...
+[2022-04-17 12:17:53] Binding Checks time: 00:00.222
+[2022-04-17 12:17:53] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:53] Processing compilation pipeline
+[2022-04-17 12:17:53] Started compiling a query
+[2022-04-17 12:17:53] Initialising compiler...
+[2022-04-17 12:17:53] 	 ... compiler initialised
+[2022-04-17 12:17:53] About to start query optimisation
+[2022-04-17 12:17:53] Compilation cache miss for e05e197af1a60c36d9aeae68d5d71957286a10ff.
+[2022-04-17 12:17:54] Stored compiled program for e05e197af1a60c36d9aeae68d5d71957286a10ff.
+[2022-04-17 12:17:54] Compilation cache miss for 4e26dc6431c024b6af22e0743835b632d7fe9cdd.
+[2022-04-17 12:17:56] Stored compiled program for 4e26dc6431c024b6af22e0743835b632d7fe9cdd.
+[2022-04-17 12:17:57] Compilation cache miss for 9185ff7fb8b8e98e5d1d38e289211a085d518daf.
+[2022-04-17 12:17:57] Stored compiled program for 9185ff7fb8b8e98e5d1d38e289211a085d518daf.
+[2022-04-17 12:17:57] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 12:17:57] CSV_COMPILATION: 239,290,419,3016
+[2022-04-17 12:17:57] [PROGRESS] execute queries> [1/1 comp 12.3s] Compiled /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql.
+[2022-04-17 12:17:57] Of 234 predicates, 0 are used in more than one query.
+[2022-04-17 12:17:57] [PROGRESS] execute queries> Starting evaluation of micro/query.ql.
+[2022-04-17 12:17:57] Starting evaluation of /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql
+[2022-04-17 12:17:57] (0s) Start query execution
+[2022-04-17 12:17:57] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 12:17:57] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 12:17:57] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (query.ql),0.027,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 12:17:57] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 12:17:57] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,query.ql,1,Success,0.027,38891,31
+[2022-04-17 12:17:57] (0s) Beginning execution of Location::Top::toString_dispred#ff
+[2022-04-17 12:17:57] CSV_CACHE_DIFF: Location::Top::toString_dispred#ff (query.ql),0.002,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 12:17:57] CSV_IMB_QUERIES: Stage,Location::Top::toString_dispred#ff,query.ql,2,Success,0.002,64877,34
+[2022-04-17 12:17:57] (0s) Beginning execution of query.ql
+[2022-04-17 12:17:57] (0s)  >>> Created relation interfaces/4@64928d95 with 3196 rows.
+[2022-04-17 12:17:57] (0s)  >>> Created relation packages/2@29d2d1tb with 205 rows.
+[2022-04-17 12:17:57] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 12:17:57] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@348c8e6n
+[2022-04-17 12:17:57] (0s)  >>> Created relation exprs_10#join_rhs/2@348c8e6n with 3830 rows.
+[2022-04-17 12:17:57] (0s) Starting to evaluate predicate @annotation#f/1@f19e16h7
+[2022-04-17 12:17:57] (0s)  >>> Created relation @annotation#f/1@f19e16h7 with 2208 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation isAnnotType/1@ba9a67ar with 71 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation enclInReftype/2@07dda0q5 with 329 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i1#6b56bwue (iteration 1)
+[2022-04-17 12:17:58] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 71 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i2#6b56bwue (iteration 2)
+[2022-04-17 12:17:58] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 2 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i3#6b56bwue (iteration 3)
+[2022-04-17 12:17:58] (0s) Empty delta for m#Type::RefType::nestedName#bf_delta (order for disjuncts: delta=<standard>).
+[2022-04-17 12:17:58] (0s) Accumulating deltas
+[2022-04-17 12:17:58] (0s)  >>> Created relation m#Type::RefType::nestedName#bf/1@6b56bwue with 73 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation classes/4@821293v7 with 1748 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation arrays/5@3a5ff15c with 310 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation wildcards/3@962bcerh with 331 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation typeVars/5@f6f131jt with 844 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate Element::Element::hasName_dispred#bf/2@31e5e64l
+[2022-04-17 12:17:58] (0s)  >>> Created relation Element::Element::hasName_dispred#bf/2@31e5e64l with 73 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate enclInReftype_0#antijoin_rhs/1@952090tq
+[2022-04-17 12:17:58] (0s)  >>> Created relation enclInReftype_0#antijoin_rhs/1@952090tq with 329 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate enclInReftype_10#join_rhs/2@d10431cv
+[2022-04-17 12:17:58] (0s)  >>> Created relation enclInReftype_10#join_rhs/2@d10431cv with 329 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf#join_rhs/3@5b58f1a5
+[2022-04-17 12:17:58] (0s)  >>> Created relation Type::RefType::nestedName#bf#join_rhs/3@5b58f1a5 with 3 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i1#30cbcwov (iteration 1)
+[2022-04-17 12:17:58] (0s) 			 - Type::RefType::nestedName#bf_delta has 70 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i2#30cbcwov (iteration 2)
+[2022-04-17 12:17:58] (0s) 			 - Type::RefType::nestedName#bf_delta has 3 rows (order for disjuncts: delta=3163).
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i3#30cbcwov (iteration 3)
+[2022-04-17 12:17:58] (0s) Empty delta for Type::RefType::nestedName#bf_delta (order for disjuncts: delta=3163).
+[2022-04-17 12:17:58] (0s) Accumulating deltas
+[2022-04-17 12:17:58] (0s)  >>> Created relation Type::RefType::nestedName#bf/2@30cbcwov with 73 rows.
+[2022-04-17 12:17:58] (0s) Starting to evaluate predicate #select#f/1@fdf91a8a
+[2022-04-17 12:17:58] (0s)  >>> Created relation #select#f/1@fdf91a8a with 0 rows.
+[2022-04-17 12:17:58] (0s) Inferred that Location::Top::hasLocationInfoAux_dispred#bfffff/6@925c89ss is empty, due to #select#f/1@fdf91a8a.
+[2022-04-17 12:17:58] (0s) Inferred that #select#query#fffffff/7@c65e08hn is empty, due to #select#f/1@fdf91a8a.
+[2022-04-17 12:17:58] (0s) Inferred that Location::Top::hasLocationInfo_dispred#bfffff/6@f06a5e9r is empty, due to Location::Top::hasLocationInfoAux_dispred#bfffff/6@925c89ss.
+[2022-04-17 12:17:58] (0s) Inferred that project#Location::Top::hasLocationInfo_dispred#bfffff/1@b7c121s2 is empty, due to Location::Top::hasLocationInfo_dispred#bfffff/6@f06a5e9r.
+[2022-04-17 12:17:58] (0s)  >>> Created relation #select#query#fffffff/7@c65e08hn with 0 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation Location::Top::hasLocationInfoAux_dispred#bfffff/6@925c89ss with 0 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation Location::Top::hasLocationInfo_dispred#bfffff/6@f06a5e9r with 0 rows.
+[2022-04-17 12:17:58] (0s)  >>> Created relation project#Location::Top::hasLocationInfo_dispred#bfffff/1@b7c121s2 with 0 rows.
+[2022-04-17 12:17:58] (0s) Query done
+[2022-04-17 12:17:58] CSV_CACHE_DIFF: #select#query#fffffff (query.ql),0.202,0.123,0.059,0.002,0.006,0.004,0,0,0,0,0,0,0
+[2022-04-17 12:17:58] (0s) Sequence stamp origin is -6466463828297835689
+[2022-04-17 12:17:58] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 12:17:58] (0s) Unpausing evaluation
+[2022-04-17 12:17:58] CSV_IMB_QUERIES: Query,#select#query#fffffff,query.ql,2,Success,0.202,0,243
+[2022-04-17 12:17:58] Evaluation of /Users/zhuangpenghai/Downloads/micro_service_seclab-main/query.ql produced BQRS results.
+[2022-04-17 12:17:58] [PROGRESS] execute queries> Evaluation completed (315ms).
+[2022-04-17 12:17:58] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 12:17:58] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 12:17:58] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 12:17:58] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 12:17:58] Unpausing evaluation
+[2022-04-17 12:17:58] Terminating normally.

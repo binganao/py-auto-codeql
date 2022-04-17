@@ -1,0 +1,397 @@
+[2022-04-17 13:53:55] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql
+[2022-04-17 13:53:55] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql
+[2022-04-17 13:53:56] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql"
+                      ]
+[2022-04-17 13:53:56] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:53:56] Creating executor with 1 threads.
+[2022-04-17 13:53:56] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql --format=json
+[2022-04-17 13:53:56] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:53:56] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:53:56] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:53:56] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:53:57] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:53:57] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:53:57] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:53:57] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:53:57] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:53:58] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql hashes to 203436e077c3e19604cc2adba1b45e8b44aa6a01.
+[2022-04-17 13:53:58] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:53:58] ExternalModuleBindingPass ...
+[2022-04-17 13:53:59] ExternalModuleBindingPass time: 00:01.317
+[2022-04-17 13:53:59] QLPredicateSynthesiser ...
+[2022-04-17 13:53:59] QLPredicateSynthesiser time: 00:00.035
+[2022-04-17 13:53:59] DeclarationBindingPass ...
+[2022-04-17 13:54:00] DeclarationBindingPass time: 00:00.199
+[2022-04-17 13:54:00] Fixed point time ...
+[2022-04-17 13:54:00] Fixed point time time: 00:00.913
+[2022-04-17 13:54:00] ReferenceBindingPass ...
+[2022-04-17 13:54:01] ReferenceBindingPass time: 00:00.126
+[2022-04-17 13:54:01] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:54:01] EntityTypeUpdateBindingPass time: 00:00.077
+[2022-04-17 13:54:01] DeclarationBindingPass ...
+[2022-04-17 13:54:01] DeclarationBindingPass time: 00:00.077
+[2022-04-17 13:54:01] PredicateBodyBindingPass ...
+[2022-04-17 13:54:01] PredicateBodyBindingPass time: 00:00.687
+[2022-04-17 13:54:01] LanguagePragmaPropagationPass ...
+[2022-04-17 13:54:01] LanguagePragmaPropagationPass time: 00:00.060
+[2022-04-17 13:54:01] Ambiguity checks ...
+[2022-04-17 13:54:02] Ambiguity checks time: 00:00.094
+[2022-04-17 13:54:02] Ql checks ...
+[2022-04-17 13:54:02] Ql checks time: 00:00.685
+[2022-04-17 13:54:04] Compilation pipeline
+[2022-04-17 13:54:04] Type Inference ...
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,765,1203
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:54:06] Type Inference time: 00:01.939
+[2022-04-17 13:54:06] Binding Checks ...
+[2022-04-17 13:54:07] Binding Checks time: 00:00.309
+[2022-04-17 13:54:07] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:54:07] Processing compilation pipeline
+[2022-04-17 13:54:07] Started compiling a query
+[2022-04-17 13:54:07] Initialising compiler...
+[2022-04-17 13:54:07] 	 ... compiler initialised
+[2022-04-17 13:54:07] About to start query optimisation
+[2022-04-17 13:54:08] Compilation cache hit - skipping compilation.
+[2022-04-17 13:54:08] Compilation cache hit - skipping compilation.
+[2022-04-17 13:54:08] Compilation cache hit - skipping compilation.
+[2022-04-17 13:54:09] Compilation cache hit - skipping compilation.
+[2022-04-17 13:54:09] Compilation cache hit - skipping compilation.
+[2022-04-17 13:54:09] Compilation cache miss for f9d7bcd6204cf0276cbc771671fed400ebb1489f.
+[2022-04-17 13:54:13] Stored compiled program for f9d7bcd6204cf0276cbc771671fed400ebb1489f.
+[2022-04-17 13:54:13] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 13:54:13] CSV_COMPILATION: 604,1043,663,3629
+[2022-04-17 13:54:13] [PROGRESS] execute queries> [1/1 comp 16.5s] Compiled /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:54:13] Of 589 predicates, 0 are used in more than one query.
+[2022-04-17 13:54:13] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql.
+[2022-04-17 13:54:13] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql
+[2022-04-17 13:54:14] (0s) Start query execution
+[2022-04-17 13:54:14] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (ReadingFromWorldWritableFile.ql),0.024,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,ReadingFromWorldWritableFile.ql,1,Success,0.024,38891,27
+[2022-04-17 13:54:14] (0s) Beginning execution of Type::erase#ff
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Type::erase#ff (ReadingFromWorldWritableFile.ql),0.004,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Stage,Type::erase#ff,ReadingFromWorldWritableFile.ql,2,Success,0.004,6439,33
+[2022-04-17 13:54:14] (0s) Beginning execution of Type::hasSubtype#ff
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Type::hasSubtype#ff (ReadingFromWorldWritableFile.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Stage,Type::hasSubtype#ff,ReadingFromWorldWritableFile.ql,3,Success,0.001,16080,36
+[2022-04-17 13:54:14] (0s) Beginning execution of Location::Top::toString_dispred#ff
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Location::Top::toString_dispred#ff (ReadingFromWorldWritableFile.ql),0.001,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Stage,Location::Top::toString_dispred#ff,ReadingFromWorldWritableFile.ql,4,Success,0.001,64877,38
+[2022-04-17 13:54:14] (0s) Beginning execution of Expr::CompileTimeConstantExpr::getIntValue_dispred#ff
+[2022-04-17 13:54:14] CSV_CACHE_DIFF: Expr::CompileTimeConstantExpr::getIntValue_dispred#ff (ReadingFromWorldWritableFile.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:54:14] CSV_IMB_QUERIES: Stage,Expr::CompileTimeConstantExpr::getIntValue_dispred#ff,ReadingFromWorldWritableFile.ql,5,Success,0,2,39
+[2022-04-17 13:54:14] (0s) Beginning execution of ReadingFromWorldWritableFile.ql
+[2022-04-17 13:54:14] (0s)  >>> Created relation callableBinding/2@5704453i with 134 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@348c8e6n
+[2022-04-17 13:54:14] (0s)  >>> Created relation exprs_10#join_rhs/2@348c8e6n with 3830 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation methods/6@d93893sl with 20736 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation fields/5@1c902dh2 with 4594 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate fields_30#join_rhs/2@51f6014u
+[2022-04-17 13:54:14] (0s)  >>> Created relation fields_30#join_rhs/2@51f6014u with 4594 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation constrs/6@9f73ec4d with 1726 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation enclInReftype/2@07dda0q5 with 329 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation isAnonymClass/2@4aaa67b5 with 2 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Type::declaresMember#fb#antijoin_rhs/2@dee5947k
+[2022-04-17 13:54:14] (0s)  >>> Created relation Type::declaresMember#fb#antijoin_rhs/2@dee5947k with 2 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Type::declaresMember#fb#shared/2@84db92kd
+[2022-04-17 13:54:14] (0s)  >>> Created relation Type::declaresMember#fb#shared/2@84db92kd with 327 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation isLocalClassOrInterface/2@f6c5080m with 0 rows.
+[2022-04-17 13:54:14] (0s) Inferred that Statement::LocalTypeDeclStmt::getLocalType_dispred#ff/2@0b8fd288 is empty, due to isLocalClassOrInterface/2@f6c5080m.
+[2022-04-17 13:54:14] (0s) Inferred that Type::declaresMember#fb#antijoin_rhs#1/2@08477120 is empty, due to isLocalClassOrInterface/2@f6c5080m.
+[2022-04-17 13:54:14] (0s) Inferred that Statement::LocalTypeDeclStmt::getDeclKeyword_dispred#ff/2@60adefoh is empty, due to Statement::LocalTypeDeclStmt::getLocalType_dispred#ff/2@0b8fd288.
+[2022-04-17 13:54:14] (0s)  >>> Created relation Statement::LocalTypeDeclStmt::getLocalType_dispred#ff/2@0b8fd288 with 0 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation Type::declaresMember#fb#antijoin_rhs#1/2@08477120 with 0 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation Statement::LocalTypeDeclStmt::getDeclKeyword_dispred#ff/2@60adefoh with 0 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Type::declaresMember#fb/2@10788dqd
+[2022-04-17 13:54:14] (0s)  >>> Created relation Type::declaresMember#fb/2@10788dqd with 27383 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Type::declaresMember#fb_1#join_rhs/1@b024d99n
+[2022-04-17 13:54:14] (0s)  >>> Created relation Type::declaresMember#fb_1#join_rhs/1@b024d99n with 27383 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate exprs_30124#join_rhs/5@e50ac3u3
+[2022-04-17 13:54:14] (0s)  >>> Created relation exprs_30124#join_rhs/5@e50ac3u3 with 3830 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation packages/2@29d2d1tb with 205 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation primitives/2@ddc678hq with 10 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation classes/4@821293v7 with 1748 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation arrays/5@3a5ff15c with 310 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation wildcards/3@962bcerh with 331 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation typeVars/5@f6f131jt with 844 rows.
+[2022-04-17 13:54:14] (0s)  >>> Created relation interfaces/4@64928d95 with 3196 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Element::Element::hasName_dispred#ff/2@1738a1lv
+[2022-04-17 13:54:14] (0s)  >>> Created relation Element::Element::hasName_dispred#ff/2@1738a1lv with 31974 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Element::Element::hasName_dispred#ff_10#join_rhs/2@881f2dm6
+[2022-04-17 13:54:14] (0s)  >>> Created relation Element::Element::hasName_dispred#ff_10#join_rhs/2@881f2dm6 with 31974 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate m#Member::Member::getDeclaringType_dispred#bf#shared/1@91ae20bf
+[2022-04-17 13:54:14] (0s)  >>> Created relation m#Member::Member::getDeclaringType_dispred#bf#shared/1@91ae20bf with 7 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate m#Member::Member::getDeclaringType_dispred#bf/1@0bf180or
+[2022-04-17 13:54:14] (0s)  >>> Created relation m#Member::Member::getDeclaringType_dispred#bf/1@0bf180or with 997 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Member::Field#class#f/1@d48afbef
+[2022-04-17 13:54:14] (0s)  >>> Created relation Member::Field#class#f/1@d48afbef with 4594 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Member::Member::getDeclaringType_dispred#bf/2@c1b2b1fu
+[2022-04-17 13:54:14] (0s)  >>> Created relation Member::Member::getDeclaringType_dispred#bf/2@c1b2b1fu with 873 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Member::Member::getDeclaringType_dispred#bf_10#join_rhs/2@5945f0ou
+[2022-04-17 13:54:14] (0s)  >>> Created relation Member::Member::getDeclaringType_dispred#bf_10#join_rhs/2@5945f0ou with 873 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate typeVars_40#join_rhs/2@01b02c1e
+[2022-04-17 13:54:14] (0s)  >>> Created relation typeVars_40#join_rhs/2@01b02c1e with 844 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate classes_0#antijoin_rhs/1@52efea8j
+[2022-04-17 13:54:14] (0s)  >>> Created relation classes_0#antijoin_rhs/1@52efea8j with 1748 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate interfaces_0#antijoin_rhs/1@13b98c8j
+[2022-04-17 13:54:14] (0s)  >>> Created relation interfaces_0#antijoin_rhs/1@13b98c8j with 3196 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate @classorinterface#f/1@c1053d1t
+[2022-04-17 13:54:14] (0s)  >>> Created relation @classorinterface#f/1@c1053d1t with 4944 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Generics::TypeVariable::getGenericType_dispred#ff/2@e81199jg
+[2022-04-17 13:54:14] (0s)  >>> Created relation Generics::TypeVariable::getGenericType_dispred#ff/2@e81199jg with 197 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Generics::TypeVariable::getGenericType_dispred#ff_10#join_rhs/2@40205f7u
+[2022-04-17 13:54:14] (0s)  >>> Created relation Generics::TypeVariable::getGenericType_dispred#ff_10#join_rhs/2@40205f7u with 197 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate @callable#b/1@b3d505rc
+[2022-04-17 13:54:14] (0s)  >>> Created relation @callable#b/1@b3d505rc with 22462 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Member::Callable#class#b/1@a145348k
+[2022-04-17 13:54:14] (0s)  >>> Created relation Member::Callable#class#b/1@a145348k with 22462 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate constrs_50#join_rhs/2@2fcc1eqj
+[2022-04-17 13:54:14] (0s)  >>> Created relation constrs_50#join_rhs/2@2fcc1eqj with 1726 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate methods_50#join_rhs/2@2b64aeij
+[2022-04-17 13:54:14] (0s)  >>> Created relation methods_50#join_rhs/2@2b64aeij with 20736 rows.
+[2022-04-17 13:54:14] (0s) Starting to evaluate predicate Generics::GenericCallable#class#f/1@38204b23
+[2022-04-17 13:54:14] (0s)  >>> Created relation Generics::GenericCallable#class#f/1@38204b23 with 684 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff#join_rhs/2@300f16l0
+[2022-04-17 13:54:15] (0s)  >>> Created relation Type::RefType::getPackage_dispred#ff#join_rhs/2@300f16l0 with 647 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i1#5c303woo (iteration 1)
+[2022-04-17 13:54:15] (0s) 			 - Type::RefType::getPackage_dispred#ff_delta has 4944 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i2#5c303woo (iteration 2)
+[2022-04-17 13:54:15] (0s) 			 - Type::RefType::getPackage_dispred#ff_delta has 844 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff/2@i3#5c303woo (iteration 3)
+[2022-04-17 13:54:15] (0s) Empty delta for Type::RefType::getPackage_dispred#ff_delta (order for disjuncts: delta=3163).
+[2022-04-17 13:54:15] (0s) Accumulating deltas
+[2022-04-17 13:54:15] (0s)  >>> Created relation Type::RefType::getPackage_dispred#ff/2@5c303woo with 5788 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate m#Type::RefType::hasQualifiedName_dispred#bff/1@c8c98fok
+[2022-04-17 13:54:15] (0s)  >>> Created relation m#Type::RefType::hasQualifiedName_dispred#bff/1@c8c98fok with 4 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate m#Type::RefType::hasQualifiedName_dispred#fbf/1@65ac0f7b
+[2022-04-17 13:54:15] (0s)  >>> Created relation m#Type::RefType::hasQualifiedName_dispred#fbf/1@65ac0f7b with 4 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::getPackage_dispred#ff_10#join_rhs/2@349b0ai2
+[2022-04-17 13:54:15] (0s)  >>> Created relation Type::RefType::getPackage_dispred#ff_10#join_rhs/2@349b0ai2 with 5788 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i1#ce79bw35 (iteration 1)
+[2022-04-17 13:54:15] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 2682 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i2#ce79bw35 (iteration 2)
+[2022-04-17 13:54:15] (0s) Empty delta for m#Type::RefType::nestedName#bf_delta (order for disjuncts: delta=<standard>).
+[2022-04-17 13:54:15] (0s) Accumulating deltas
+[2022-04-17 13:54:15] (0s)  >>> Created relation m#Type::RefType::nestedName#bf/1@ce79bw35 with 2682 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate enclInReftype_0#antijoin_rhs/1@952090tq
+[2022-04-17 13:54:15] (0s)  >>> Created relation enclInReftype_0#antijoin_rhs/1@952090tq with 329 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate enclInReftype_10#join_rhs/2@d10431cv
+[2022-04-17 13:54:15] (0s)  >>> Created relation enclInReftype_10#join_rhs/2@d10431cv with 329 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf#join_rhs/3@045c8cjf
+[2022-04-17 13:54:15] (0s)  >>> Created relation Type::RefType::nestedName#bf#join_rhs/3@045c8cjf with 133 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i1#f49c4w85 (iteration 1)
+[2022-04-17 13:54:15] (0s) 			 - Type::RefType::nestedName#bf_delta has 2549 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i2#f49c4w85 (iteration 2)
+[2022-04-17 13:54:15] (0s) 			 - Type::RefType::nestedName#bf_delta has 132 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i3#f49c4w85 (iteration 3)
+[2022-04-17 13:54:15] (0s) 			 - Type::RefType::nestedName#bf_delta has 1 rows (order for disjuncts: delta=500000).
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i4#f49c4w85 (iteration 4)
+[2022-04-17 13:54:15] (0s) Empty delta for Type::RefType::nestedName#bf_delta (order for disjuncts: delta=500000).
+[2022-04-17 13:54:15] (0s) Accumulating deltas
+[2022-04-17 13:54:15] (0s)  >>> Created relation Type::RefType::nestedName#bf/2@f49c4w85 with 2682 rows.
+[2022-04-17 13:54:15] (0s)  >>> Created relation variableBinding/2@669cc0j3 with 387 rows.
+[2022-04-17 13:54:15] (0s) Starting to evaluate predicate variableBinding_10#join_rhs/2@68649fpv
+[2022-04-17 13:54:15] (0s)  >>> Created relation variableBinding_10#join_rhs/2@68649fpv with 387 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#fbf/3@5ad8a2l4
+[2022-04-17 13:54:15] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#fbf/3@5ad8a2l4 with 2679 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#fbf_120#join_rhs/3@ce34e8qd
+[2022-04-17 13:54:15] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#fbf_120#join_rhs/3@ce34e8qd with 2679 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate FileWritable::SetWritable#class#f/1@3b61ffea
+[2022-04-17 13:54:15] (1s)  >>> Created relation FileWritable::SetWritable#class#f/1@3b61ffea with 2 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate m#Expr::MethodAccess::getMethod_dispred#fb/1@b01ea43q
+[2022-04-17 13:54:15] (1s)  >>> Created relation m#Expr::MethodAccess::getMethod_dispred#fb/1@b01ea43q with 290 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::MethodAccess::getMethod_dispred#fb/2@09d8ceg6
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::MethodAccess::getMethod_dispred#fb/2@09d8ceg6 with 2 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::MethodAccess::getMethod_dispred#fb_10#join_rhs/2@788db67a
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::MethodAccess::getMethod_dispred#fb_10#join_rhs/2@788db67a with 2 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::MethodAccess::getArgument_dispred#bbf/3@bd225fqn
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::MethodAccess::getArgument_dispred#bbf/3@bd225fqn with 84 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#bff/3@902e5b4h
+[2022-04-17 13:54:15] (1s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#bff/3@902e5b4h with 4 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate callableBinding_10#join_rhs/2@5ad37c9u
+[2022-04-17 13:54:15] (1s)  >>> Created relation callableBinding_10#join_rhs/2@5ad37c9u with 134 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::Call::getCallee_dispred#ff/2@fcf9b7mr
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::Call::getCallee_dispred#ff/2@fcf9b7mr with 134 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::Call::getCallee_dispred#ff_10#join_rhs/2@16168344
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::Call::getCallee_dispred#ff_10#join_rhs/2@16168344 with 134 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::MethodAccess::getArgument_dispred#bbf_201#join_rhs/3@c7459ee4
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::MethodAccess::getArgument_dispred#bbf_201#join_rhs/3@c7459ee4 with 84 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate m#Member::Member::getDeclaringType_dispred#fb/1@99400c5v
+[2022-04-17 13:54:15] (1s)  >>> Created relation m#Member::Member::getDeclaringType_dispred#fb/1@99400c5v with 0 rows.
+[2022-04-17 13:54:15] (1s) Inferred that Member::Member::getDeclaringType_dispred#fb/2@5c43f337 is empty, due to m#Member::Member::getDeclaringType_dispred#fb/1@99400c5v.
+[2022-04-17 13:54:15] (1s) Inferred that Member::Member::getDeclaringType_dispred#fb_10#join_rhs/2@a7c1bb7e is empty, due to Member::Member::getDeclaringType_dispred#fb/2@5c43f337.
+[2022-04-17 13:54:15] (1s) Inferred that m#Expr::ConstructorCall::getConstructor_dispred#fb/1@97bbebr5 is empty, due to Member::Member::getDeclaringType_dispred#fb_10#join_rhs/2@a7c1bb7e.
+[2022-04-17 13:54:15] (1s) Inferred that Expr::ConstructorCall::getConstructor_dispred#fb/2@3d692b9h is empty, due to m#Expr::ConstructorCall::getConstructor_dispred#fb/1@97bbebr5.
+[2022-04-17 13:54:15] (1s) Inferred that Expr::ConstructorCall::getConstructor_dispred#fb_10#join_rhs/2@ea211399 is empty, due to Expr::ConstructorCall::getConstructor_dispred#fb/2@3d692b9h.
+[2022-04-17 13:54:15] (1s) Inferred that m#Expr::ClassInstanceExpr::getArgument_dispred#bff/1@4057051h is empty, due to Expr::ConstructorCall::getConstructor_dispred#fb_10#join_rhs/2@ea211399.
+[2022-04-17 13:54:15] (1s) Inferred that Expr::ClassInstanceExpr::getAnArgument_dispred#bf/2@1a24417c is empty, due to m#Expr::ClassInstanceExpr::getArgument_dispred#bff/1@4057051h.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Member::Member::getDeclaringType_dispred#fb/2@5c43f337 with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Member::Member::getDeclaringType_dispred#fb_10#join_rhs/2@a7c1bb7e with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::ConstructorCall::getConstructor_dispred#fb_10#join_rhs/2@ea211399 with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation m#Expr::ClassInstanceExpr::getArgument_dispred#bff/1@4057051h with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::ConstructorCall::getConstructor_dispred#fb/2@3d692b9h with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::ClassInstanceExpr::getAnArgument_dispred#bf/2@1a24417c with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation m#Expr::ConstructorCall::getConstructor_dispred#fb/1@97bbebr5 with 0 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate project#Expr::Call::getCallee_dispred#ff/1@2ca388r1
+[2022-04-17 13:54:15] (1s)  >>> Created relation project#Expr::Call::getCallee_dispred#ff/1@2ca388r1 with 94 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation params/5@32e25at0 with 21675 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate params_302#join_rhs/3@cacdfcdf
+[2022-04-17 13:54:15] (1s)  >>> Created relation params_302#join_rhs/3@cacdfcdf with 21675 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Member::Callable::getParameter_dispred#bff/3@599057bf
+[2022-04-17 13:54:15] (1s)  >>> Created relation Member::Callable::getParameter_dispred#bff/3@599057bf with 64 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Member::Callable::getParameter_dispred#bff_201#join_rhs/3@3d65c8r1
+[2022-04-17 13:54:15] (1s)  >>> Created relation Member::Callable::getParameter_dispred#bff_201#join_rhs/3@3d65c8r1 with 64 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::ClassInstanceExpr#class#f/1@48a9c731
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::ClassInstanceExpr#class#f/1@48a9c731 with 22 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate exprs_13024#join_rhs/5@49f3fcj2
+[2022-04-17 13:54:15] (1s)  >>> Created relation exprs_13024#join_rhs/5@49f3fcj2 with 3830 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::ClassInstanceExpr::getAnArgument_dispred#fb/2@2d31cdtb
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::ClassInstanceExpr::getAnArgument_dispred#fb/2@2d31cdtb with 8 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate Expr::Call::getArgument_dispred#ffb/3@ac8dbfbi
+[2022-04-17 13:54:15] (1s)  >>> Created relation Expr::Call::getArgument_dispred#ffb/3@ac8dbfbi with 61 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate FileReadWrite::fileRead#ff#loop_invariant_prefix/3@c114aca0
+[2022-04-17 13:54:15] (1s)  >>> Created relation FileReadWrite::fileRead#ff#loop_invariant_prefix/3@c114aca0 with 61 rows.
+[2022-04-17 13:54:15] (1s) Starting to evaluate predicate FileReadWrite::fileRead#ff/2@i1#8fac5wir (iteration 1)
+[2022-04-17 13:54:15] (1s) Empty delta for FileReadWrite::fileRead#ff_delta (order for disjuncts: delta=<standard>).
+[2022-04-17 13:54:15] (1s) Accumulating deltas
+[2022-04-17 13:54:15] (1s)  >>> Created relation FileReadWrite::fileRead#ff/2@8fac5wir with 0 rows.
+[2022-04-17 13:54:15] (1s) Inferred that project#FileReadWrite::fileRead#ff/1@08f8e0i2 is empty, due to FileReadWrite::fileRead#ff/2@8fac5wir.
+[2022-04-17 13:54:15] (1s) Inferred that #select#cpe#13#ff/2@199133np is empty, due to project#FileReadWrite::fileRead#ff/1@08f8e0i2.
+[2022-04-17 13:54:15] (1s) Inferred that project##select#cpe#13#ff/1@c8fda8ep is empty, due to #select#cpe#13#ff/2@199133np.
+[2022-04-17 13:54:15] (1s) Inferred that project##select#cpe#13#ff#2/1@9e64bcf8 is empty, due to #select#cpe#13#ff/2@199133np.
+[2022-04-17 13:54:15] (1s) Inferred that m#Location::Top::hasLocationInfo_dispred#bfffff/1@2973b327 is empty, due to #select#cpe#13#ff/2@199133np.
+[2022-04-17 13:54:15] (1s) Inferred that #select#query#ffffffffffffffff/16@5ad6a19j is empty, due to #select#cpe#13#ff/2@199133np.
+[2022-04-17 13:54:15] (1s) Inferred that Location::Top::hasLocationInfoAux_dispred#bfffff/6@cd80258o is empty, due to m#Location::Top::hasLocationInfo_dispred#bfffff/1@2973b327.
+[2022-04-17 13:54:15] (1s) Inferred that Location::Top::hasLocationInfo_dispred#bfffff/6@de2508sp is empty, due to Location::Top::hasLocationInfoAux_dispred#bfffff/6@cd80258o.
+[2022-04-17 13:54:15] (1s) Inferred that project#Location::Top::hasLocationInfo_dispred#bfffff/1@e463c33m is empty, due to Location::Top::hasLocationInfo_dispred#bfffff/6@de2508sp.
+[2022-04-17 13:54:15] (1s)  >>> Created relation project#Location::Top::hasLocationInfo_dispred#bfffff/1@e463c33m with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Location::Top::hasLocationInfoAux_dispred#bfffff/6@cd80258o with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation #select#query#ffffffffffffffff/16@5ad6a19j with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation project#FileReadWrite::fileRead#ff/1@08f8e0i2 with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation project##select#cpe#13#ff/1@c8fda8ep with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation Location::Top::hasLocationInfo_dispred#bfffff/6@de2508sp with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation #select#cpe#13#ff/2@199133np with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation m#Location::Top::hasLocationInfo_dispred#bfffff/1@2973b327 with 0 rows.
+[2022-04-17 13:54:15] (1s)  >>> Created relation project##select#cpe#13#ff#2/1@9e64bcf8 with 0 rows.
+[2022-04-17 13:54:15] (1s) Query done
+[2022-04-17 13:54:15] CSV_CACHE_DIFF: #select#query#ffffffffffffffff (ReadingFromWorldWritableFile.ql),1.06,0.812,0.117,0.024,0.069,0.012,0,0,0,0,0,0,0
+[2022-04-17 13:54:15] (1s) Sequence stamp origin is -6466439038518275420
+[2022-04-17 13:54:15] (1s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 13:54:15] (1s) Unpausing evaluation
+[2022-04-17 13:54:15] CSV_IMB_QUERIES: Query,#select#query#ffffffffffffffff,ReadingFromWorldWritableFile.ql,5,Success,1.06,0,1120
+[2022-04-17 13:54:15] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql produced BQRS results.
+[2022-04-17 13:54:15] [PROGRESS] execute queries> Evaluation completed (1.3s).
+[2022-04-17 13:54:15] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 13:54:15] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 13:54:15] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 13:54:15] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:54:15] Unpausing evaluation
+[2022-04-17 13:54:15] Terminating normally.

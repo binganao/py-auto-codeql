@@ -1,0 +1,292 @@
+[2022-04-17 14:12:42] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql
+[2022-04-17 14:12:42] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql
+[2022-04-17 14:12:42] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql"
+                      ]
+[2022-04-17 14:12:42] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 14:12:42] Creating executor with 1 threads.
+[2022-04-17 14:12:42] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql --format=json
+[2022-04-17 14:12:42] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:43] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 14:12:43] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 14:12:43] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 14:12:43] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 14:12:43] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 14:12:43] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 14:12:43] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:43] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:44] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql hashes to 408e2151a155cc564f3ad25cc014f502a8c9e76f.
+[2022-04-17 14:12:44] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:44] ExternalModuleBindingPass ...
+[2022-04-17 14:12:45] ExternalModuleBindingPass time: 00:01.031
+[2022-04-17 14:12:45] QLPredicateSynthesiser ...
+[2022-04-17 14:12:45] QLPredicateSynthesiser time: 00:00.022
+[2022-04-17 14:12:45] DeclarationBindingPass ...
+[2022-04-17 14:12:45] DeclarationBindingPass time: 00:00.157
+[2022-04-17 14:12:45] Fixed point time ...
+[2022-04-17 14:12:46] Fixed point time time: 00:00.276
+[2022-04-17 14:12:46] ReferenceBindingPass ...
+[2022-04-17 14:12:46] ReferenceBindingPass time: 00:00.074
+[2022-04-17 14:12:46] EntityTypeUpdateBindingPass ...
+[2022-04-17 14:12:46] EntityTypeUpdateBindingPass time: 00:00.052
+[2022-04-17 14:12:46] DeclarationBindingPass ...
+[2022-04-17 14:12:46] DeclarationBindingPass time: 00:00.030
+[2022-04-17 14:12:46] PredicateBodyBindingPass ...
+[2022-04-17 14:12:47] PredicateBodyBindingPass time: 00:00.581
+[2022-04-17 14:12:47] LanguagePragmaPropagationPass ...
+[2022-04-17 14:12:47] LanguagePragmaPropagationPass time: 00:00.030
+[2022-04-17 14:12:47] Ambiguity checks ...
+[2022-04-17 14:12:47] Ambiguity checks time: 00:00.056
+[2022-04-17 14:12:47] Ql checks ...
+[2022-04-17 14:12:47] Ql checks time: 00:00.509
+[2022-04-17 14:12:49] Compilation pipeline
+[2022-04-17 14:12:49] Type Inference ...
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,766,1192
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:49] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 14:12:51] Type Inference time: 00:01.640
+[2022-04-17 14:12:51] Binding Checks ...
+[2022-04-17 14:12:51] Binding Checks time: 00:00.267
+[2022-04-17 14:12:51] [WARN] execute queries> WARNING: A problem query must select at least 2 columns. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql:49,1-50,39)
+[2022-04-17 14:12:51] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:51] Processing compilation pipeline
+[2022-04-17 14:12:51] Started compiling a query
+[2022-04-17 14:12:51] Initialising compiler...
+[2022-04-17 14:12:51] 	 ... compiler initialised
+[2022-04-17 14:12:51] About to start query optimisation
+[2022-04-17 14:12:52] Compilation cache hit - skipping compilation.
+[2022-04-17 14:12:52] Compilation cache miss for d878c4ec33a4c837ab81cb7827a4ddfe76b40586.
+[2022-04-17 14:12:53] Stored compiled program for d878c4ec33a4c837ab81cb7827a4ddfe76b40586.
+[2022-04-17 14:12:53] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 14:12:53] CSV_COMPILATION: 148,226,147,1339
+[2022-04-17 14:12:53] [PROGRESS] execute queries> [1/1 comp 10s] Compiled /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:53] Of 94 predicates, 0 are used in more than one query.
+[2022-04-17 14:12:53] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql.
+[2022-04-17 14:12:53] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql
+[2022-04-17 14:12:53] (0s) Start query execution
+[2022-04-17 14:12:53] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 14:12:53] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 14:12:53] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (JHipsterGeneratedPRNG.ql),0.026,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 14:12:53] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 14:12:53] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,JHipsterGeneratedPRNG.ql,1,Success,0.026,38891,29
+[2022-04-17 14:12:53] (0s) Beginning execution of JHipsterGeneratedPRNG.ql
+[2022-04-17 14:12:53] (0s)  >>> Created relation locations_default/6@d0a81fkd with 4561 rows.
+[2022-04-17 14:12:53] (0s)  >>> Created relation files/2@19948aeb with 1853 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation methods/6@d93893sl with 20736 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation fields/5@1c902dh2 with 4594 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation constrs/6@9f73ec4d with 1726 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::declaresMember#fb/2@bd4c05ps
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::declaresMember#fb/2@bd4c05ps with 27056 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation stmts/5@0f812bj4 with 228 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation callableBinding/2@5704453i with 134 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate stmts_10#join_rhs/2@fa7205g2
+[2022-04-17 14:12:54] (0s)  >>> Created relation stmts_10#join_rhs/2@fa7205g2 with 228 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate exprs_30#join_rhs/2@2a2443ga
+[2022-04-17 14:12:54] (0s)  >>> Created relation exprs_30#join_rhs/2@2a2443ga with 3830 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Statement::ReturnStmt::getResult_dispred#ff/2@190cb86u
+[2022-04-17 14:12:54] (0s)  >>> Created relation Statement::ReturnStmt::getResult_dispred#ff/2@190cb86u with 46 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Statement::ReturnStmt::getResult_dispred#ff_1#join_rhs/1@d6ed82i0
+[2022-04-17 14:12:54] (0s)  >>> Created relation Statement::ReturnStmt::getResult_dispred#ff_1#join_rhs/1@d6ed82i0 with 46 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethod#class#b/1@f493172f
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethod#class#b/1@f493172f with 21 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate stmts_10234#join_rhs/5@b3fa06fd
+[2022-04-17 14:12:54] (0s)  >>> Created relation stmts_10234#join_rhs/5@b3fa06fd with 228 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate @callable#b/1@b3d505rc
+[2022-04-17 14:12:54] (0s)  >>> Created relation @callable#b/1@b3d505rc with 22462 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::declaresMember#fb_1#join_rhs/1@1032575r
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::declaresMember#fb_1#join_rhs/1@1032575r with 27056 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Member::Callable::getBody_dispred#ff/2@2871cbqc
+[2022-04-17 14:12:54] (0s)  >>> Created relation Member::Callable::getBody_dispred#ff/2@2871cbqc with 57 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Member::Member::getDeclaringType_dispred#bf/1@68c5f19p
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Member::Member::getDeclaringType_dispred#bf/1@68c5f19p with 66 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Member::Member::getDeclaringType_dispred#bf/2@9e8caamd
+[2022-04-17 14:12:54] (0s)  >>> Created relation Member::Member::getDeclaringType_dispred#bf/2@9e8caamd with 66 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_type/1@d8376e8n
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_type/1@d8376e8n with 2 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_package/1@341fa6qd
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Type::RefType::hasQualifiedName_dispred#fbb#mcpe_package/1@341fa6qd with 3 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation classes/4@821293v7 with 1748 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation enclInReftype/2@07dda0q5 with 329 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i1#6cc94wti (iteration 1)
+[2022-04-17 14:12:54] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 1748 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i2#6cc94wti (iteration 2)
+[2022-04-17 14:12:54] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 18 rows (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i3#6cc94wti (iteration 3)
+[2022-04-17 14:12:54] (0s) 			 - m#Type::RefType::nestedName#bf_delta has 1 rows (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Type::RefType::nestedName#bf/1@i4#6cc94wti (iteration 4)
+[2022-04-17 14:12:54] (0s) Empty delta for m#Type::RefType::nestedName#bf_delta (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Accumulating deltas
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Type::RefType::nestedName#bf/1@6cc94wti with 1767 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation wildcards/3@962bcerh with 331 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation typeVars/5@f6f131jt with 844 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate @boundedtype#f/1@8c3271mq
+[2022-04-17 14:12:54] (0s)  >>> Created relation @boundedtype#f/1@8c3271mq with 1175 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation arrays/5@3a5ff15c with 310 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation interfaces/4@64928d95 with 3196 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Element::Element::getName_dispred#bf/1@f0ad73f1
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Element::Element::getName_dispred#bf/1@f0ad73f1 with 6495 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Element::Element#class#b/1@caf6f9gk
+[2022-04-17 14:12:54] (0s)  >>> Created relation Element::Element#class#b/1@caf6f9gk with 6495 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate project#classes/1@eca985qh
+[2022-04-17 14:12:54] (0s)  >>> Created relation project#classes/1@eca985qh with 155 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate m#Element::Element::hasName_dispred#bf/1@e4d2cam4
+[2022-04-17 14:12:54] (0s)  >>> Created relation m#Element::Element::hasName_dispred#bf/1@e4d2cam4 with 6650 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation packages/2@29d2d1tb with 205 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Element::Element::hasName#bf/2@78331d1l
+[2022-04-17 14:12:54] (0s)  >>> Created relation Element::Element::hasName#bf/2@78331d1l with 6650 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Element::Element::hasName_dispred#bf/2@386cc05k
+[2022-04-17 14:12:54] (0s)  >>> Created relation Element::Element::hasName_dispred#bf/2@386cc05k with 6650 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Element::Element::getName_dispred#bf/2@33db8dn9
+[2022-04-17 14:12:54] (0s)  >>> Created relation Element::Element::getName_dispred#bf/2@33db8dn9 with 6495 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate enclInReftype_0#antijoin_rhs/1@952090tq
+[2022-04-17 14:12:54] (0s)  >>> Created relation enclInReftype_0#antijoin_rhs/1@952090tq with 329 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate enclInReftype_10#join_rhs/2@d10431cv
+[2022-04-17 14:12:54] (0s)  >>> Created relation enclInReftype_10#join_rhs/2@d10431cv with 329 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf#join_rhs/3@53be96t9
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::RefType::nestedName#bf#join_rhs/3@53be96t9 with 221 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i1#d2b2ewrs (iteration 1)
+[2022-04-17 14:12:54] (0s) 			 - Type::RefType::nestedName#bf_delta has 1546 rows (order for disjuncts: delta=<standard>).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i2#d2b2ewrs (iteration 2)
+[2022-04-17 14:12:54] (0s) 			 - Type::RefType::nestedName#bf_delta has 218 rows (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i3#d2b2ewrs (iteration 3)
+[2022-04-17 14:12:54] (0s) 			 - Type::RefType::nestedName#bf_delta has 3 rows (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::nestedName#bf/2@i4#d2b2ewrs (iteration 4)
+[2022-04-17 14:12:54] (0s) Empty delta for Type::RefType::nestedName#bf_delta (order for disjuncts: delta=500000).
+[2022-04-17 14:12:54] (0s) Accumulating deltas
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::RefType::nestedName#bf/2@d2b2ewrs with 1767 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#fbb/3@9c4839tf
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#fbb/3@9c4839tf with 1 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Type::RefType::hasQualifiedName_dispred#fbb_120#join_rhs/3@a93c41mj
+[2022-04-17 14:12:54] (0s)  >>> Created relation Type::RefType::hasQualifiedName_dispred#fbb_120#join_rhs/3@a93c41mj with 1 rows.
+[2022-04-17 14:12:54] (0s) Starting to evaluate predicate Lang::TypeApacheRandomStringUtils#class#f/1@529552nc
+[2022-04-17 14:12:54] (0s)  >>> Created relation Lang::TypeApacheRandomStringUtils#class#f/1@529552nc with 0 rows.
+[2022-04-17 14:12:54] (0s) Inferred that JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethod#class#b/1@2020c5vn is empty, due to Lang::TypeApacheRandomStringUtils#class#f/1@529552nc.
+[2022-04-17 14:12:54] (0s) Inferred that JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethodAccess#class#b/1@762ff46r is empty, due to JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethod#class#b/1@2020c5vn.
+[2022-04-17 14:12:54] (0s) Inferred that JHipsterGeneratedPRNG::VulnerableJHipsterRandomUtilMethod#class#f/1@9cc5bf13 is empty, due to JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethodAccess#class#b/1@762ff46r.
+[2022-04-17 14:12:54] (0s) Inferred that Location::Location::toString_dispred#bf#shared/1@a6a465bq is empty, due to JHipsterGeneratedPRNG::VulnerableJHipsterRandomUtilMethod#class#f/1@9cc5bf13.
+[2022-04-17 14:12:54] (0s) Inferred that Location::Location::toString_dispred#bf/2@877d7e8v is empty, due to Location::Location::toString_dispred#bf#shared/1@a6a465bq.
+[2022-04-17 14:12:54] (0s) Inferred that #select#query#f/1@4f9fa8n3 is empty, due to Location::Location::toString_dispred#bf/2@877d7e8v.
+[2022-04-17 14:12:54] (0s)  >>> Created relation JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethod#class#b/1@2020c5vn with 0 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation #select#query#f/1@4f9fa8n3 with 0 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation Location::Location::toString_dispred#bf/2@877d7e8v with 0 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation Location::Location::toString_dispred#bf#shared/1@a6a465bq with 0 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation JHipsterGeneratedPRNG::VulnerableJHipsterRandomUtilMethod#class#f/1@9cc5bf13 with 0 rows.
+[2022-04-17 14:12:54] (0s)  >>> Created relation JHipsterGeneratedPRNG::PredictableApacheRandomStringUtilsMethodAccess#class#b/1@762ff46r with 0 rows.
+[2022-04-17 14:12:54] (0s) Query done
+[2022-04-17 14:12:54] CSV_CACHE_DIFF: #select#query#f (JHipsterGeneratedPRNG.ql),0.521,0.363,0.084,0.017,0.027,0.009,0,0,0,0,0,0,0
+[2022-04-17 14:12:54] (0s) Sequence stamp origin is -6466434200933439956
+[2022-04-17 14:12:54] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 14:12:54] (0s) Unpausing evaluation
+[2022-04-17 14:12:54] CSV_IMB_QUERIES: Query,#select#query#f,JHipsterGeneratedPRNG.ql,1,Success,0.521,0,560
+[2022-04-17 14:12:54] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql produced BQRS results.
+[2022-04-17 14:12:54] [PROGRESS] execute queries> Evaluation completed (596ms).
+[2022-04-17 14:12:54] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 14:12:54] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 14:12:54] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 14:12:54] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 14:12:54] Unpausing evaluation
+[2022-04-17 14:12:54] Terminating normally.

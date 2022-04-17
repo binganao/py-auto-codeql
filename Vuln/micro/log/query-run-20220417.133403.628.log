@@ -1,0 +1,11 @@
+[2022-04-17 13:34:03] This is codeql query run -d ./Vuln/micro/ ./Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql
+[2022-04-17 13:34:03] Log file was started late.
+[2022-04-17 13:34:03] Calling plumbing command: codeql resolve ram --format=json
+[2022-04-17 13:34:03] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx2048M",
+                        "--off-heap-ram=2048"
+                      ]
+[2022-04-17 13:34:03] Spawning plumbing command: execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql
+[2022-04-17 13:34:34] Plumbing command codeql execute queries terminated with status 0.
+[2022-04-17 13:34:34] Exiting with code 0

@@ -1,0 +1,84 @@
+[2022-04-17 13:31:07] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql
+[2022-04-17 13:31:07] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql
+[2022-04-17 13:31:07] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql"
+                      ]
+[2022-04-17 13:31:07] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:31:07] Creating executor with 1 threads.
+[2022-04-17 13:31:08] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql --format=json
+[2022-04-17 13:31:08] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:08] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:31:08] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:31:08] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:31:09] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:31:09] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:31:09] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:31:09] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:09] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:10] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql hashes to d50bb9b2711ffebb79c95dca20989aa2d7834cd1.
+[2022-04-17 13:31:10] [DETAILS] execute queries> Compilation cache hit for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:10] [PROGRESS] execute queries> [1/1] Found in cache: /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:10] Of 91 predicates, 0 are used in more than one query.
+[2022-04-17 13:31:10] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql.
+[2022-04-17 13:31:10] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql
+[2022-04-17 13:31:10] (0s) Start query execution
+[2022-04-17 13:31:10] (0s) Beginning execution of MavenPomDependsOnBintray.ql
+[2022-04-17 13:31:10] (0s)  >>> Created relation xmlElements/5@1321aag7 with 1079 rows.
+[2022-04-17 13:31:10] (0s)  >>> Created relation xmlEncoding/2@a126dfgj with 115 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLParent#f/1@43b59a0b
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLParent#f/1@43b59a0b with 1194 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate MavenPom::ProtoPom#class#f/1@7dd12b0s
+[2022-04-17 13:31:10] (0s)  >>> Created relation MavenPom::ProtoPom#class#f/1@7dd12b0s with 1079 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLElement::getName#ff/2@1bf71fp4
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLElement::getName#ff/2@1bf71fp4 with 1079 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLElement::getName#ff_10#join_rhs/2@f9130dlp
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLElement::getName#ff_10#join_rhs/2@f9130dlp with 1079 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLElement::getName_dispred#ff#antijoin_rhs/1@bae668bu
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLElement::getName_dispred#ff#antijoin_rhs/1@bae668bu with 0 rows.
+[2022-04-17 13:31:10] (0s)  >>> Created relation xmlAttrs/6@c21dc5fb with 847 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate xmlAttrs_123#join_rhs/3@ba40f7a2
+[2022-04-17 13:31:10] (0s)  >>> Created relation xmlAttrs_123#join_rhs/3@ba40f7a2 with 847 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLElement::getName_dispred#ff/2@1054abku
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLElement::getName_dispred#ff/2@1054abku with 1079 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate XML::XMLElement::getName_dispred#ff_10#join_rhs/2@98ef2f8p
+[2022-04-17 13:31:10] (0s)  >>> Created relation XML::XMLElement::getName_dispred#ff_10#join_rhs/2@98ef2f8p with 1079 rows.
+[2022-04-17 13:31:10] (0s) Starting to evaluate predicate MavenPom::DeclaredRepository#class#f/1@4ae16eqm
+[2022-04-17 13:31:10] (0s)  >>> Created relation MavenPom::DeclaredRepository#class#f/1@4ae16eqm with 0 rows.
+[2022-04-17 13:31:10] (0s) Inferred that MavenPom::DeclaredRepository::getUrl_dispred#ff/2@4035d9rd is empty, due to MavenPom::DeclaredRepository#class#f/1@4ae16eqm.
+[2022-04-17 13:31:10] (0s) Inferred that MavenPomDependsOnBintray::isBintrayRepositoryUsage#f/1@56d931eo is empty, due to MavenPom::DeclaredRepository::getUrl_dispred#ff/2@4035d9rd.
+[2022-04-17 13:31:10] (0s) Inferred that #select#ff/2@59b1a5g4 is empty, due to MavenPomDependsOnBintray::isBintrayRepositoryUsage#f/1@56d931eo.
+[2022-04-17 13:31:10] (0s) Inferred that #select#query#ffffffff/8@62565318 is empty, due to #select#ff/2@59b1a5g4.
+[2022-04-17 13:31:10] (0s)  >>> Created relation MavenPom::DeclaredRepository::getUrl_dispred#ff/2@4035d9rd with 0 rows.
+[2022-04-17 13:31:10] (0s)  >>> Created relation MavenPomDependsOnBintray::isBintrayRepositoryUsage#f/1@56d931eo with 0 rows.
+[2022-04-17 13:31:10] (0s)  >>> Created relation #select#query#ffffffff/8@62565318 with 0 rows.
+[2022-04-17 13:31:10] (0s)  >>> Created relation #select#ff/2@59b1a5g4 with 0 rows.
+[2022-04-17 13:31:10] (0s) Query done
+[2022-04-17 13:31:10] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 13:31:10] CSV_CACHE_DIFF: #select#query#ffffffff (MavenPomDependsOnBintray.ql),0.236,0.157,0.045,0.004,0.008,0.002,0,0,0,0,0,0,0
+[2022-04-17 13:31:10] (0s) Sequence stamp origin is -6466444915505490632
+[2022-04-17 13:31:10] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 13:31:10] (0s) Unpausing evaluation
+[2022-04-17 13:31:10] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 13:31:10] CSV_IMB_QUERIES: Query,#select#query#ffffffff,MavenPomDependsOnBintray.ql,0,Success,0.236,0,251
+[2022-04-17 13:31:10] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql produced BQRS results.
+[2022-04-17 13:31:10] [PROGRESS] execute queries> Evaluation completed (420ms).
+[2022-04-17 13:31:10] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 13:31:10] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 13:31:10] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 13:31:10] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:31:10] Unpausing evaluation
+[2022-04-17 13:31:10] Terminating normally.

@@ -1,0 +1,231 @@
+[2022-04-17 13:55:29] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml -- /Users/zhuangpenghai/Downloads/CodeQL/Vuln/micro/db-java /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql
+[2022-04-17 13:55:29] Calling plumbing command: codeql resolve queries --format=json -- /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql
+[2022-04-17 13:55:30] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql"
+                      ]
+[2022-04-17 13:55:30] Refusing fancy output: $CODEQL_ISATTY terminal indication is missing
+[2022-04-17 13:55:30] Creating executor with 1 threads.
+[2022-04-17 13:55:30] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/zhuangpenghai/Downloads/CodeQL/qlconfig.yml --query=/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql --format=json
+[2022-04-17 13:55:30] [DETAILS] resolve library-path> Resolving query at normalized path /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:30] [DETAILS] resolve library-path> Found enclosing pack 'micro' at /Users/zhuangpenghai/Downloads/CodeQL.
+[2022-04-17 13:55:30] [DETAILS] resolve library-path> Adding compilation cache at /Users/zhuangpenghai/Downloads/CodeQL/.cache.
+[2022-04-17 13:55:30] [DETAILS] resolve library-path> Resolving library dependencies from /Users/zhuangpenghai/Downloads/CodeQL/qlpack.yml.
+[2022-04-17 13:55:31] [DETAILS] resolve library-path> QL pack dependencies for /Users/zhuangpenghai/Downloads/CodeQL resolved OK.
+[2022-04-17 13:55:31] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme.
+[2022-04-17 13:55:31] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib",
+                          "/Users/zhuangpenghai/codeql-home/codeql-repo/java/upgrades"
+                        ],
+                        "dbscheme" : "/Users/zhuangpenghai/codeql-home/codeql-repo/java/ql/lib/config/semmlecode.dbscheme",
+                        "compilationCache" : [
+                          "/Users/zhuangpenghai/Downloads/CodeQL/.cache"
+                        ],
+                        "relativeName" : "micro/Security/CWE/CWE-190/ComparisonWithWiderType.ql",
+                        "qlPackName" : "micro"
+                      }
+[2022-04-17 13:55:31] [PROGRESS] execute queries> Compiling query plan for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:31] [DETAILS] execute queries> Resolving imports for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:32] Resolved file set for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql hashes to 393a6191f5ee9caa9a0c40e7f94cdda0bf12bf6d.
+[2022-04-17 13:55:32] [DETAILS] execute queries> Checking QL for /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:32] ExternalModuleBindingPass ...
+[2022-04-17 13:55:34] ExternalModuleBindingPass time: 00:01.630
+[2022-04-17 13:55:34] QLPredicateSynthesiser ...
+[2022-04-17 13:55:34] QLPredicateSynthesiser time: 00:00.022
+[2022-04-17 13:55:34] DeclarationBindingPass ...
+[2022-04-17 13:55:34] DeclarationBindingPass time: 00:00.118
+[2022-04-17 13:55:34] Fixed point time ...
+[2022-04-17 13:55:34] Fixed point time time: 00:00.367
+[2022-04-17 13:55:34] ReferenceBindingPass ...
+[2022-04-17 13:55:34] ReferenceBindingPass time: 00:00.084
+[2022-04-17 13:55:34] EntityTypeUpdateBindingPass ...
+[2022-04-17 13:55:34] EntityTypeUpdateBindingPass time: 00:00.055
+[2022-04-17 13:55:34] DeclarationBindingPass ...
+[2022-04-17 13:55:34] DeclarationBindingPass time: 00:00.028
+[2022-04-17 13:55:34] PredicateBodyBindingPass ...
+[2022-04-17 13:55:35] PredicateBodyBindingPass time: 00:00.472
+[2022-04-17 13:55:35] LanguagePragmaPropagationPass ...
+[2022-04-17 13:55:35] LanguagePragmaPropagationPass time: 00:00.031
+[2022-04-17 13:55:35] Ambiguity checks ...
+[2022-04-17 13:55:35] Ambiguity checks time: 00:00.066
+[2022-04-17 13:55:35] Ql checks ...
+[2022-04-17 13:55:35] Ql checks time: 00:00.529
+[2022-04-17 13:55:37] Compilation pipeline
+[2022-04-17 13:55:37] Type Inference ...
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: 0,0,18,21
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-04-17 13:55:37] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,767,1204
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,76,135
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,10,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,9,11
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,9,12
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:38] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-04-17 13:55:39] Type Inference time: 00:01.750
+[2022-04-17 13:55:39] Binding Checks ...
+[2022-04-17 13:55:39] Binding Checks time: 00:00.271
+[2022-04-17 13:55:40] [WARN] execute queries> WARNING: Unused method getNarrower (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql:26,17-28)
+[2022-04-17 13:55:40] [WARN] execute queries> WARNING: Unused method getWider (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql:28,17-25)
+[2022-04-17 13:55:40] [WARN] execute queries> WARNING: A problem query must select at least 2 columns. (/Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql:53,1-57,34)
+[2022-04-17 13:55:40] [DETAILS] execute queries> Optimizing /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:40] Processing compilation pipeline
+[2022-04-17 13:55:40] Started compiling a query
+[2022-04-17 13:55:40] Initialising compiler...
+[2022-04-17 13:55:40] 	 ... compiler initialised
+[2022-04-17 13:55:40] About to start query optimisation
+[2022-04-17 13:55:40] Compilation cache hit - skipping compilation.
+[2022-04-17 13:55:40] Compilation cache miss for d59fadca3d4f7e9af09b9a51ac8e205abefed0e3.
+[2022-04-17 13:55:43] Stored compiled program for d59fadca3d4f7e9af09b9a51ac8e205abefed0e3.
+[2022-04-17 13:55:43] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-04-17 13:55:43] CSV_COMPILATION: 184,259,375,2275
+[2022-04-17 13:55:43] [PROGRESS] execute queries> [1/1 comp 12.2s] Compiled /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:43] Of 143 predicates, 0 are used in more than one query.
+[2022-04-17 13:55:43] [PROGRESS] execute queries> Starting evaluation of micro/Security/CWE/CWE-190/ComparisonWithWiderType.ql.
+[2022-04-17 13:55:43] Starting evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql
+[2022-04-17 13:55:43] (0s) Start query execution
+[2022-04-17 13:55:43] (0s) Beginning execution of Location::fixedHasLocation#fff
+[2022-04-17 13:55:43] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-04-17 13:55:43] CSV_CACHE_DIFF: Location::fixedHasLocation#fff (ComparisonWithWiderType.ql),0.069,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-04-17 13:55:43] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-04-17 13:55:43] CSV_IMB_QUERIES: Stage,Location::fixedHasLocation#fff,ComparisonWithWiderType.ql,1,Success,0.069,38891,75
+[2022-04-17 13:55:43] (0s) Beginning execution of ComparisonWithWiderType.ql
+[2022-04-17 13:55:43] (0s)  >>> Created relation exprs/5@14e06el4 with 3830 rows.
+[2022-04-17 13:55:43] (0s)  >>> Created relation stmts/5@0f812bj4 with 228 rows.
+[2022-04-17 13:55:43] (0s) Starting to evaluate predicate stmts_10#join_rhs/2@fa7205g2
+[2022-04-17 13:55:43] (0s)  >>> Created relation stmts_10#join_rhs/2@fa7205g2 with 228 rows.
+[2022-04-17 13:55:43] (0s) Starting to evaluate predicate Statement::LoopStmt#class#f/1@16cafcpd
+[2022-04-17 13:55:43] (0s)  >>> Created relation Statement::LoopStmt#class#f/1@16cafcpd with 2 rows.
+[2022-04-17 13:55:43] (0s) Starting to evaluate predicate exprs_340#join_rhs/3@3df914ar
+[2022-04-17 13:55:43] (0s)  >>> Created relation exprs_340#join_rhs/3@3df914ar with 3830 rows.
+[2022-04-17 13:55:44] (0s) Starting to evaluate predicate exprs_30#join_rhs/2@2a2443ga
+[2022-04-17 13:55:44] (0s)  >>> Created relation exprs_30#join_rhs/2@2a2443ga with 3830 rows.
+[2022-04-17 13:55:44] (0s) Starting to evaluate predicate Statement::LoopStmt::getCondition_dispred#ff/2@47d517cg
+[2022-04-17 13:55:44] (0s)  >>> Created relation Statement::LoopStmt::getCondition_dispred#ff/2@47d517cg with 2 rows.
+[2022-04-17 13:55:44] (0s) Starting to evaluate predicate Statement::LoopStmt::getCondition_dispred#ff_1#join_rhs/1@2054b99e
+[2022-04-17 13:55:44] (0s)  >>> Created relation Statement::LoopStmt::getCondition_dispred#ff_1#join_rhs/1@2054b99e with 2 rows.
+[2022-04-17 13:55:44] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@348c8e6n
+[2022-04-17 13:55:44] (0s)  >>> Created relation exprs_10#join_rhs/2@348c8e6n with 3830 rows.
+[2022-04-17 13:55:44] (0s) Starting to evaluate predicate Expr::ComparisonExpr#class#b/1@89cefd40
+[2022-04-17 13:55:44] (0s)  >>> Created relation Expr::ComparisonExpr#class#b/1@89cefd40 with 0 rows.
+[2022-04-17 13:55:44] (0s) Inferred that m#ComparisonWithWiderType::leftWidth#bf/1@6734e544 is empty, due to Expr::ComparisonExpr#class#b/1@89cefd40.
+[2022-04-17 13:55:44] (0s) Inferred that ComparisonWithWiderType::leftWidth#bf/2@5466f1k1 is empty, due to m#ComparisonWithWiderType::leftWidth#bf/1@6734e544.
+[2022-04-17 13:55:44] (0s) Inferred that ComparisonWithWiderType::rightWidth#bf/2@0733a2f8 is empty, due to m#ComparisonWithWiderType::leftWidth#bf/1@6734e544.
+[2022-04-17 13:55:44] (0s) Inferred that ComparisonWithWiderType::WideningComparison#class#f/1@ac73eadt is empty, due to ComparisonWithWiderType::leftWidth#bf/2@5466f1k1.
+[2022-04-17 13:55:44] (0s) Inferred that Expr::BinaryExpr::getAnOperand_dispred#bf/2@ddd0b78h is empty, due to ComparisonWithWiderType::WideningComparison#class#f/1@ac73eadt.
+[2022-04-17 13:55:44] (0s) Inferred that m#Location::Location::toString_dispred#bf/1@ddac384j is empty, due to ComparisonWithWiderType::WideningComparison#class#f/1@ac73eadt.
+[2022-04-17 13:55:44] (0s) Inferred that #select#query#f#shared/1@4f59e42i is empty, due to ComparisonWithWiderType::WideningComparison#class#f/1@ac73eadt.
+[2022-04-17 13:55:44] (0s) Inferred that m#Location::Location::toString_dispred#bf#antijoin_rhs/1@ba9287bk is empty, due to Expr::BinaryExpr::getAnOperand_dispred#bf/2@ddd0b78h.
+[2022-04-17 13:55:44] (0s) Inferred that #select#query#f#antijoin_rhs/1@1f512beu is empty, due to #select#query#f#shared/1@4f59e42i.
+[2022-04-17 13:55:44] (0s) Inferred that Location::Location::toString_dispred#bf/2@eeabcbqe is empty, due to m#Location::Location::toString_dispred#bf/1@ddac384j.
+[2022-04-17 13:55:44] (0s) Inferred that #select#query#f/1@4f4605kb is empty, due to #select#query#f#shared/1@4f59e42i.
+[2022-04-17 13:55:44] (0s)  >>> Created relation m#ComparisonWithWiderType::leftWidth#bf/1@6734e544 with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation ComparisonWithWiderType::leftWidth#bf/2@5466f1k1 with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation #select#query#f/1@4f4605kb with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation Location::Location::toString_dispred#bf/2@eeabcbqe with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation #select#query#f#antijoin_rhs/1@1f512beu with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation ComparisonWithWiderType::WideningComparison#class#f/1@ac73eadt with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation #select#query#f#shared/1@4f59e42i with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation m#Location::Location::toString_dispred#bf/1@ddac384j with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation Expr::BinaryExpr::getAnOperand_dispred#bf/2@ddd0b78h with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation m#Location::Location::toString_dispred#bf#antijoin_rhs/1@ba9287bk with 0 rows.
+[2022-04-17 13:55:44] (0s)  >>> Created relation ComparisonWithWiderType::rightWidth#bf/2@0733a2f8 with 0 rows.
+[2022-04-17 13:55:44] (0s) Query done
+[2022-04-17 13:55:44] CSV_CACHE_DIFF: #select#query#f (ComparisonWithWiderType.ql),0.232,0.121,0.054,0.001,0.021,0.003,0,0,0,0,0,0,0
+[2022-04-17 13:55:44] (0s) Sequence stamp origin is -6466438634885538499
+[2022-04-17 13:55:44] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-04-17 13:55:44] (0s) Unpausing evaluation
+[2022-04-17 13:55:44] CSV_IMB_QUERIES: Query,#select#query#f,ComparisonWithWiderType.ql,1,Success,0.232,0,323
+[2022-04-17 13:55:44] Evaluation of /Users/zhuangpenghai/Downloads/CodeQL/Security/CWE/CWE-190/ComparisonWithWiderType.ql produced BQRS results.
+[2022-04-17 13:55:44] [PROGRESS] execute queries> Evaluation completed (465ms).
+[2022-04-17 13:55:44] Constructing in-process plumbing: codeql bqrs decode dummy.bqrs
+[2022-04-17 13:55:44] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-04-17 13:55:44] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-04-17 13:55:44] The disk cache is freshly trimmed; leave it be.
+[2022-04-17 13:55:44] Unpausing evaluation
+[2022-04-17 13:55:44] Terminating normally.
