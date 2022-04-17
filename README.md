@@ -56,7 +56,9 @@ def run_codeql(database_dir_path, ql_path):
 
 ![image-20220417140314957](https://cdn.bingbingzi.cn/blog/20220417140315.png "整理后的结果")
 
-修改后的 Security 我将会放置在 Github 上：https://github.com/binganao/py-auto-codeql，注：此 Security 为官方魔改后的 ql 文件
+修改后的 Security 我将会放置在 Github 上：https://github.com/binganao/py-auto-codeql
+
+> 注：此 Security 为官方魔改后的 ql 文件
 
 最终代码：
 
